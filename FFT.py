@@ -1,7 +1,8 @@
-__author__ = 'Olexandr'
-
-import Utils
 import numpy as np
+from utils.LengthUtils import correct_len
+from utils.PowerUtils import is_power_of_2
+
+__author__ = 'Olexandr'
 
 
 def fft(x):
@@ -38,7 +39,7 @@ def fft_diff_len(x):
     @param x: list of data
     @return: list with fft
     """
-    if Utils.is_power_of_2(len(x)):
+    if is_power_of_2(len(x)):
         return fft(x)
     else:
-        return fft_diff_len(Utils.correct_len(x, is_pow_of_2=True))
+        return fft_diff_len(correct_len(x, is_pow_of_2=True))

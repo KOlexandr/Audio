@@ -1,14 +1,13 @@
-__author__ = 'Olexandr'
-
 import FFT
 import wave
 import os.path
 import numpy as np
 import matplotlib.pyplot as plot
 
+__author__ = 'Olexandr'
+
 
 class WavFile:
-
     def __init__(self, file_name=None, frames=None, sample_width=None, time=0):
         """
         initialize WavFile object
@@ -40,9 +39,6 @@ class WavFile:
             self.number_of_channels = 2
         else:
             raise Exception("Wrong input data!")
-
-        # self.fft = abs(np.fft.fft(self.samples))
-        # self.fft = abs(FFT.fft_diff_len(self.get_one_channel_data()))
 
     def get_one_channel_data(self, really_transform=False):
         """
