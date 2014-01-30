@@ -3,10 +3,10 @@ __author__ = 'Olexandr'
 
 class LibraryItem:
     def __init__(self, word, samples):
+        self.fft = None
         self.word = word
         self.samples = samples
         self.length = len(samples)
-        self.fft = None
 
     def correct_length(self, new_length):
         """
@@ -24,5 +24,4 @@ class LibraryItem:
         count FFT of samples of this item
         @param fft_function: function for counting FFT
         """
-        if self.fft is None:
-            self.fft = fft_function(self.samples)
+        self.fft = fft_function(self.samples)

@@ -28,10 +28,11 @@ class WavFile:
                     self.comp_name) = wav.getparams()
                 self.file_size_sec = self.number_of_frames/self.frame_rate
                 self.samples = np.fromstring(wav.readframes(self.number_of_frames), dtype=self.types[self.sample_width])
+                # self.samples = [i/32768 for i in self.samples]
                 wav.close()
             else:
                 raise Exception("File '" + file_name + "' is not exists!")
-        elif frames and sample_width and time > 0:
+        elif not (frames is None) and not(sample_width is None) and time > 0:
             self.file_name = "anonymous_file"
             self.sample_width = sample_width
             self.samples = np.fromstring(frames, dtype=self.types[self.sample_width])
@@ -98,13 +99,13 @@ class WavFile:
         if show:
             plot.show()
 
-    def plot_fft_of_wav(self, show=True, save=False):
+    def plot_fft_of_wav(self, show=True, save=False, really_transform=False):
         """
         plot list with fft value for sample of file
         @param show: flag for showing figure
         @param save: flag for saving .png file with figure
         """
-        fft = abs(FFT.fft_diff_len(self.get_one_channel_data()))
+        fft = abs(FFT.fft_diff_len(self.get_one_channel_data(really_transform)))
         plot.plot(range(len(fft)), fft)
         plot.grid(True)
         plot.title(self.file_name + " fft")
@@ -121,3 +122,15 @@ class WavFile:
         word = self.file_name.lower()
         word = word[str(word).find("\\")+1:len(word)]
         return word[0:len(word)-4]
+
+    @staticmethod
+    def get_all_waves(files_list):
+        """
+        get all files from list and create list of WavFile objects
+        @param files_list: list of paths to files
+        @return: list of WavFile objects
+        """
+        waves = []
+        for i in files_list:
+            waves.append(WavFile(i))
+        return waves
