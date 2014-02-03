@@ -29,6 +29,22 @@ class Recorder:
         wf.writeframes(frames)
         wf.close()
 
+    def record_audio_to_file_and_get_wav(self, time, file_name):
+        """
+        records audio and save as *.wav file
+        @param time: time for record is seconds
+        @param file_name: name of new file
+        @return WavFile object
+        """
+        sample_width, frames = self.record_audio(time)
+        wf = wave.open(file_name, 'wb')
+        wf.setnchannels(self.channels)
+        wf.setsampwidth(sample_width)
+        wf.setframerate(self.rate)
+        wf.writeframes(frames)
+        wf.close()
+        return WavFile(frames=frames, sample_width=sample_width, time=time, word=file_name)
+
     def record_audio(self, time):
         """
         records audio and returns recorded samples

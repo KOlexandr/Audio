@@ -1,11 +1,11 @@
 from tkinter import filedialog, messagebox
-import numpy as np
 from tkinter.font import Font
-from tkinter.ttk import Style, Progressbar
+from tkinter.ttk import Style
 import configparser as cp
 from tkinter import *
+import numpy as np
 import webbrowser
-from numpy.oldnumeric.linear_algebra import singular_value_decomposition
+
 from Processor import Processor
 from WavFile import WavFile
 
@@ -33,6 +33,9 @@ class Application(Frame):
         self.min_audio_time = int(self.cf.get("program", "min_audio_time"))
         self.max_audio_time = int(self.cf.get("program", "max_audio_time"))
         self.default_audio_time = int(self.cf.get("program", "default_audio_time"))
+        self.min_test_audio_time = int(self.cf.get("program", "min_test_audio_time"))
+        self.max_test_audio_time = int(self.cf.get("program", "max_test_audio_time"))
+        self.default_test_audio_time = int(self.cf.get("program", "default_test_audio_time"))
         #get program properties
 
         self.root = root
@@ -42,8 +45,6 @@ class Application(Frame):
         self.root.protocol("WM_DELETE_WINDOW", self.close)
         root.wm_iconbitmap(bitmap=self.cf.get("main_window", "icon_file"))
 
-        self.time = None
-        self.progress = None
         self.top_frame = None
         self.main_frame = None
         self.bottom_frame = None
@@ -52,15 +53,24 @@ class Application(Frame):
         self.pack()
 
     def init_ui(self):
+        """
+        initialize all GUI
+        """
         self.style = Style()
         self.style.theme_use('default')
 
         self.init_menu()
         self.init_top_frame()
-        self.init_main_frame()
+
+        self.main_frame = Frame(self, relief=SUNKEN)
+        self.make_main_frame()
+
         self.init_bottom_frame()
 
     def init_menu(self):
+        """
+        initialize menu (now menu has only 'About' element)
+        """
         menu_bar = Menu(self.root)
         help_menu = Menu(menu_bar, tearoff=0)
         help_menu.add_command(label="About", command=self.about)
@@ -68,6 +78,9 @@ class Application(Frame):
         self.root.config(menu=menu_bar)
 
     def about(self):
+        """
+        makes simple GUI of About window
+        """
         window = "about_window"
         ok_hover_bg = self.cf.get(window, "ok_hover_bg")
         ok_default_bg = self.cf.get(window, "ok_default_bg")
@@ -107,12 +120,30 @@ class Application(Frame):
         item.configure(bg=new_bg)
         item.pack()
 
-    def init_main_frame(self):
-        self.main_frame = Frame(self, relief=SUNKEN, height=300, width=500)
-        Button(self.main_frame, text="Teach Program", command=self.make_teach_main_frame, width=15).pack()
+    @staticmethod
+    def clear_frame(frame):
+        for child in frame.winfo_children():
+            child.destroy()
+
+    def make_main_frame(self):
+        """
+        makes simple GUI of main window with 2 buttons record example file (Teach Program)
+        and record test audio and analyze it (Record and Analyze Sound)
+        """
+        self.clear_frame(self.main_frame)
+        Button(self.main_frame, text="Teach Program",
+               command=lambda: self.make_record_frame(self.min_audio_time, self.max_audio_time,
+                                                      self.record_example_audio), width=15).pack()
+        Button(self.main_frame, text="Record and Analyze Sound",
+               command=lambda: self.make_record_frame(self.min_test_audio_time, self.max_test_audio_time,
+                                                      self.record_test_audio),
+               width=30).pack()
         self.main_frame.pack(side=TOP)
 
     def init_top_frame(self):
+        """
+        initialize head of main window
+        """
         self.top_frame = Frame(self, relief=RIDGE, height=50, bg="white", borderwidth=1)
         Label(self.top_frame, text="Welcome to " + self.title, bg="white",
               font=Font(family=self.font_family, size=10, weight="bold")).pack(side=TOP, anchor=W, pady=5, padx=5)
@@ -123,6 +154,9 @@ class Application(Frame):
         self.top_frame.pack(side=TOP, fill=BOTH)
 
     def init_bottom_frame(self):
+        """
+        initialize footer of main window
+        """
         self.bottom_frame = Frame(self, relief=GROOVE, height=50, borderwidth=1)
         Button(self.bottom_frame, text="Cancel", command=self.close, width=10).pack(side=RIGHT, padx=5, pady=5)
 
@@ -138,50 +172,71 @@ class Application(Frame):
         self.bottom_frame.pack(side=BOTTOM, fill=BOTH)
 
     def close(self):
-        # answer = messagebox.askyesno(parent=self, message='Are you sure you want to close program?',
-        #                              icon='question', title='Close')
-        # if answer:
-        self.root.destroy()
+        """
+        close program dialog
+        """
+        answer = messagebox.askyesno(parent=self, message='Are you sure you want to close program?',
+                                     icon='question', title='Close')
+        if answer:
+            self.root.destroy()
 
-    def make_teach_main_frame(self):
-        for child in self.main_frame.winfo_children():
-            child.destroy()
-
-        self.time = IntVar(self.main_frame)
-        Label(self.main_frame, text="Select time of you future recording:").pack(side=TOP, anchor=NW)
-
-        frame_left = Frame(self.main_frame)
-        for i in range(self.min_audio_time, self.max_audio_time+1):
-            Radiobutton(frame_left, text=str(i) + " sec", indicatoron=0, variable=self.time, value=i,
-                        width=20).pack(side=TOP, anchor=NW)
-        frame_left.pack(side=LEFT, anchor=NW)
-
-        right_frame = Frame(self.main_frame)
-        self.progress = Progressbar(right_frame, orient=HORIZONTAL, length=200, mode='determinate')
-        self.progress.pack(side=TOP, anchor=NE)
-        Button(right_frame, text="Record audio", command=self.record, width=15).pack(side=TOP, anchor=NE)
-        right_frame.pack(side=LEFT, anchor=NE)
-
+    def make_record_frame(self, min_time, max_time, record_function):
+        """
+        make simple GUI of record window
+        @param min_time: minimum length of audio which will record
+        @param max_time: maximum length of audio which will record
+        @param record_function: command for record button (now: record example audio or test audio)
+        """
+        self.clear_frame(self.main_frame)
+        time = IntVar(self.main_frame)
+        Label(self.main_frame, text="Time:").pack(side=LEFT)
+        Spinbox(self.main_frame, from_=min_time, to=max_time, textvariable=time).pack(side=LEFT)
+        Button(self.main_frame, text="Record audio", command=lambda: record_function(time), width=20).pack(side=LEFT)
+        Button(self.main_frame, text="Back", command=self.make_main_frame, width=20).pack(side=LEFT)
         self.main_frame.pack()
 
-    def record(self):
-        if self.time.get() == 0:
-            self.time.set(self.default_audio_time)
+    def record_example_audio(self, time):
+        """
+        records short audio file (file example with some word)
+        and adds it to library
+        @param time: length of test file
+        """
+        if time.get() == 0:
+            time.set(self.default_audio_time)
         file_name = filedialog.asksaveasfilename(filetypes=[("Wave audio files", "*.wav *.wave")],
-                                                 defaultextension=".wav", initialdir="./audio_files/records")
+                                                 defaultextension=".wav",
+                                                 initialdir=self.cf.get("program", "base_save_folder"))
         if len(file_name) == 0:
-            messagebox.showwarning("Warning", "You must save new file!")
+            messagebox.showwarning("Warning", "You must input name of new file, and save it!")
         else:
-            self.progress.start()
-            self.processor.recorder.record_audio_to_file(time=self.time.get(), file_name=file_name)
-            self.progress.stop()
+            wav = self.processor.recorder.record_audio_to_file_and_get_wav(time=time.get(), file_name=file_name)
+            self.processor.lib.create_and_add_item_from_wave(wav)
+            messagebox.showinfo("File Saved", "Audio recorded, saved into file and added to library!")
+
+    def record_test_audio(self, time):
+        """
+        records audio from microphone and uses this audio for analyzing
+        @param time: length of test file
+        """
+        if time.get() == 0:
+            time.set(self.default_test_audio_time)
+        wav = self.processor.recorder.record_and_get_wav(time.get())
+        samples, word_count, max_len = self.processor.find_word_in_test_file(wav.get_one_channel_data())
+        result_str = "All words in file = " + str(word_count) + "\n"
+        print("All words in file = " + str(word_count))
+        for j in samples:
+            word, coefficient = self.processor.lib.find_max_corrcoef_and_word(j, max_len)
+            if coefficient > 0.3:
+                result_str += word + " - " + str(coefficient) + "\n"
+                print(word + " - " + str(coefficient))
+        messagebox.showinfo("Result", result_str)
 
 
 def main():
     cf = cp.ConfigParser()
     cf.read("properties/properties.cfg")
-    processor = Processor("examples", np.fft.fft,
-                          lambda: WavFile("waves/silenceSmall.wav").get_one_channel_data())
+    processor = Processor(cf.get("program", "base_examples_folder"), np.fft.fft,
+                          lambda: WavFile(cf.get("program", "path_to_small_silence_wav")).get_one_channel_data())
     root = Tk()
     app = Application(root, cf, processor)
     root.mainloop()

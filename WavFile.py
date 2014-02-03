@@ -8,7 +8,7 @@ __author__ = 'Olexandr'
 
 
 class WavFile:
-    def __init__(self, file_name=None, frames=None, sample_width=None, time=0):
+    def __init__(self, file_name=None, frames=None, sample_width=None, time=0, word="anonymous"):
         """
         initialize WavFile object
         you can use name of file from file system
@@ -33,7 +33,7 @@ class WavFile:
             else:
                 raise Exception("File '" + file_name + "' is not exists!")
         elif not (frames is None) and not(sample_width is None) and time > 0:
-            self.file_name = "anonymous_file"
+            self.file_name = word
             self.sample_width = sample_width
             self.samples = np.fromstring(frames, dtype=self.types[self.sample_width])
             self.file_size_sec = time
