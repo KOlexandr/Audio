@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0db91aa-b7c4-4319-965f-f86680b0dd9d" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\audio_files\examples\eight_.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\audio_files\examples\five_.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\audio_files\examples\four_.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\audio_files\examples\my_seven.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\audio_files\examples\nine_.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\audio_files\examples\one_.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\audio_files\examples\seven_.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\audio_files\examples\silence.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\audio_files\examples\six_.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\audio_files\examples\ten_.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\audio_files\examples\three_.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\audio_files\examples\two_.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\audio_files\waves\silenceSmall.wav" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Recorder.py" afterPath="$PROJECT_DIR$/Recorder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WavFile.py" afterPath="$PROJECT_DIR$/WavFile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Window.py" afterPath="$PROJECT_DIR$/Window.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/properties.cfg" afterPath="$PROJECT_DIR$/properties/properties.cfg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio_files/silenceSmall.wav" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RecordAudio.iws" />
@@ -93,7 +77,7 @@
       <file leaf-file-name="Window.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="17" selection-start="4573" selection-end="4573" vertical-scroll-proportion="0.5142349" vertical-offset="0" max-vertical-offset="765">
+            <state line="172" column="0" selection-start="6969" selection-end="6969" vertical-scroll-proportion="0.72773975" vertical-offset="0" max-vertical-offset="765">
               <folding>
                 <element signature="e#355#2043#0" expanded="false" />
                 <element signature="e#2076#2362#0" expanded="false" />
@@ -613,7 +597,11 @@
       <created>1391381914310</created>
       <updated>1391381914310</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="teaching program etc.">
+      <created>1391464431850</created>
+      <updated>1391464431851</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -641,14 +629,14 @@
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32967034" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11259338" sideWeight="0.64615387" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35384616" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11259338" sideWeight="0.6703297" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35384616" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31098902" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -670,7 +658,8 @@
     </option>
     <MESSAGE value="changes" />
     <MESSAGE value="gui" />
-    <option name="LAST_COMMIT_MESSAGE" value="gui" />
+    <MESSAGE value="teaching program etc." />
+    <option name="LAST_COMMIT_MESSAGE" value="teaching program etc." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -846,7 +835,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="17" selection-start="4573" selection-end="4573" vertical-scroll-proportion="0.5142349" vertical-offset="0" max-vertical-offset="765">
+        <state line="172" column="0" selection-start="6969" selection-end="6969" vertical-scroll-proportion="0.72773975" vertical-offset="0" max-vertical-offset="765">
           <folding>
             <element signature="e#355#2043#0" expanded="false" />
             <element signature="e#2076#2362#0" expanded="false" />
