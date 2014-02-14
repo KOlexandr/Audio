@@ -120,7 +120,7 @@ class WavFile:
         @return: file name (word)
         """
         word = self.file_name.lower()
-        word = word[str(word).find("\\")+1:len(word)]
+        word = word[str(word).rfind("/")+1:len(word)]
         return word[0:len(word)-4]
 
     @staticmethod
