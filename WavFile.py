@@ -114,6 +114,9 @@ class WavFile:
         if show:
             plot.show()
 
+    def get_file_size_msec(self):
+        return self.file_size_sec * 1000
+
     def get_simple_file_name(self):
         """
         get simple file name from path to file
