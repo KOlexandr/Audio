@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0db91aa-b7c4-4319-965f-f86680b0dd9d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/PlotUtils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/vad/VAD.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/vad/VADUtils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/vad/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\vad\VAD.py" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\vad\VADUtils.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.py" afterPath="$PROJECT_DIR$/Main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Window.py" afterPath="$PROJECT_DIR$/Window.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\vad\__init__.py" afterPath="$PROJECT_DIR$/algorithms/__init__.py" />
     </list>
     <ignored path="RecordAudio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,33 +36,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VAD.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/algorithms/vad/VAD.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="25" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.7906977" vertical-offset="0" max-vertical-offset="1547">
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VADUtils.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/vad/VADUtils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="4" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="30" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-              <folding />
+            <state line="25" column="10" selection-start="944" selection-end="944" vertical-scroll-proportion="0.70598006" vertical-offset="0" max-vertical-offset="602">
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,7 +82,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="windows" />
       </map>
     </option>
   </component>
@@ -209,20 +178,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="algorithms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -581,7 +536,11 @@
       <created>1392572730470</created>
       <updated>1392572730470</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="vad">
+      <created>1392583885143</created>
+      <updated>1392583885143</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -714,7 +673,9 @@
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="10" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="493">
-          <folding />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -768,7 +729,9 @@
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="10" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="493">
-          <folding />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -972,13 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/PlotUtils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="11" selection-start="230" selection-end="230" vertical-scroll-proportion="0.3224138" vertical-offset="0" max-vertical-offset="580">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python33/Lib/site-packages/scipy/stats/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="44" selection-start="2338" selection-end="2338" vertical-scroll-proportion="-6.298276" vertical-offset="5098" max-vertical-offset="5678">
@@ -993,39 +949,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/vad/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/vad/VADUtils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="4" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Window.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="31" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0" vertical-offset="3670" max-vertical-offset="4250">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="30" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
           <folding />
         </state>
       </provider>
@@ -1039,11 +965,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/vad/VAD.py">
+    <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="25" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.7906977" vertical-offset="0" max-vertical-offset="1547">
+        <state line="25" column="10" selection-start="944" selection-end="944" vertical-scroll-proportion="0.70598006" vertical-offset="0" max-vertical-offset="602">
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
