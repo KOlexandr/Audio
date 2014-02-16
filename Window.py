@@ -5,10 +5,8 @@ import configparser as cp
 from tkinter import *
 import numpy as np
 import webbrowser
-
 from Processor import Processor
 from WavFile import WavFile
-from vad import VAD
 
 __author__ = 'Olexandr'
 
@@ -234,16 +232,13 @@ class Application(Frame):
 
 
 def main():
-    # cf = cp.ConfigParser()
-    # cf.read("properties/properties.cfg")
-    # processor = Processor(cf.get("program", "base_examples_folder"), np.fft.fft,
-    #                       lambda: WavFile(cf.get("program", "path_to_small_silence_wav")).get_one_channel_data())
-    # root = Tk()
-    # app = Application(root, cf, processor)
-    # root.mainloop()
-    wav = WavFile("resources/audio_files/files/examples/seven_.wav")
-    VAD.vad(wav)
-
+    cf = cp.ConfigParser()
+    cf.read("properties/properties.cfg")
+    processor = Processor(cf.get("program", "base_examples_folder"), np.fft.fft,
+                          lambda: WavFile(cf.get("program", "path_to_small_silence_wav")).get_one_channel_data())
+    root = Tk()
+    app = Application(root, cf, processor)
+    root.mainloop()
 
 
 if __name__ == '__main__':
