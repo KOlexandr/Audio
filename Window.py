@@ -3,10 +3,11 @@ from tkinter.font import Font
 from tkinter.ttk import Style
 import configparser as cp
 from tkinter import *
-import numpy as np
 import webbrowser
-from Processor import Processor
+import numpy as np
+
 from WavFile import WavFile
+from handlers.Processor import Processor
 
 __author__ = 'Olexandr'
 

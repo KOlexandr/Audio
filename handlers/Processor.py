@@ -1,7 +1,8 @@
 import numpy as np
+
 from WavFile import WavFile
-from Recorder import Recorder
 from library.Library import Library
+from handlers.Recorder import Recorder
 from utils.FileSystemUtils import get_files
 
 __author__ = 'Olexandr'

@@ -1,8 +1,9 @@
-import FFT
 import wave
 import os.path
 import numpy as np
 import matplotlib.pyplot as plot
+
+from handlers import FFT
 
 __author__ = 'Olexandr'
 
