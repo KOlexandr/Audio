@@ -5,28 +5,73 @@ __author__ = 'Olexandr'
 
 class Plotter:
     def __init__(self):
-        self.data_x, self.data_y, self.title, self.color, self.style = [], [], [], [], []
+        self.data, self.additional_data = {}, {}
+        self.sub_plot_num = 1
 
-    def add_sub_plot_data(self, title, data_y, data_x=None, color="blue", line_style="-"):
-        self.data_y.append(data_y)
+    def add_sub_plot_data(self, title, data_y, data_x=None, color="blue", ls="-"):
+        """
+        adds new data for plot in new sub plot frame
+        @param title: title of subplot
+        @param data_y: list with y coordinates
+        @param data_x: list with x coordinates
+        @param color: color of graph
+        @param ls: style of line for this graph
+        """
         if data_x is None:
-            self.data_x.append(range(len(data_y)))
-        else:
-            self.data_x.append(data_x)
-        self.color.append(color)
-        self.style.append(line_style)
-        self.title.append(title)
+            data_x = range(len(data_y))
+        if self.additional_data.get(title) is None:
+            self.additional_data[title] = []
+        self.data[title] = (data_x, data_y, color, ls, self.sub_plot_num)
+        self.sub_plot_num += 1
 
-    def add_current_plot_data(self):
-        pass
+    def add_current_plot_data(self, title, data_y, data_x=None, color="green", ls="o", lw=1):
+        """
+        adds new 2D graph to current subplot
+        @param title: title of subplot which should contains this graph
+        @param data_y: list with y coordinates
+        @param data_x: list with x coordinates
+        @param color: color of graph
+        @param ls: style of line for this graph
+        @param lw: weight of line
+        """
+        if data_x is None:
+            data_x = range(len(data_y))
+        self.additional_data[title].append(("xy", data_x, data_y, color, ls, lw))
+
+    def add_line_at(self, title, x, axis, color="green", ls="-", lw=1):
+        """
+        adds one or few vertical or horizontal lines to current subplot
+        @param title: title of subplot which should contains this graph
+        @param x: main coordinates of lines
+        @param axis: name of axis ["x"|"y"]
+        @param color: color of graph
+        @param ls: style of line for this graph
+        @param lw: weight of line
+        """
+        self.additional_data[title].append((axis, x, color, ls, lw))
 
     def sub_plot_all_horizontal(self):
-        if len(self.data_x) == 0:
+        """
+        plots all subplots and their additional data in one window
+        """
+        data_len = len(self.data)
+        if data_len == 0:
             raise Exception("Data for plot not exists")
-        for i in range(len(self.data_y)):
-            plot.subplot(len(self.data_y), 1, i+1)
-            plot.plot(self.data_x[i], self.data_y[i], color=self.color[i], linestyle=self.style[i])
-            plot.title(self.title[i])
+        for i in self.data.keys():
+            plot.subplot(data_len, 1, self.data[i][4])
+            plot.plot(self.data[i][0], self.data[i][1], color=self.data[i][2], linestyle=self.data[i][3])
+            if not self.additional_data.get(i) is None:
+                y_min, y_max = min(self.data[i][1]), max(self.data[i][1])
+                x_min, x_max = min(self.data[i][0]), max(self.data[i][0])
+                for j in self.additional_data.get(i):
+                    if j[0] == "xy":
+                        plot.plot(j[1], j[2], color=j[3], linestyles=j[4], lw=j[5])
+                    elif j[0] == "x":
+                        plot.vlines(j[1], y_min, y_max, color=j[2], linestyles=j[3], lw=j[4])
+                    elif j[0] == "y":
+                        plot.hlines(j[1], x_min, x_max, color=j[2], linestyles=j[3], lw=j[4])
+                plot.xlim((x_min, x_max))
+            plot.title(i)
             plot.grid(True)
         plot.show()
 
