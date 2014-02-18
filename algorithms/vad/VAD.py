@@ -1,7 +1,5 @@
-from math import log10, floor
-
 import numpy
-
+from math import log10, floor
 from algorithms.vad.VADUtils import energy_logarithm, zero_crossing_rate, sfm
 
 
@@ -68,8 +66,8 @@ def vad(wav_file, frame_size=10, fft_function=numpy.fft.fft):
             counter += 1
         if (zcr[i] - min_zcr) >= thresh_zcr:
             counter += 1
-        if (freq_component[i] - min_freq) >= thresh_freq:
-            counter += 1
+        # if (freq_component[i] - min_freq) >= thresh_freq:
+        #     counter += 1
         if (sfm_list[i] - min_sfm) >= thresh_sfm:
             counter += 1
 

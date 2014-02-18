@@ -2,19 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0db91aa-b7c4-4319-965f-f86680b0dd9d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBCUtils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/naiveBayesClassifier/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/beans/__init__.py" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\library\LibraryItem.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.py" afterPath="$PROJECT_DIR$/Main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handlers/Processor.py" afterPath="$PROJECT_DIR$/handlers/Processor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handlers/Recorder.py" afterPath="$PROJECT_DIR$/handlers/Recorder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VADTest.py" afterPath="$PROJECT_DIR$/VADTest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Window.py" afterPath="$PROJECT_DIR$/Window.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/1A.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/1B.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/2A.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/2B.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/3A.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/3B.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/4A.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/4B.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/5A.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/5B.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/6A.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/6B.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/7A.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/7B.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/8A.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/8B.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/9A.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/9B.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/nonSpeech/Blue_noise.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/nonSpeech/Brown_noise.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/nonSpeech/Gray_noise.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/OA.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/OB.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/nonSpeech/Pink_noise.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/nonSpeech/Purple_noise.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/nonSpeech/White_noise.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/ZA.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/files/speech/ZB.waV" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NBCTest.py" />
+      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\algorithms\naiveBayesClassifier\NBCUtils.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBC.py" afterPath="$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBC.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/vad/VAD.py" afterPath="$PROJECT_DIR$/algorithms/vad/VAD.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/properties.cfg" afterPath="$PROJECT_DIR$/properties/properties.cfg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\WavFile.py" afterPath="$PROJECT_DIR$/beans/WavFile.py" />
-      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\library\Library.py" afterPath="$PROJECT_DIR$/beans/library/Library.py" />
-      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\library\__init__.py" afterPath="$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBC.py" />
     </list>
     <ignored path="RecordAudio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,6 +54,7 @@
     <SUITE FILE_PATH="coverage/RecordAudio$Window.coverage" NAME="Window Coverage Results" MODIFIED="1392581318280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$FFT.coverage" NAME="FFT Coverage Results" MODIFIED="1390091072064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$Test.coverage" NAME="Test Coverage Results" MODIFIED="1391651639794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RecordAudio$NBCTest.coverage" NAME="NBCTest Coverage Results" MODIFIED="1392759585429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$VADTest.coverage" NAME="VADTest Coverage Results" MODIFIED="1392681843234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$Tmp.coverage" NAME="Tmp Coverage Results" MODIFIED="1391039917689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$MainLibrary.coverage" NAME="MainLibrary Coverage Results" MODIFIED="1391035076819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -52,19 +74,41 @@
       <file leaf-file-name="Processor.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/handlers/Processor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="5" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
-              <folding />
+            <state line="12" column="97" selection-start="307" selection-end="311" vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="1343">
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VADTest.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VADTest.py">
+      <file leaf-file-name="WavFile.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/beans/WavFile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="65" selection-start="1999" selection-end="2060" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1105">
+            <state line="44" column="28" selection-start="1887" selection-end="1907" vertical-scroll-proportion="0.0" vertical-offset="508" max-vertical-offset="2465">
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NBC.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBC.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="146" selection-start="4042" selection-end="4173" vertical-scroll-proportion="0.0" vertical-offset="916" max-vertical-offset="1598">
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NBCTest.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NBCTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="794" selection-end="794" vertical-scroll-proportion="0.58965516" vertical-offset="117" max-vertical-offset="697">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,78 +116,18 @@
       <file leaf-file-name="VAD.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/vad/VAD.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1479">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utils.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/Utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="0" selection-start="1863" selection-end="1863" vertical-scroll-proportion="0.0" vertical-offset="331" max-vertical-offset="1241">
+            <state line="70" column="23" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.0" vertical-offset="691" max-vertical-offset="1513">
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NBCUtils.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBCUtils.py">
+      <file leaf-file-name="properties.cfg" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/properties/properties.cfg">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="16" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NBC.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBC.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="32" selection-start="2077" selection-end="2077" vertical-scroll-proportion="0.522807" vertical-offset="420" max-vertical-offset="1275">
-              <folding>
-                <element signature="e#0#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Plotter.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handlers/Plotter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="35" selection-start="3062" selection-end="3062" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="969">
-              <folding>
-                <element signature="e#270#825#0" expanded="false" />
-                <element signature="e#929#1423#0" expanded="false" />
-                <element signature="e#1505#1940#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Window.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Window.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="33" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="4301">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Library.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beans/library/Library.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="5" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1904">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Recorder.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handlers/Recorder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="18" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1530">
+            <state line="32" column="54" selection-start="806" selection-end="835" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="646">
               <folding />
             </state>
           </provider>
@@ -188,7 +172,6 @@
         <option value="$PROJECT_DIR$/properties/style.properties" />
         <option value="$PROJECT_DIR$/Recorder.py" />
         <option value="$PROJECT_DIR$/Test.py" />
-        <option value="$PROJECT_DIR$/properties/properties.cfg" />
         <option value="$PROJECT_DIR$/vad/VADUtils.py" />
         <option value="$PROJECT_DIR$/vad/VAD.py" />
         <option value="$PROJECT_DIR$/WavFile.py" />
@@ -208,8 +191,11 @@
         <option value="$PROJECT_DIR$/beans/library/Library.py" />
         <option value="$PROJECT_DIR$/handlers/Processor.py" />
         <option value="$PROJECT_DIR$/handlers/Recorder.py" />
+        <option value="$PROJECT_DIR$/properties/properties.cfg" />
         <option value="$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBCUtils.py" />
+        <option value="$PROJECT_DIR$/algorithms/vad/VAD.py" />
         <option value="$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBC.py" />
+        <option value="$PROJECT_DIR$/NBCTest.py" />
       </list>
     </option>
   </component>
@@ -287,6 +273,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="audio_files" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="properties" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="algorithms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -331,11 +363,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\EmergencyFiles\Python\RecordAudio\resources\audio_files\files" />
       <recent name="E:\EmergencyFiles\Python\RecordAudio\resources" />
       <recent name="E:\EmergencyFiles\Python\RecordAudio\properties" />
       <recent name="E:\EmergencyFiles\Python\RecordAudio" />
       <recent name="E:\EmergencyFiles\Python\RecordAudio\waves" />
-      <recent name="E:\EmergencyFiles\Python\RecordAudio\examples" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\EmergencyFiles\Python\RecordAudio\beans" />
@@ -345,7 +377,7 @@
       <recent name="E:\EmergencyFiles\Python\RecordAudio\resources\icons" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.VADTest">
+  <component name="RunManager" selected="Python.NBCTest">
     <configuration default="false" name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -388,25 +420,6 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="C:/Python33/Lib/tkinter" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RecordAudio" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:/Python33/Lib/tkinter/__init__.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -440,6 +453,25 @@
       <module name="RecordAudio" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VADTest.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="NBCTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RecordAudio" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NBCTest.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
@@ -598,17 +630,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.Main" />
       <item index="1" class="java.lang.String" itemvalue="Python.Window" />
-      <item index="2" class="java.lang.String" itemvalue="Python.__init__" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.VADTest" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.VADTest" />
+      <item index="4" class="java.lang.String" itemvalue="Python.NBCTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.VADTest" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Main" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Window" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Test" />
-        <item index="4" class="java.lang.String" itemvalue="Python.__init__" />
+        <item index="0" class="java.lang.String" itemvalue="Python.NBCTest" />
+        <item index="1" class="java.lang.String" itemvalue="Python.VADTest" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Main" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Window" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -684,7 +716,11 @@
       <created>1392683079101</created>
       <updated>1392683079101</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Naive Bayes Classifier">
+      <created>1392685056344</created>
+      <updated>1392685056344</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -715,8 +751,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3525641" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31098902" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3525641" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31089744" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12353568" sideWeight="0.43630573" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -752,7 +788,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="vad" />
     <MESSAGE value="plotter" />
-    <option name="LAST_COMMIT_MESSAGE" value="plotter" />
+    <MESSAGE value="Naive Bayes Classifier" />
+    <option name="LAST_COMMIT_MESSAGE" value="Naive Bayes Classifier" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -762,11 +799,26 @@
           <line>873</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/NBCTest.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="166" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBC.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBC.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="165" />
+      <option name="time" value="185" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -888,27 +940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/properties/properties.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="206" selection-end="206" vertical-scroll-proportion="0.24232456" vertical-offset="0" max-vertical-offset="912">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python33/Lib/site-packages/numpy/fft/fftpack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="4" selection-start="2095" selection-end="2095" vertical-scroll-proportion="0.33275864" vertical-offset="1201" max-vertical-offset="19125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-1571908645/numpy/core/multiarray.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1942" column="0" selection-start="68205" selection-end="68205" vertical-scroll-proportion="0.0" vertical-offset="32821" max-vertical-offset="91239">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-1571908645/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="840" column="6" selection-start="30082" selection-end="30082" vertical-scroll-proportion="-3.4482758" vertical-offset="10517" max-vertical-offset="27625">
@@ -1001,20 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beans/WavFile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="46" selection-end="78" vertical-scroll-proportion="0.08793104" vertical-offset="0" max-vertical-offset="2465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python33/Lib/site-packages/numpy/core/numeric.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="459" column="0" selection-start="14203" selection-end="14203" vertical-scroll-proportion="0.0" vertical-offset="7457" max-vertical-offset="46359">
@@ -1071,17 +1088,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/Plotter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="35" selection-start="3062" selection-end="3062" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="969">
-          <folding>
-            <element signature="e#270#825#0" expanded="false" />
-            <element signature="e#929#1423#0" expanded="false" />
-            <element signature="e#1505#1940#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/vad/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="602">
@@ -1105,79 +1111,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
+    <entry file="file://$PROJECT_DIR$/handlers/Plotter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="33" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <folding />
+        <state line="72" column="35" selection-start="3062" selection-end="3062" vertical-scroll-proportion="1.0234114" vertical-offset="0" max-vertical-offset="969">
+          <folding>
+            <element signature="e#270#825#0" expanded="false" />
+            <element signature="e#929#1423#0" expanded="false" />
+            <element signature="e#1505#1940#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Window.py">
+    <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="33" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="4301">
+        <state line="9" column="16" selection-start="150" selection-end="150" vertical-scroll-proportion="0.25415283" vertical-offset="0" max-vertical-offset="602">
+          <folding>
+            <element signature="e#0#18#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beans/library/Library.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="5" selection-start="25" selection-end="25" vertical-scroll-proportion="0.05862069" vertical-offset="0" max-vertical-offset="1904">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/handlers/Recorder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="18" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1530">
+        <state line="4" column="18" selection-start="47" selection-end="47" vertical-scroll-proportion="-1.4827586" vertical-offset="928" max-vertical-offset="1530">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/Processor.py">
+    <entry file="file://$PROJECT_DIR$/Window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="5" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beans/library/Library.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="5" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1904">
+        <state line="3" column="0" selection-start="103" selection-end="128" vertical-scroll-proportion="0.08793104" vertical-offset="0" max-vertical-offset="4301">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/Utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="0" selection-start="1863" selection-end="1863" vertical-scroll-proportion="0.0" vertical-offset="331" max-vertical-offset="1241">
+        <state line="67" column="0" selection-start="1863" selection-end="1863" vertical-scroll-proportion="1.3931035" vertical-offset="331" max-vertical-offset="1241">
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/vad/VAD.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VADTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="65" selection-start="1999" selection-end="2060" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1105">
+        <state line="25" column="38" selection-start="1704" selection-end="1704" vertical-scroll-proportion="0.73275864" vertical-offset="0" max-vertical-offset="1105">
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#30#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBCUtils.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="16" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+        <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beans/WavFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="28" selection-start="1887" selection-end="1907" vertical-scroll-proportion="0.0" vertical-offset="508" max-vertical-offset="2465">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/Processor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="97" selection-start="307" selection-end="311" vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="1343">
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python33/Lib/site-packages/numpy/fft/fftpack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="0" selection-start="2023" selection-end="2023" vertical-scroll-proportion="0.0" vertical-offset="1116" max-vertical-offset="19125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-1571908645/numpy/core/multiarray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1942" column="0" selection-start="68205" selection-end="68205" vertical-scroll-proportion="0.0" vertical-offset="32821" max-vertical-offset="91239">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBC.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="32" selection-start="2077" selection-end="2077" vertical-scroll-proportion="0.522807" vertical-offset="420" max-vertical-offset="1275">
+        <state line="81" column="146" selection-start="4042" selection-end="4173" vertical-scroll-proportion="0.0" vertical-offset="916" max-vertical-offset="1598">
           <folding>
-            <element signature="e#0#63#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/properties/properties.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="54" selection-start="806" selection-end="835" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/vad/VAD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="23" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.0" vertical-offset="691" max-vertical-offset="1513">
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NBCTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="794" selection-end="794" vertical-scroll-proportion="0.58965516" vertical-offset="117" max-vertical-offset="697">
+          <folding />
         </state>
       </provider>
     </entry>
