@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0db91aa-b7c4-4319-965f-f86680b0dd9d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/Utils.py" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\utils\FileSystemUtils.py" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\utils\LengthUtils.py" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\utils\PowerUtils.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handlers/FFT.py" afterPath="$PROJECT_DIR$/handlers/FFT.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Library.py" afterPath="$PROJECT_DIR$/library/Library.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handlers/Plotter.py" afterPath="$PROJECT_DIR$/handlers/Plotter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBCUtils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/naiveBayesClassifier/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/beans/__init__.py" />
+      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\library\LibraryItem.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.py" afterPath="$PROJECT_DIR$/Main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handlers/Processor.py" afterPath="$PROJECT_DIR$/handlers/Processor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handlers/Recorder.py" afterPath="$PROJECT_DIR$/handlers/Recorder.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VADTest.py" afterPath="$PROJECT_DIR$/VADTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Window.py" afterPath="$PROJECT_DIR$/Window.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\WavFile.py" afterPath="$PROJECT_DIR$/beans/WavFile.py" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\library\Library.py" afterPath="$PROJECT_DIR$/beans/library/Library.py" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\library\__init__.py" afterPath="$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBC.py" />
     </list>
     <ignored path="RecordAudio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,10 +49,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VADTest.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Processor.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handlers/Processor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="5" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VADTest.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VADTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="55" selection-start="1565" selection-end="1565" vertical-scroll-proportion="0.55689657" vertical-offset="0" max-vertical-offset="1054">
+            <state line="34" column="65" selection-start="1999" selection-end="2060" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1105">
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VAD.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/vad/VAD.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="13" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1479">
               <folding />
             </state>
           </provider>
@@ -58,9 +81,29 @@
       <file leaf-file-name="Utils.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/Utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="0" selection-start="1863" selection-end="1863" vertical-scroll-proportion="0.0" vertical-offset="605" max-vertical-offset="1241">
+            <state line="67" column="0" selection-start="1863" selection-end="1863" vertical-scroll-proportion="0.0" vertical-offset="331" max-vertical-offset="1241">
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NBCUtils.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBCUtils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="16" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NBC.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBC.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="32" selection-start="2077" selection-end="2077" vertical-scroll-proportion="0.522807" vertical-offset="420" max-vertical-offset="1275">
+              <folding>
+                <element signature="e#0#63#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,6 +122,33 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Window.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Window.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="33" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="4301">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Library.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/beans/library/Library.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="5" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1904">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Recorder.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handlers/Recorder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="18" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1530">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -89,6 +159,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Olexandr &lt;kolexandr.13@gmail.com&gt;" />
         <option value="Oleksandr Kucher" />
       </list>
     </option>
@@ -120,21 +191,25 @@
         <option value="$PROJECT_DIR$/properties/properties.cfg" />
         <option value="$PROJECT_DIR$/vad/VADUtils.py" />
         <option value="$PROJECT_DIR$/vad/VAD.py" />
-        <option value="$PROJECT_DIR$/Window.py" />
         <option value="$PROJECT_DIR$/WavFile.py" />
-        <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/algorithms/vad/VADUtils.py" />
         <option value="$PROJECT_DIR$/handlers/Ploter.py" />
         <option value="$PROJECT_DIR$/utils/PlotUtils.py" />
         <option value="$PROJECT_DIR$/utils/LengthUtils.py" />
         <option value="$PROJECT_DIR$/utils/FileSystemUtils.py" />
         <option value="$PROJECT_DIR$/utils/PowerUtils.py" />
-        <option value="$PROJECT_DIR$/handlers/Processor.py" />
         <option value="$PROJECT_DIR$/handlers/FFT.py" />
         <option value="$PROJECT_DIR$/library/Library.py" />
         <option value="$PROJECT_DIR$/utils/Utils.py" />
         <option value="$PROJECT_DIR$/handlers/Plotter.py" />
         <option value="$PROJECT_DIR$/VADTest.py" />
+        <option value="$PROJECT_DIR$/Main.py" />
+        <option value="$PROJECT_DIR$/Window.py" />
+        <option value="$PROJECT_DIR$/beans/library/Library.py" />
+        <option value="$PROJECT_DIR$/handlers/Processor.py" />
+        <option value="$PROJECT_DIR$/handlers/Recorder.py" />
+        <option value="$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBCUtils.py" />
+        <option value="$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBC.py" />
       </list>
     </option>
   </component>
@@ -212,20 +287,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="handlers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="algorithms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -244,7 +305,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vad" />
+              <option name="myItemId" value="naiveBayesClassifier" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -277,11 +338,11 @@
       <recent name="E:\EmergencyFiles\Python\RecordAudio\examples" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\EmergencyFiles\Python\RecordAudio\beans" />
+      <recent name="E:\EmergencyFiles\Python\RecordAudio" />
       <recent name="E:\EmergencyFiles\Python\RecordAudio\handlers" />
       <recent name="E:\EmergencyFiles\Python\RecordAudio\algorithms" />
       <recent name="E:\EmergencyFiles\Python\RecordAudio\resources\icons" />
-      <recent name="E:\EmergencyFiles\Python\RecordAudio\resources" />
-      <recent name="E:\EmergencyFiles\Python\RecordAudio" />
     </key>
   </component>
   <component name="RunManager" selected="Python.VADTest">
@@ -619,7 +680,11 @@
       <created>1392618231556</created>
       <updated>1392618231556</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="plotter">
+      <created>1392683079101</created>
+      <updated>1392683079101</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -650,7 +715,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3525641" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3525641" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31098902" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12353568" sideWeight="0.43630573" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -686,7 +751,8 @@
     <MESSAGE value="small silence" />
     <MESSAGE value="test" />
     <MESSAGE value="vad" />
-    <option name="LAST_COMMIT_MESSAGE" value="vad" />
+    <MESSAGE value="plotter" />
+    <option name="LAST_COMMIT_MESSAGE" value="plotter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -704,19 +770,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/handlers/Processor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="914" selection-end="914" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1326">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Library.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="8" selection-start="1613" selection-end="1613" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1887" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WavFile.py">
+    <entry file="file://$PROJECT_DIR$/beans/WavFile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="44" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="2397">
           <folding />
@@ -765,12 +819,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Library.py">
+    <entry file="file://$PROJECT_DIR$/beans/library/Library.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="8" selection-start="1613" selection-end="1613" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1887" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WavFile.py">
+    <entry file="file://$PROJECT_DIR$/beans/WavFile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="44" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="2397">
           <folding />
@@ -947,44 +1001,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Window.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4267">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.028239202" vertical-offset="0" max-vertical-offset="602">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/vad/VAD.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="28" selection-start="2734" selection-end="2734" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WavFile.py">
+    <entry file="file://$PROJECT_DIR$/beans/WavFile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="46" selection-end="78" vertical-scroll-proportion="0.08793104" vertical-offset="0" max-vertical-offset="2465">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/vad/VADUtils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="0.2637931" vertical-offset="0" max-vertical-offset="580">
-          <folding>
-            <element signature="e#121#305#0" expanded="false" />
-            <element signature="e#340#480#0" expanded="false" />
-            <element signature="e#502#675#0" expanded="false" />
-            <element signature="e#714#1116#0" expanded="false" />
-            <element signature="e#1160#1525#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1012,31 +1032,6 @@
     <entry file="file://C:/Python33/Lib/site-packages/matplotlib/lines.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="822" column="0" selection-start="28012" selection-end="28012" vertical-scroll-proportion="0.0" vertical-offset="13526" max-vertical-offset="21624">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/Recorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
-          <folding>
-            <element signature="e#0#11#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Library.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.08471761" vertical-offset="0" max-vertical-offset="1870">
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/Processor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="5" selection-start="128" selection-end="128" vertical-scroll-proportion="0.14119601" vertical-offset="0" max-vertical-offset="1343">
           <folding />
         </state>
       </provider>
@@ -1069,15 +1064,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/Utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="0" selection-start="1863" selection-end="1863" vertical-scroll-proportion="0.0" vertical-offset="605" max-vertical-offset="1241">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python33/Lib/site-packages/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1428" column="4" selection-start="44248" selection-end="44248" vertical-scroll-proportion="0.0" vertical-offset="24304" max-vertical-offset="62101">
@@ -1096,10 +1082,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/vad/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="602">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/vad/VADUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="602">
+          <folding>
+            <element signature="e#0#12#0" expanded="false" />
+            <element signature="e#121#305#0" expanded="false" />
+            <element signature="e#340#480#0" expanded="false" />
+            <element signature="e#502#675#0" expanded="false" />
+            <element signature="e#714#1116#0" expanded="false" />
+            <element signature="e#1160#1525#0" expanded="false" />
+            <element signature="e#1598#3122#0" expanded="false" />
+            <element signature="e#3213#4143#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="33" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="33" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="4301">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/Recorder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="18" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/Processor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="5" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beans/library/Library.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="5" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1904">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="0" selection-start="1863" selection-end="1863" vertical-scroll-proportion="0.0" vertical-offset="331" max-vertical-offset="1241">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/vad/VAD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/VADTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="55" selection-start="1565" selection-end="1565" vertical-scroll-proportion="0.55689657" vertical-offset="0" max-vertical-offset="1054">
+        <state line="34" column="65" selection-start="1999" selection-end="2060" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1105">
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBCUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="16" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="32" selection-start="2077" selection-end="2077" vertical-scroll-proportion="0.522807" vertical-offset="420" max-vertical-offset="1275">
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

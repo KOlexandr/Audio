@@ -1,6 +1,6 @@
 import numpy as np
 
-from WavFile import WavFile
+from beans.WavFile import WavFile
 from handlers.Processor import Processor
 
 __author__ = 'Olexandr'

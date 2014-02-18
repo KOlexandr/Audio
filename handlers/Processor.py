@@ -1,7 +1,7 @@
 import numpy as np
 
-from WavFile import WavFile
-from library.Library import Library
+from beans.WavFile import WavFile
+from beans.library.Library import Library
 from handlers.Recorder import Recorder
 from utils.Utils import get_files
 

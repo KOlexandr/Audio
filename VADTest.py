@@ -1,6 +1,6 @@
-from WavFile import WavFile
 from algorithms.vad import VAD
 from algorithms.vad.VADUtils import find_words_for_one_param
+from beans.WavFile import WavFile
 from handlers.Plotter import Plotter
 
 __author__ = 'Olexandr'

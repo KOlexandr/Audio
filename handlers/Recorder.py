@@ -1,6 +1,9 @@
 import wave
+
 import pyaudio
-from WavFile import WavFile
+
+from beans.WavFile import WavFile
+
 
 __author__ = 'Olexandr'
 
