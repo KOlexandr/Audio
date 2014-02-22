@@ -124,6 +124,7 @@ class WavFile:
         @return: file name (word)
         """
         word = self.file_name.lower()
+        word = word[str(word).rfind("\\")+1:len(word)]
         word = word[str(word).rfind("/")+1:len(word)]
         return word[0:len(word)-4]
 
@@ -138,3 +139,6 @@ class WavFile:
         for i in files_list:
             waves.append(WavFile(i))
         return waves
+
+    def __str__(self):
+        return self.get_simple_file_name() + ": " + str(self.file_size_sec) + " sec"

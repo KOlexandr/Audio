@@ -12,7 +12,7 @@ def vad(wav_file, frame_size=10, fft_function=numpy.fft.fft):
     @param wav_file: WavFile object
     @param frame_size: size of one frame in milliseconds
     @param fft_function: function for count FFT
-    @return:
+    @return: tuple of next parameters
             energy          - Short-term energy for each frame,                      (MatLab)
             freq_component  - Most Dominant Frequency Component for each frame,      (MatLab)
             zcr             - Zero Crossing Rate for each frame,                     (MatLab)
@@ -21,8 +21,8 @@ def vad(wav_file, frame_size=10, fft_function=numpy.fft.fft):
             speech          - list with flags for each frame (silence or speech)     (new)
     """
     data = wav_file.get_one_channel_data()
-    frame_count = int(wav_file.get_file_size_msec()/frame_size)
-    items_per_frame = floor(len(data)/frame_count)
+    frame_count = int(wav_file.get_file_size_msec() / frame_size)
+    items_per_frame = floor(len(data) / frame_count)
 
     #Threshold for Energy
     energy_prim_threshold = 40
@@ -39,7 +39,7 @@ def vad(wav_file, frame_size=10, fft_function=numpy.fft.fft):
 
     j = 0
     for i in range(frame_count):
-        sub = data[i*items_per_frame:(i+1)*items_per_frame]
+        sub = data[i * items_per_frame:(i + 1) * items_per_frame]
 
         energy.append(energy_logarithm(sub))
         zcr.append(zero_crossing_rate(sub))
@@ -78,7 +78,13 @@ def vad(wav_file, frame_size=10, fft_function=numpy.fft.fft):
             silence_count += 1
 
         if speech[i] == 0:
-            min_energy = (silence_count*min_energy+energy[i])/(silence_count+1)
-        thresh_energy = energy_prim_threshold*log10(min_energy)
+            min_energy = (silence_count * min_energy + energy[i]) / (silence_count + 1)
+        thresh_energy = energy_prim_threshold * log10(min_energy)
 
-    return energy, freq_component, zcr, sfm_list, items_per_frame, speech
+    return {"energy": energy,
+            "mdf": freq_component,
+            "zcr": zcr,
+            "sfm": sfm_list,
+            "items_per_frame": items_per_frame,
+            "speech": speech,
+            "words_count": len(energy)}

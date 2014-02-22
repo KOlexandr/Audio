@@ -6,32 +6,17 @@ __author__ = 'Olexandr'
 
 
 def main():
+    """
+    cf: configurations parser, for get all parameters saved in configuration file
+    """
     cf = cp.ConfigParser()
     cf.read("properties/properties.cfg")
-    nbc = NBC(cf)
+    nbc = NBC()
+    nbc.add_audio_files("speech", cf.get("nbc", "path_to_speech"))
+    nbc.add_audio_files("non_speech", cf.get("nbc", "path_to_non_speech"))
     nbc.teach_classifier()
-    speech_by_e, speech_by_mdf, speech_by_sfm, speech_by_zcr, non_speech_by_e, non_speech_by_mdf, non_speech_by_sfm, non_speech_by_zcr = nbc.classifier(
-        WavFile("./resources/audio_files/waves/12345678910.wav"))
-
-    if speech_by_e > non_speech_by_e:
-        print("speech")
-    else:
-        print("non speech")
-
-    if speech_by_mdf > non_speech_by_mdf:
-        print("speech")
-    else:
-        print("non speech")
-
-    if speech_by_sfm > non_speech_by_sfm:
-        print("speech")
-    else:
-        print("non speech")
-
-    if speech_by_zcr > non_speech_by_zcr:
-        print("speech")
-    else:
-        print("non speech")
+    classes = nbc.get_classes(nbc.classify(WavFile("./resources/audio_files/waves/12345678910.wav")))
+    print(classes)
 
 
 if "__main__" == __name__:

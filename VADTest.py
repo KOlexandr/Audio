@@ -32,13 +32,17 @@ def plot_result(energy, mdf, min_e, min_mdf, min_sfm, min_zcr, sfm, wav, word_en
 
 def main(file_name, min_frames_voice, min_frames_noise, bad_frames_count):
     wav = WavFile(file_name)
-    energy, mdf, zcr, sfm, items_per_frame, speech = VAD.vad(wav)
-
+    parameters = VAD.vad(wav)
+    items_per_frame = parameters["items_per_frame"]
+    energy = parameters["energy"]
+    mdf = parameters["mdf"]
+    zcr = parameters["zcr"]
+    sfm = parameters["sfm"]
     if bad_frames_count == 0:
         min_e = min(energy) + 1
-        min_zcr = min(zcr) + 1
+        min_zcr = min(mdf) + 1
         #320 near 0.01*32768
-        min_mdf = min(mdf) + 320
+        min_mdf = min(zcr) + 320
         min_sfm = min(sfm) + 1
     else:
         min_e = max(energy[0:bad_frames_count])
