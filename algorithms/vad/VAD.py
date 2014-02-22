@@ -88,3 +88,34 @@ def vad(wav_file, frame_size=10, fft_function=numpy.fft.fft):
             "items_per_frame": items_per_frame,
             "speech": speech,
             "words_count": len(energy)}
+
+
+def simple_vad(wav_file, frame_size=10, fft_function=numpy.fft.fft):
+    """
+    simple Voice Activity Detection (without some verifications etc.)
+    @param wav_file: WavFile object
+    @param frame_size: size of one frame in milliseconds
+    @param fft_function: function for count FFT
+    @return: tuple of next parameters
+            energy          - Short-term energy for each frame,                      (MatLab)
+            mdf  - Most Dominant Frequency Component for each frame,                 (MatLab)
+            zcr             - Zero Crossing Rate for each frame,                     (MatLab)
+            sfm_list        - Spectral Flatness Measure for each frame,              (new)
+            items_per_frame - items in one frame,                                    (MatLab)
+    """
+    data = wav_file.get_one_channel_data()
+    frame_count = int(wav_file.get_file_size_msec() / frame_size)
+    items_per_frame = floor(len(data) / frame_count)
+    energy, zcr, mdf, sfm_list, speech = [], [], [], [], []
+    for i in range(frame_count):
+        sub = data[i * items_per_frame:(i + 1) * items_per_frame]
+        energy.append(energy_logarithm(sub))
+        zcr.append(zero_crossing_rate(sub))
+        mdf.append(max(sub))
+        sfm_list.append(sfm(abs(fft_function(sub))))
+    return {"energy": energy,
+            "mdf": mdf,
+            "zcr": zcr,
+            "sfm": sfm_list,
+            "items_per_frame": items_per_frame,
+            "words_count": len(energy)}
