@@ -3,8 +3,6 @@ import os.path
 import numpy as np
 import matplotlib.pyplot as plot
 
-from handlers import FFT
-
 __author__ = 'Olexandr'
 
 
@@ -66,13 +64,13 @@ class WavFile:
         else:
             return self.samples[0::self.number_of_channels]
 
-    def plot_samples_as_one_channel(self, show=True, save=False):
+    def plot_samples_as_one_channel(self, show=True, save=False, really_transform=False):
         """
         plot only one sample of file which returned by function get_one_channel_data()
         @param show: flag for showing figure
         @param save: flag for saving .png file with figure
         """
-        one_channel = self.get_one_channel_data()
+        one_channel = self.get_one_channel_data(really_transform)
         time = np.linspace(0, self.file_size_sec, num=len(one_channel))
         plot.plot(time, one_channel, "g")
         plot.grid(True)
@@ -100,13 +98,16 @@ class WavFile:
         if show:
             plot.show()
 
-    def plot_fft_of_wav(self, show=True, save=False, really_transform=False):
+    def plot_fft_of_wav(self, show=True, save=False, really_transform=False, fft_func=np.fft.fft, use_abs=True):
         """
         plot list with fft value for sample of file
         @param show: flag for showing figure
         @param save: flag for saving .png file with figure
         """
-        fft = abs(FFT.fft_diff_len(self.get_one_channel_data(really_transform)))
+        if use_abs:
+            fft = abs(fft_func(self.get_one_channel_data(really_transform)))
+        else:
+            fft = fft_func(self.get_one_channel_data(really_transform))
         plot.plot(range(len(fft)), fft)
         plot.grid(True)
         plot.title(self.file_name + " fft")
@@ -114,6 +115,15 @@ class WavFile:
             plot.savefig(self.file_name + ".fft.png")
         if show:
             plot.show()
+
+    def get_fft_of_wav(self, really_transform=False, fft_func=np.fft.fft, use_abs=True):
+        """
+        plot list with fft value for sample of file
+        """
+        if use_abs:
+            return abs(fft_func(self.get_one_channel_data(really_transform)))
+        else:
+            return fft_func(self.get_one_channel_data(really_transform))
 
     def get_file_size_msec(self):
         return self.file_size_sec * 1000
@@ -142,3 +152,21 @@ class WavFile:
 
     def __str__(self):
         return self.get_simple_file_name() + ": " + str(self.file_size_sec) + " sec"
+
+    @staticmethod
+    def to_binary(signal):
+        """
+        transform to binary
+        @param signal:
+        """
+        b_signal = b''
+        for i in signal:
+            b_signal += wave.struct.pack('h', i)
+        return b_signal
+
+    @staticmethod
+    def write(file_name, list_signal, time, n_channels=1, sample_width=2, sample_rate=44100):
+        file = wave.open(file_name, 'wb')
+        file.setparams((n_channels, sample_width, sample_rate, sample_rate * time, 'NONE', 'noncompressed'))
+        file.writeframes(WavFile.to_binary(list_signal))
+        file.close()

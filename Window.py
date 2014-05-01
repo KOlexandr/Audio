@@ -40,6 +40,8 @@ class Application(Frame):
         self.default_test_audio_time = int(self.cf.get("program", "default_test_audio_time"))
         #get program properties
 
+        self.use_ggl = bool(self.cf.get("uses", "use_ggl"))
+
         self.root = root
         self.processor = processor
         self.root.title(self.title)
@@ -223,14 +225,17 @@ class Application(Frame):
         if time.get() == 0:
             time.set(self.default_test_audio_time)
         wav = self.processor.recorder.record_and_get_wav(time.get())
-        samples, word_count, max_len = self.processor.find_word_in_test_file(wav.get_one_channel_data())
-        result_str = "All words in file = " + str(word_count) + "\n"
-        print("All words in file = " + str(word_count))
-        for j in samples:
-            word, coefficient = self.processor.lib.find_max_corrcoef_and_word(j, max_len)
-            if coefficient > 0.3:
-                result_str += word + " - " + str(coefficient) + "\n"
-                print(word + " - " + str(coefficient))
+        if self.use_ggl:
+            result_str = ''
+        else:
+            samples, word_count, max_len = self.processor.find_word_in_test_file(wav.get_one_channel_data())
+            result_str = "All words in file = " + str(word_count) + "\n"
+            print("All words in file = " + str(word_count))
+            for j in samples:
+                word, coefficient = self.processor.lib.find_max_corrcoef_and_word(j, max_len)
+                if coefficient > 0.3:
+                    result_str += word + " - " + str(coefficient) + "\n"
+                    print(word + " - " + str(coefficient))
         messagebox.showinfo("Result", result_str)
 
 

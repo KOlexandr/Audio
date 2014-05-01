@@ -8,7 +8,7 @@ class Plotter:
         self.data, self.additional_data = {}, {}
         self.sub_plot_num = 1
 
-    def add_sub_plot_data(self, title, data_y, data_x=None, color="blue", ls="-"):
+    def add_sub_plot_data(self, title, data_y, data_x=None, color="blue", ls="-", scale_x=None, scale_y=None):
         """
         adds new data for plot in new sub plot frame
         @param title: title of subplot
@@ -21,7 +21,7 @@ class Plotter:
             data_x = range(len(data_y))
         if self.additional_data.get(title) is None:
             self.additional_data[title] = []
-        self.data[title] = (data_x, data_y, color, ls, self.sub_plot_num)
+        self.data[title] = (data_x, data_y, color, ls, self.sub_plot_num, scale_x, scale_y)
         self.sub_plot_num += 1
 
     def add_current_plot_data(self, title, data_y, data_x=None, color="green", ls="o", lw=1):
@@ -59,6 +59,10 @@ class Plotter:
             raise Exception("Data for plot not exists")
         for i in self.data.keys():
             plot.subplot(data_len, 1, self.data[i][4])
+            if not (self.data[i][5] is None):
+                plot.xscale(self.data[i][5])
+            if not (self.data[i][6] is None):
+                plot.yscale(self.data[i][6])
             plot.plot(self.data[i][0], self.data[i][1], color=self.data[i][2], linestyle=self.data[i][3])
             if not self.additional_data.get(i) is None:
                 y_min, y_max = min(self.data[i][1]), max(self.data[i][1])
