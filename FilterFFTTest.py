@@ -1,6 +1,5 @@
 from math import cos, pi
 import numpy
-from algorithms.filterWithFiniteImpulseResponse.Filter import Filter
 from handlers.Plotter import Plotter
 from beans.WavFile import WavFile
 
@@ -28,7 +27,7 @@ def main():
     s_in = []
     for i in range(n):
         s_in.append(s(i))
-    fi_filter = Filter(window_name="hemming", fs=fs, fx=50, use_abs=False)
+    # fi_filter = Filter(window_name="hemming", fs=fs, fx=50, use_abs=False)
     # plotter.add_sub_plot_data("original", list(wav.samples))
     # l = list(numpy.fft.fft(wav.samples))
     # plotter.add_sub_plot_data("original_FFT", l)
@@ -36,7 +35,7 @@ def main():
 
     plotter.add_sub_plot_data("original", list(map(abs, s_in)))
     plotter.add_sub_plot_data("original_FFT", list(numpy.fft.fft(s_in)))
-    plotter.add_sub_plot_data("filtered", fi_filter.finite_impulse_filter(n, in_data=numpy.fft.fft(s_in), fd=fd))
+    # plotter.add_sub_plot_data("filtered", fi_filter.finite_impulse_filter(n, in_data=numpy.fft.fft(s_in), fd=fd))
 
     plotter.sub_plot_all_horizontal()
 
