@@ -17,7 +17,7 @@ class SPro5:
         data = "--format=wave --sample-rate=16000 --mel --freq-min=0 --freq-max=8000 --fft-length=256 --length=16.0" + \
                " --shift=10.0 --num-ceps=13 test.wav test.mfcc"
 
-        dll.main(len(data) * 2, ctypes.c_wchar_p(data))
+        dll.main(len(data) * 2, ctypes.c_wchar_p("--"))
 
 
 if "__main__" == __name__:
