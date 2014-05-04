@@ -1,13 +1,16 @@
-import math
-import numpy
-import ctypes
-from beans.WavFile import WavFile
+from variables import path_to_project
 from handlers.Plotter import Plotter
+from beans.WavFile import WavFile
+import ctypes
+import numpy
+import math
+import os
 
 __author__ = 'Olexandr'
 
 
-path_to_dll = "algorithms/harmonicOscillations/HarmonicOscillations.dll"
+path_to_dll = os.path.dirname(__file__) + "/HarmonicOscillations.dll"
+path_to_audio = path_to_project + "/resources/audio_files/test/"
 
 
 class HarmonicOscillations:
@@ -36,6 +39,7 @@ class HarmonicOscillations:
         for i in range(array_size * 2):
             out[i] = out_data[i]
 
+        #magnitude of spectrum
         amplitude = []
         freq = []
         current_freq = 0
@@ -47,24 +51,37 @@ class HarmonicOscillations:
         return freq, amplitude
 
     @staticmethod
-    def fft_db_hz(wav):
+    def fft_db_amplitude_wav(wav):
         """
         wrapper for c++ fft_db_hz from HarmonicOscillations.dll
         create freq and amplitude vectors in c++-code (works more faster then HarmonicOscillations.fft)
         @param wav: custom WavFile
         @return: freq - vector of frequency (Hz), amplitude - vector of amplitudes (db)
         """
+        return HarmonicOscillations.fft_db_amplitude(wav.samples, wav.samples.nbytes, wav.sample_width, wav.frame_rate)
+
+    @staticmethod
+    def fft_db_amplitude(samples, byte_per_frame, sample_width, frame_rate):
+        """
+        wrapper for c++ fft_db_hz from HarmonicOscillations.dll
+        create freq and amplitude vectors in c++-code (works more faster then HarmonicOscillations.fft)
+        @param samples: vector of audio data
+        @param byte_per_frame: values for representation each frame (2)
+        @param sample_width: width of each sample
+        @param frame_rate: frame rate of samples (44100 Hz)
+        @return: freq - vector of frequency (Hz), amplitude - vector of amplitudes (db)
+        """
         dll = ctypes.CDLL(path_to_dll)
-        p2 = int(math.log2(wav.samples.nbytes/wav.sample_width))
+        p2 = int(math.log2(byte_per_frame/sample_width))
         array_size = 1 << p2
         in_data = (ctypes.c_double * (array_size*2))()
         freq = (ctypes.c_double * array_size)()
         amplitude = (ctypes.c_double * array_size)()
 
-        min_size = min(array_size * 2, len(wav.samples))
-        in_data[0:min_size] = wav.samples[0:min_size]
+        min_size = min(array_size * 2, len(samples))
+        in_data[0:min_size] = samples[0:min_size]
 
-        dll.fft_db_hz(ctypes.c_int(p2), ctypes.c_int(wav.frame_rate), in_data, freq, amplitude)
+        dll.fft_db_hz(ctypes.c_int(p2), ctypes.c_int(frame_rate), in_data, freq, amplitude)
 
         return list(freq), list(amplitude)
 
@@ -95,9 +112,9 @@ class HarmonicOscillations:
 
 
 def test():
-    wav = WavFile('audio/sin100Hz.wav')
+    wav = WavFile(path_to_audio + 'sin100Hz.wav')
     freq, amplitude = HarmonicOscillations.fft(wav)
-    freq1, amplitude1 = HarmonicOscillations.fft_db_hz(wav)
+    freq1, amplitude1 = HarmonicOscillations.fft_db_amplitude_wav(wav)
 
     plotter = Plotter()
     plotter.add_sub_plot_data("data", wav.samples)
@@ -108,12 +125,12 @@ def test():
 
 
 def test_all_audio():
-    sin = WavFile('audio/sin100Hz.wav')
-    noise = WavFile('audio/noise.wav')
-    m = WavFile('audio/meandr25Hz.wav')
-    freq_sin, amplitude_sin = HarmonicOscillations.fft_db_hz(sin)
-    freq_noise, amplitude_noise = HarmonicOscillations.fft_db_hz(noise)
-    freq_m, amplitude_m = HarmonicOscillations.fft_db_hz(m)
+    sin = WavFile(path_to_audio + 'sin100Hz.wav')
+    noise = WavFile(path_to_audio + 'noise.wav')
+    m = WavFile(path_to_audio + 'meandr25Hz.wav')
+    freq_sin, amplitude_sin = HarmonicOscillations.fft_db_amplitude_wav(sin)
+    freq_noise, amplitude_noise = HarmonicOscillations.fft_db_amplitude_wav(noise)
+    freq_m, amplitude_m = HarmonicOscillations.fft_db_amplitude_wav(m)
 
     plotter = Plotter()
     plotter.add_sub_plot_data("sin 100 Hz", sin.samples)
