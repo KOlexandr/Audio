@@ -2,180 +2,178 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0db91aa-b7c4-4319-965f-f86680b0dd9d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/spro5/WRSystemSPro.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/spro5/WrapperWRSystemSPro.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/add-01.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/add-02.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/add-03.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/add-04.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/add-05.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/add-06.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/add-07.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/add-08.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/add-09.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/add-10.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/add-11.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/add-12.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/back-01.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/back-02.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/back-03.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/back-04.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/back-05.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/back-06.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/back-07.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/back-08.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/back-09.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/back-10.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/back-11.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/cancel-01.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/cancel-02.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/cancel-03.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/cancel-04.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/cancel-05.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/cancel-06.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/cancel-07.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/cancel-08.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/cancel-09.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/cancel-10.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/cancel-11.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/close-01.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/close-02.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/close-03.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/close-04.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/close-05.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/close-06.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/close-07.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/close-08.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/close-09.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/close-10.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/close-11.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/close-12.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/copy-01.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/copy-02.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/copy-03.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/copy-04.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/copy-05.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/copy-06.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/copy-07.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/copy-08.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/copy-09.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/copy-10.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/copy-11.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/copy-12.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/delete-01.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/delete-02.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/delete-03.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/delete-04.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/delete-05.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/delete-06.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/delete-07.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/delete-08.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/delete-09.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/delete-10.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/delete-11.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/films-01.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/films-02.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/films-03.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/films-04.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/films-05.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/films-06.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/films-07.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/films-08.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/films-09.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/films-10.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/films-11.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/films-12.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/habr-01.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/habr-02.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/habr-03.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/habr-04.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/habr-05.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/habr-06.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/habr-07.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/habr-08.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/habr-09.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/habr-10.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/habr-11.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/internet-01.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/internet-02.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/internet-03.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/internet-04.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/internet-05.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/internet-06.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/internet-07.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/internet-08.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/internet-09.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/internet-10.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/internet-11.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/music-01.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/music-02.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/music-03.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/music-04.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/music-05.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/music-06.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/music-07.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/music-08.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/music-09.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/music-10.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/music-11.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/open-01.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/open-02.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/open-03.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/open-04.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/open-05.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/open-06.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/open-07.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/open-08.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/open-09.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/open-10.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/open-11.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/paste-01.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/paste-02.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/paste-03.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/paste-04.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/paste-05.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/paste-06.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/paste-07.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/paste-08.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/paste-09.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/paste-10.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/paste-11.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/paste-12.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/retry-01.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/retry-02.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/retry-03.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/retry-04.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/retry-05.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/retry-06.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/retry-07.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/retry-08.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/retry-09.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/retry-10.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/retry-11.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/retry-12.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/seven.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/test-01.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/test-02.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/test-03.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/test-04.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/test-05.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/test-06.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/test-07.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/test-08.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/test-09.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/test-10.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/test-11.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/test-12.mfcc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/results/system.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/base/test_base.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\beans\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\beans\library\__init__.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Utils.py" afterPath="$PROJECT_DIR$/utils/Utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/test/seven.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/spro5/__init__.py" afterPath="$PROJECT_DIR$/algorithms/spro5/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/results/system.bin" afterPath="$PROJECT_DIR$/resources/mfcc/results/system.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/base/test_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/base/test_base.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\add-01.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/add-01.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\add-02.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/add-02.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\add-03.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/add-03.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\add-04.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/add-04.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\add-05.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/add-05.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\add-06.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/add-06.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\add-07.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/add-07.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\add-08.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/add-08.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\add-09.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/add-09.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\add-10.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/add-10.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\add-11.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/add-11.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\add-12.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/add-12.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\back-01.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/back-01.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\back-02.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/back-02.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\back-03.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/back-03.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\back-04.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/back-04.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\back-05.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/back-05.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\back-06.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/back-06.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\back-07.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/back-07.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\back-08.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/back-08.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\back-09.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/back-09.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\back-10.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/back-10.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\back-11.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/back-11.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\cancel-01.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/cancel-01.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\cancel-02.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/cancel-02.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\cancel-03.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/cancel-03.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\cancel-04.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/cancel-04.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\cancel-05.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/cancel-05.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\cancel-06.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/cancel-06.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\cancel-07.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/cancel-07.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\cancel-08.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/cancel-08.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\cancel-09.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/cancel-09.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\cancel-10.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/cancel-10.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\cancel-11.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/cancel-11.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\close-01.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/close-01.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\close-02.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/close-02.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\close-03.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/close-03.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\close-04.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/close-04.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\close-05.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/close-05.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\close-06.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/close-06.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\close-07.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/close-07.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\close-08.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/close-08.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\close-09.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/close-09.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\close-10.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/close-10.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\close-11.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/close-11.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\close-12.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/close-12.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\copy-01.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/copy-01.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\copy-02.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/copy-02.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\copy-03.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/copy-03.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\copy-04.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/copy-04.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\copy-05.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/copy-05.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\copy-06.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/copy-06.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\copy-07.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/copy-07.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\copy-08.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/copy-08.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\copy-09.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/copy-09.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\copy-10.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/copy-10.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\copy-11.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/copy-11.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\copy-12.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/copy-12.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\delete-01.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/delete-01.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\delete-02.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/delete-02.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\delete-03.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/delete-03.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\delete-04.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/delete-04.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\delete-05.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/delete-05.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\delete-06.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/delete-06.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\delete-07.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/delete-07.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\delete-08.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/delete-08.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\delete-09.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/delete-09.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\delete-10.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/delete-10.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\delete-11.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/delete-11.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\films-01.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/films-01.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\films-02.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/films-02.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\films-03.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/films-03.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\films-04.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/films-04.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\films-05.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/films-05.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\films-06.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/films-06.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\films-07.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/films-07.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\films-08.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/films-08.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\films-09.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/films-09.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\films-10.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/films-10.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\films-11.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/films-11.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\films-12.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/films-12.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\habr-01.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/habr-01.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\habr-02.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/habr-02.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\habr-03.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/habr-03.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\habr-04.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/habr-04.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\habr-05.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/habr-05.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\habr-06.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/habr-06.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\habr-07.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/habr-07.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\habr-08.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/habr-08.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\habr-09.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/habr-09.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\habr-10.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/habr-10.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\habr-11.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/habr-11.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\internet-01.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/internet-01.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\internet-02.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/internet-02.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\internet-03.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/internet-03.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\internet-04.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/internet-04.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\internet-05.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/internet-05.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\internet-06.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/internet-06.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\internet-07.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/internet-07.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\internet-08.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/internet-08.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\internet-09.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/internet-09.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\internet-10.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/internet-10.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\internet-11.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/internet-11.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\music-01.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/music-01.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\music-02.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/music-02.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\music-03.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/music-03.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\music-04.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/music-04.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\music-05.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/music-05.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\music-06.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/music-06.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\music-07.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/music-07.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\music-08.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/music-08.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\music-09.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/music-09.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\music-10.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/music-10.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\music-11.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/music-11.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\open-01.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/open-01.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\open-02.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/open-02.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\open-03.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/open-03.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\open-04.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/open-04.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\open-05.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/open-05.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\open-06.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/open-06.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\open-07.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/open-07.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\open-08.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/open-08.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\open-09.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/open-09.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\open-10.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/open-10.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\open-11.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/open-11.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\paste-01.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/paste-01.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\paste-02.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/paste-02.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\paste-03.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/paste-03.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\paste-04.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/paste-04.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\paste-05.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/paste-05.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\paste-06.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/paste-06.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\paste-07.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/paste-07.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\paste-08.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/paste-08.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\paste-09.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/paste-09.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\paste-10.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/paste-10.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\paste-11.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/paste-11.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\paste-12.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/paste-12.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\retry-01.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/retry-01.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\retry-02.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/retry-02.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\retry-03.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/retry-03.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\retry-04.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/retry-04.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\retry-05.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/retry-05.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\retry-06.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/retry-06.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\retry-07.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/retry-07.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\retry-08.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/retry-08.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\retry-09.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/retry-09.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\retry-10.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/retry-10.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\retry-11.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/retry-11.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\retry-12.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/retry-12.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test-01.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/test-01.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test-02.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/test-02.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test-03.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/test-03.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test-04.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/test-04.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test-05.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/test-05.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test-06.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/test-06.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test-07.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/test/test-07.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test-08.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/test-08.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test-09.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/test-09.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test-10.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/test-10.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test-11.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/test-11.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test-12.mfcc" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn/test-12.mfcc" />
+      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\waves\seven.wav" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/seven.wav" />
     </list>
     <ignored path="RecordAudio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -203,7 +201,7 @@
     <SUITE FILE_PATH="coverage/RecordAudio$Test1.coverage" NAME="Test1 Coverage Results" MODIFIED="1399174529603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$VADTest.coverage" NAME="VADTest Coverage Results" MODIFIED="1393111516371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1399194269664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/fir" />
-    <SUITE FILE_PATH="coverage/RecordAudio$__init____4_.coverage" NAME="__init__ (4) Coverage Results" MODIFIED="1399427849827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/spro5" />
+    <SUITE FILE_PATH="coverage/RecordAudio$__init____4_.coverage" NAME="__init__ (4) Coverage Results" MODIFIED="1399470544737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/spro5" />
     <SUITE FILE_PATH="coverage/RecordAudio$Tmp.coverage" NAME="Tmp Coverage Results" MODIFIED="1391039917689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$pretreatmentOfSpeechSignals.coverage" NAME="pretreatmentOfSpeechSignals Coverage Results" MODIFIED="1398939135495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -219,38 +217,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/spro5/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="24" selection-start="6871" selection-end="6871" vertical-scroll-proportion="0.8045977" vertical-offset="702" max-vertical-offset="1224">
+            <state line="212" column="0" selection-start="9466" selection-end="9466" vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="850">
               <folding>
+                <element signature="e#0#37#0" expanded="true" />
                 <element signature="e#273#414#1" expanded="false" />
-                <element signature="e#1347#1570#0" expanded="false" />
-                <element signature="e#1620#4161#0" expanded="false" />
-                <element signature="e#4207#4708#0" expanded="false" />
-                <element signature="e#4768#5213#0" expanded="false" />
-                <element signature="e#5258#5738#0" expanded="false" />
+                <element signature="e#447#631#0" expanded="false" />
+                <element signature="e#699#1239#0" expanded="false" />
+                <element signature="e#1300#1523#0" expanded="false" />
+                <element signature="e#1573#4114#0" expanded="false" />
+                <element signature="e#4171#4862#0" expanded="false" />
+                <element signature="e#4922#5504#0" expanded="false" />
+                <element signature="e#5594#6425#0" expanded="false" />
+                <element signature="e#6502#7769#0" expanded="false" />
+                <element signature="e#7815#8635#0" expanded="false" />
+                <element signature="e#8675#9213#0" expanded="false" />
+                <element signature="e#9243#9315#0" expanded="false" />
+                <element signature="e#9346#9420#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wer_test_base.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt">
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+      <file leaf-file-name="learn_base.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/mfcc/base/learn_base.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="1552" max-vertical-offset="1734">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassifierBean.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beans/ClassifierBean.py">
+      <file leaf-file-name="test_base.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/mfcc/base/test_base.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="83" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+            <state line="17" column="1" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0" vertical-offset="1943" max-vertical-offset="2006">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wer_learn_base.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wer_test_base.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
               <folding />
             </state>
           </provider>
@@ -263,24 +290,6 @@
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LibraryItem.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beans/library/LibraryItem.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Library.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beans/library/Library.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="8" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1853">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -298,15 +307,6 @@
         <entry file="file://$PROJECT_DIR$/utils/Utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="80" column="56" selection-start="2306" selection-end="2306" vertical-scroll-proportion="0.0" vertical-offset="1013" max-vertical-offset="1479">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NBC.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/naiveBayesClassifier/NBC.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="36" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="3128">
               <folding />
             </state>
           </provider>
@@ -343,8 +343,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Processor.py" />
-        <option value="$PROJECT_DIR$/properties/style.properties" />
         <option value="$PROJECT_DIR$/Recorder.py" />
         <option value="$PROJECT_DIR$/vad/VADUtils.py" />
         <option value="$PROJECT_DIR$/vad/VAD.py" />
@@ -393,6 +391,8 @@
         <option value="$PROJECT_DIR$/algorithms/harmonicOscillations/__init__.py" />
         <option value="$PROJECT_DIR$/algorithms/mel/__init__.py" />
         <option value="$PROJECT_DIR$/utils/Utils.py" />
+        <option value="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" />
+        <option value="$PROJECT_DIR$/resources/mfcc/base/test_base.txt" />
         <option value="$PROJECT_DIR$/algorithms/spro5/__init__.py" />
       </list>
     </option>
@@ -448,6 +448,86 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mfcc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="waves" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mfcc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mfcc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -470,18 +550,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\waves\test" />
       <recent name="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base" />
       <recent name="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\waves" />
       <recent name="E:\EmergencyFiles\Python\RecordAudio\algorithms\spro5" />
       <recent name="E:\EmergencyFiles\Python\RecordAudio" />
-      <recent name="E:\EmergencyFiles\Python\RecordAudio\algorithms\ffir\audio" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test" />
+      <recent name="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base" />
+      <recent name="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\waves\learn" />
+      <recent name="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn" />
       <recent name="E:\EmergencyFiles\Python\RecordAudio\resources\audio_files\test_audio" />
-      <recent name="E:\EmergencyFiles\Python\RecordAudio\algorithms\harmonicOscillations\audio" />
-      <recent name="E:\EmergencyFiles\Python\RecordAudio\algorithms\harmonicOscillations" />
-      <recent name="E:\EmergencyFiles\Python\RecordAudio\algorithms" />
-      <recent name="E:\EmergencyFiles\Python\RecordAudio\beans" />
     </key>
   </component>
   <component name="RunManager" selected="Python.__init__ (4)">
@@ -863,7 +943,11 @@
       <created>1399245848974</created>
       <updated>1399245848974</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="SPro 5.0 wrapper&#10;using SPro 5.0/ test results">
+      <created>1399427922696</created>
+      <updated>1399427922696</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -897,7 +981,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15335463" sideWeight="0.56369424" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15069222" sideWeight="0.56369424" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41452992" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12353568" sideWeight="0.43630573" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31089744" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -939,7 +1023,8 @@
     <MESSAGE value="Filter with finite impulse response" />
     <MESSAGE value="SPro 5.0" />
     <MESSAGE value="SPro 5.0 wrapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="SPro 5.0 wrapper" />
+    <MESSAGE value="SPro 5.0 wrapper&#10;using SPro 5.0/ test results" />
+    <option name="LAST_COMMIT_MESSAGE" value="SPro 5.0 wrapper&#10;using SPro 5.0/ test results" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -976,13 +1061,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/algorithms/spro5/__init__.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="314" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/algorithms/spro5/__init__.py</url>
-          <line>146</line>
-          <option name="timeStamp" value="315" />
+          <line>212</line>
+          <option name="timeStamp" value="322" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -996,28 +1076,10 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="316" />
+      <option name="time" value="323" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/algorithms/recommendationSystem/habr.csv">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/recommendationSystem/svd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="26" selection-start="1521" selection-end="1521" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1955" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python33/Lib/aifc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="373" column="8" selection-start="11938" selection-end="11938" vertical-scroll-proportion="0.0" vertical-offset="6102" max-vertical-offset="15283" />
-      </provider>
-    </entry>
     <entry file="file://C:/Python33/Lib/site-packages/numpy/matrixlib/defmatrix.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="340" column="0" selection-start="9353" selection-end="9353" vertical-scroll-proportion="0.0" vertical-offset="5575" max-vertical-offset="18700" />
@@ -1177,13 +1239,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.6725275" vertical-offset="0" max-vertical-offset="910">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python33/Lib/ctypes/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="352" column="0" selection-start="10949" selection-end="10949" vertical-scroll-proportion="0.0" vertical-offset="5829" max-vertical-offset="9333">
@@ -1214,7 +1269,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2601">
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1284,16 +1339,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/base/test_base.txt">
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/results/system.bin">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2261">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.2730844" vertical-offset="1157" max-vertical-offset="1666">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/results/system.bin">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.005894" vertical-offset="1021" max-vertical-offset="1530">
+        <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.8045977" vertical-offset="192" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/base/test_base.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="1" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0" vertical-offset="1943" max-vertical-offset="2006">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/base/learn_base.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="1552" max-vertical-offset="1734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/spro5/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="212" column="0" selection-start="9466" selection-end="9466" vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="850">
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#273#414#1" expanded="false" />
+            <element signature="e#447#631#0" expanded="false" />
+            <element signature="e#699#1239#0" expanded="false" />
+            <element signature="e#1300#1523#0" expanded="false" />
+            <element signature="e#1573#4114#0" expanded="false" />
+            <element signature="e#4171#4862#0" expanded="false" />
+            <element signature="e#4922#5504#0" expanded="false" />
+            <element signature="e#5594#6425#0" expanded="false" />
+            <element signature="e#6502#7769#0" expanded="false" />
+            <element signature="e#7815#8635#0" expanded="false" />
+            <element signature="e#8675#9213#0" expanded="false" />
+            <element signature="e#9243#9315#0" expanded="false" />
+            <element signature="e#9346#9420#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
           <folding />
         </state>
       </provider>
@@ -1303,22 +1418,8 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/spro5/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="24" selection-start="6871" selection-end="6871" vertical-scroll-proportion="0.8045977" vertical-offset="702" max-vertical-offset="1224">
-          <folding>
-            <element signature="e#273#414#1" expanded="false" />
-            <element signature="e#1347#1570#0" expanded="false" />
-            <element signature="e#1620#4161#0" expanded="false" />
-            <element signature="e#4207#4708#0" expanded="false" />
-            <element signature="e#4768#5213#0" expanded="false" />
-            <element signature="e#5258#5738#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

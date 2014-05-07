@@ -1,5 +1,5 @@
-from beans.WavFile import WavFile
 from variables import path_to_project
+from beans.WavFile import WavFile
 from utils import Utils
 import ctypes
 import re
@@ -18,10 +18,9 @@ class SPro5:
     use DLL for transform wav file to mfcc
     """
     def __init__(self):
+        self.mfcc = {"learn": {}, "test": {}}
         self.s_pro_5 = ctypes.CDLL(path_to_dll + "SProWrapper.dll")
         self.wr_s_pro_5 = ctypes.CDLL(path_to_dll + "WrapperWRSystemSPro.dll")
-        self.mfcc = {}
-        self.file_name = {"learn": "learn_base", "base": "test_base"}
 
     def s_pro_base_params(self, input_file, output_file):
         """
@@ -81,72 +80,135 @@ class SPro5:
         print("\t-V, --version             print version number and exit")
         print("\t-h, --help                this help message\n")
 
-    def store_mfcc_file_data(self):
+    def store_mfcc_file_data(self, work_type):
         """
         gets all *.mfcc files from resources/mfcc/base folder
         and save all data in self.mfcc dict
+        @param work_type: parameter ['learn', 'test'], important for choosing directory with .mfcc files
         """
-        file_paths = Utils.get_simple_file_names(path_to_mfcc + "base", ".mfcc")
+        file_paths = Utils.get_simple_file_names(path_to_mfcc + "base/" + work_type, ".mfcc")
         words = []
         for i in file_paths:
             word = re.sub("-[0-9]{1,3}\\.mfcc$", "", str(i).lower())
-            if not word in self.mfcc:
-                self.mfcc[word] = []
-            self.mfcc[word].append(i)
+            if not word in self.mfcc[work_type]:
+                self.mfcc[work_type][word] = []
+            self.mfcc[work_type][word].append(work_type + "/" + i)
             if not word in words:
                 words.append(word)
+        return words
 
-    def write_mfcc_data_to_file(self, file_name):
+    def write_mfcc_data_to_file(self, work_type):
         """
-        writes self.mfcc into .txt file
-        @param file_name: WrapperWRSystemSPro will work with this file
-        @return:
+        writes self.mfcc into .txt file, WrapperWRSystemSPro will work with this file
+        @param work_type: parameter ['learn', 'test'], important for choosing directory with .mfcc files
         """
-        f = open(file_name + ".txt", "w")
-        f.write(str(len(self.mfcc)) + "\n")
-        for i in self.mfcc.keys():
+        f = open(path_to_mfcc + "base/" + work_type + "_base.txt", "w")
+        f.write(str(len(self.mfcc[work_type])) + "\n")
+        for i in self.mfcc[work_type].keys():
             f.write(str(i).lower() + "\n")
-            f.write(str(len(self.mfcc[i])) + "\n")
-            for j in self.mfcc[i]:
+            f.write(str(len(self.mfcc[work_type][i])) + "\n")
+            for j in self.mfcc[work_type][i]:
                 f.write(j + "\n")
         f.close()
 
-    def waves_files_to_mfcc(self):
+    def wav_to_mfcc(self, base_path, file_paths, i, leading_zeros, waves_path):
+        """
+        transform one .wav file to .mfcc
+        @param base_path: path to folder with .mfcc files for SPro 5.0
+        @param file_paths: all wav files for teaching or testing program
+        @param i: index of current file
+        @param leading_zeros: number of leading zeros in .mfcc filename
+        @param waves_path: path to folder with .wav files for SPro 5.0
+        @return:
+        """
+        output_file = re.sub("\\.wav", "-" + str(i + 1).zfill(leading_zeros) + ".mfcc", file_paths[i])
+        if os.path.exists(base_path + output_file):
+            idx = 2
+            while os.path.exists(base_path + output_file):
+                output_file = re.sub("\\.wav", "-" + str(i + idx).zfill(leading_zeros) + ".mfcc", file_paths[i])
+        self.s_pro_base_params(waves_path + file_paths[i], base_path + output_file)
+
+    def all_waves_to_mfcc(self, work_type, use_exclude_list=True):
         """
         gets all wav files in dir and transforms each of them into mfcc
+        @param work_type: parameter ['learn', 'test'], important for choosing directory with .wav files
         """
-        file_paths = Utils.get_simple_file_names(path_to_mfcc + "waves", ".wav")
+        base_path = path_to_mfcc + "base/" + work_type + "/"
+        waves_path = path_to_mfcc + "waves/" + work_type + "/"
+
+        exclude_file = path_to_mfcc + "waves/excluded_" + work_type + ".txt"
+        if use_exclude_list:
+            if os.path.exists(exclude_file):
+                f = open(exclude_file, "r")
+                excluded = f.readlines()
+                f.close()
+            else:
+                excluded = []
+
+        file_paths = Utils.get_simple_file_names(path_to_mfcc + "waves/" + work_type, ".wav")
         leading_zeros = len(str(len(file_paths)))
         for i in range(len(file_paths)):
-            output_file = re.sub("\\.wav", "-" + str(i + 1).zfill(leading_zeros) + ".mfcc", file_paths[i])
-            self.s_pro_base_params(path_to_mfcc + "waves/" + file_paths[i], path_to_mfcc + "base/" + output_file)
+            if use_exclude_list:
+                if not file_paths[i] in excluded:
+                    excluded.append(file_paths[i])
+                    self.wav_to_mfcc(base_path, file_paths, i, leading_zeros, waves_path)
+            else:
+                self.wav_to_mfcc(base_path, file_paths, i, leading_zeros, waves_path)
+
+        if use_exclude_list:
+            f = open(exclude_file, "w")
+            f.writelines(excluded)
+            f.close()
 
     def wr_system(self, work_type):
         """
         runs WrapperWRSystemSPro
-        @param work_type: ['learn', 'base']
+        @param work_type: ['learn', 'test']
             'learn': for learning system
-            'base': for testing system
+            'test': for testing system
         base_file: base file name - file with list of mfcc files and words
         system_file: system result file
         wer_file: WER (Word Error Rate) file
         """
-        # self.waves_files_to_mfcc()
-        # self.store_mfcc_file_data()
-        # self.write_mfcc_data_to_file(path_to_mfcc + "base/" + base_file)
         params = [
-            "--" + str(work_type),
-            "--base " + path_to_mfcc + "base/" + self.file_name[work_type] + ".txt",
+            "--base " + path_to_mfcc + "base/" + work_type + "_base.txt",
             "--system " + path_to_mfcc + "results/system.bin",
-            "--test_results " + path_to_mfcc + "results/wer_" + self.file_name[work_type] + ".txt"
+            "--test_results " + path_to_mfcc + "results/wer_" + work_type + "_base.txt"
         ]
-        if "base" == work_type:
-            joined_params = ' '.join(params[1:])
+        if "learn" == work_type:
+            joined_params = "--learn " + ' '.join(params)
         else:
             joined_params = ' '.join(params)
         self.wr_s_pro_5.main(len(joined_params)*2, ctypes.c_wchar_p(joined_params))
 
+    def run(self, work_type):
+        """
+        1. converts all exists .wav files to .mfcc
+        2. create dict with all needle data (word count, groups with words, files for current word)
+        3. write created dict into _base.txt file, which will use in analyzing
+        @param work_type: ['learn', 'test']
+            'learn': for learning system
+            'test': for testing system
+        """
+        self.all_waves_to_mfcc(work_type)
+        self.store_mfcc_file_data(work_type)
+        self.write_mfcc_data_to_file(work_type)
+        self.wr_system(work_type)
+
+    def test(self):
+        """
+        run program for testing
+        """
+        self.run("test")
+
+    def learn(self):
+        """
+        run program for teaching
+        """
+        self.run("learn")
+
 
 if "__main__" == __name__:
     s = SPro5()
-    s.wr_system("learn")
+    s.learn()
+    s.test()
