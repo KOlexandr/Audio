@@ -66,3 +66,18 @@ def get_files(base_folder, extension):
             if file.lower().endswith(extension):
                 file_paths.append(os.path.join(root, file))
     return file_paths
+
+
+def get_simple_file_names(base_folder, extension):
+    """
+    find all files in base_folder and all folders inside base
+    @param base_folder: start directory
+    @param extension: extension of file
+    @return: list of simple file names with given extension
+    """
+    file_list = []
+    for root, dirs, files in os.walk(base_folder):
+        for i in files:
+            if str(i).lower().endswith(extension.lower()):
+                file_list.append(i)
+    return file_list
