@@ -132,6 +132,7 @@ class SPro5:
         """
         gets all wav files in dir and transforms each of them into mfcc
         @param work_type: parameter ['learn', 'test'], important for choosing directory with .wav files
+        @param use_exclude_list: flag for use or not file with all analyzed wav files early
         """
         base_path = path_to_mfcc + "base/" + work_type + "/"
         waves_path = path_to_mfcc + "waves/" + work_type + "/"
@@ -181,7 +182,7 @@ class SPro5:
             joined_params = ' '.join(params)
         self.wr_s_pro_5.main(len(joined_params)*2, ctypes.c_wchar_p(joined_params))
 
-    def run(self, work_type):
+    def run(self, work_type, use_exclude_list=True):
         """
         1. converts all exists .wav files to .mfcc
         2. create dict with all needle data (word count, groups with words, files for current word)
@@ -189,26 +190,63 @@ class SPro5:
         @param work_type: ['learn', 'test']
             'learn': for learning system
             'test': for testing system
+        @param use_exclude_list: flag for use or not file with all analyzed wav files early
         """
-        self.all_waves_to_mfcc(work_type)
+        self.all_waves_to_mfcc(work_type, use_exclude_list)
         self.store_mfcc_file_data(work_type)
         self.write_mfcc_data_to_file(work_type)
         self.wr_system(work_type)
 
-    def test(self):
+    def test(self, use_exclude_list=True):
         """
         run program for testing
+        @param use_exclude_list: flag for use or not file with all analyzed wav files early
         """
-        self.run("test")
+        self.run("test", use_exclude_list)
 
-    def learn(self):
+    def learn(self, use_exclude_list=True):
         """
         run program for teaching
+        @param use_exclude_list: flag for use or not file with all analyzed wav files early
         """
-        self.run("learn")
+        self.run("learn", use_exclude_list)
+
+    @staticmethod
+    def get_results():
+        """
+        analyze wer_test_base.txt file with results of analyzing
+        @return: dict with filename of test file (cleared filename) and most possible word from library
+        """
+        test_file = path_to_mfcc + "results/wer_test_base.txt"
+        f = open(test_file, "r")
+        data = f.readlines()
+        f.close()
+        results = {}
+        words = data[0].replace("\n", "").split("\t")[1:]
+        for i in data[1:len(data)-4]:
+            line = str(i).replace("\n", "").split("\t")
+            if len(line) > 0:
+                results[line[0].replace(": ", "")] = SPro5.get_word(words, list(map(int, line[1:])))
+        return results
+
+    @staticmethod
+    def get_word(words, coefficients):
+        """
+        @param words: list with words in library
+        @param coefficients: list with coefficients for current test word
+        @return: word with max coefficient
+        """
+        max_val = 0
+        word = words[0]
+        for i in range(len(words)):
+            if coefficients[i] > max_val:
+                max_val = coefficients[i]
+                word = words[i]
+        return word
 
 
 if "__main__" == __name__:
-    s = SPro5()
-    s.learn()
-    s.test()
+    # s = SPro5()
+    # s.learn()
+    # s.test()
+    print(SPro5.get_results())
