@@ -1,9 +1,9 @@
-import numpy as np
-
-from beans.WavFile import WavFile
+from variables import path_to_examples, path_to_silence, path_to_records
 from beans.library.Library import Library
 from handlers.Recorder import Recorder
+from beans.WavFile import WavFile
 from utils.Utils import get_files
+import numpy as np
 
 __author__ = 'Olexandr'
 
@@ -72,3 +72,22 @@ class Processor:
                 k = 0
             j += 1
         return words_samples, words_count, max_length
+
+
+def test():
+    filename = "/test.wav"
+    processor = Processor(path_to_examples, np.fft.fft, lambda: WavFile(path_to_silence).get_one_channel_data())
+    processor.recorder.record_audio_to_file(3, path_to_records + filename)
+    # wav = WavFile("waves/13245678109Speed.wav")
+    wav = WavFile(path_to_records + filename)
+    wav.plot_samples_as_one_channel()
+    samples, word_count, max_len = processor.find_word_in_test_file(wav.get_one_channel_data())
+    print("All words in file = " + str(word_count))
+    for j in samples:
+        word, coefficient = processor.lib.find_max_corrcoef_and_word(j, max_len)
+        if coefficient > 0.3:
+            print(word + " - " + str(coefficient))
+
+
+if "__main__" == __name__:
+    test()

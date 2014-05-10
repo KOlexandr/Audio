@@ -1,5 +1,5 @@
-from variables import path_to_project
 from handlers.Plotter import Plotter
+from variables import path_to_test
 from beans.WavFile import WavFile
 import ctypes
 import numpy
@@ -10,7 +10,6 @@ __author__ = 'Olexandr'
 
 
 path_to_dll = os.path.dirname(__file__) + "/HarmonicOscillations.dll"
-path_to_audio = path_to_project + "/resources/audio_files/test/"
 
 
 class HarmonicOscillations:
@@ -112,7 +111,7 @@ class HarmonicOscillations:
 
 
 def test():
-    wav = WavFile(path_to_audio + 'sin100Hz.wav')
+    wav = WavFile(path_to_test + 'sin100Hz.wav')
     freq, amplitude = HarmonicOscillations.fft(wav)
     freq1, amplitude1 = HarmonicOscillations.fft_db_amplitude_wav(wav)
 
@@ -125,9 +124,9 @@ def test():
 
 
 def test_all_audio():
-    sin = WavFile(path_to_audio + 'sin100Hz.wav')
-    noise = WavFile(path_to_audio + 'noise.wav')
-    m = WavFile(path_to_audio + 'meandr25Hz.wav')
+    sin = WavFile(path_to_test + 'sin100Hz.wav')
+    noise = WavFile(path_to_test + 'noise.wav')
+    m = WavFile(path_to_test + 'meandr25Hz.wav')
     freq_sin, amplitude_sin = HarmonicOscillations.fft_db_amplitude_wav(sin)
     freq_noise, amplitude_noise = HarmonicOscillations.fft_db_amplitude_wav(noise)
     freq_m, amplitude_m = HarmonicOscillations.fft_db_amplitude_wav(m)

@@ -1,5 +1,5 @@
 from algorithms.harmonicOscillations import HarmonicOscillations
-from variables import path_to_project
+from variables import path_to_test
 from handlers.Plotter import Plotter
 from beans.WavFile import WavFile
 import ctypes
@@ -8,7 +8,6 @@ import os
 __author__ = 'Olexandr'
 
 path_to_dll = os.path.dirname(__file__) + "/FIR.dll"
-path_to_audio = path_to_project + "/resources/audio_files/test/"
 
 
 class FiniteImpulseFilter:
@@ -46,7 +45,7 @@ class FiniteImpulseFilter:
 
 
 def test():
-    file = WavFile(path_to_audio + "meandr25Hz.wav")
+    file = WavFile(path_to_test + "meandr25Hz.wav")
     freq, amplitude = HarmonicOscillations.fft_db_amplitude_wav(file)
     out = FiniteImpulseFilter.filter(amplitude, 100, file.frame_rate, 20, 50, "hemming")
 

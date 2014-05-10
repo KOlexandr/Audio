@@ -1,9 +1,9 @@
-from math import log10
-
-from algorithms.vad import VAD
+from variables import path_to_speech, path_to_non_speech, path_to_waves
 from beans.ClassifierBean import ClassifierBean
 from beans.WavFile import WavFile
 from utils.Utils import get_files
+from algorithms.vad import vad
+from math import log10
 
 __author__ = 'Olexandr'
 
@@ -106,7 +106,7 @@ class NBC:
         characteristics = self.data_class[class_key]
         for i in self.audio_files[class_key]:
             if not i.classified:
-                parameters = VAD.vad(i.file_object, frame_size=self.frame_size)
+                parameters = vad(i.file_object, frame_size=self.frame_size)
                 for j in self.used_characteristics:
                     self.teach(parameters.get(j), characteristics[j])
                 words_count += parameters.get("words_count")
@@ -134,7 +134,7 @@ class NBC:
         @return: result of classification
         """
         result = {}
-        current_characteristics = VAD.vad(file, frame_size=self.frame_size)
+        current_characteristics = vad(file, frame_size=self.frame_size)
         for i in self.used_classes:
             result[i] = {}
             for j in self.used_characteristics:
@@ -182,3 +182,16 @@ class NBC:
                     classes[i][j] = val
                     break
         return classes
+
+
+def test():
+    nbc = NBC()
+    nbc.add_audio_files("speech", path_to_speech)
+    nbc.add_audio_files("non_speech", path_to_non_speech)
+    nbc.teach_classifier()
+    classes = nbc.get_classes(nbc.classify(WavFile(path_to_waves + "12345678910.wav")))
+    print(classes)
+
+
+if "__main__" == __name__:
+    test()

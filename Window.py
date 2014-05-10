@@ -1,53 +1,49 @@
+from variables import path_to_records, path_to_files, path_to_silence, cf
 from tkinter import filedialog, messagebox
+from handlers.Processor import Processor
+from beans.WavFile import WavFile
 from tkinter.font import Font
 from tkinter.ttk import Style
-import configparser as cp
 from tkinter import *
-import webbrowser
-
 import numpy as np
-
-from beans.WavFile import WavFile
-from handlers.Processor import Processor
-
+import webbrowser
 
 __author__ = 'Olexandr'
 
 
 class Application(Frame):
-    def __init__(self, root, cf, processor):
+    def __init__(self, root, processor):
         Frame.__init__(self, root)
-        self.cf = cf
 
         #get general properties
-        self.title = self.cf.get("general", "title")
-        self.author = self.cf.get("general", "author")
-        self.link_color = self.cf.get("general", "link_color")
-        self.link_cursor = self.cf.get("general", "link_cursor")
-        self.font_family = self.cf.get("general", "font_family")
-        self.author_email = self.cf.get("general", "author_email")
-        self.copyright_year = self.cf.get("general", "copyright_year")
-        self.author_google_plus = self.cf.get("general", "author_google_plus")
-        self.license_agree_link = self.cf.get("general", "license_agree_link")
+        self.title = cf.get("general", "title")
+        self.author = cf.get("general", "author")
+        self.link_color = cf.get("general", "link_color")
+        self.link_cursor = cf.get("general", "link_cursor")
+        self.font_family = cf.get("general", "font_family")
+        self.author_email = cf.get("general", "author_email")
+        self.copyright_year = cf.get("general", "copyright_year")
+        self.author_google_plus = cf.get("general", "author_google_plus")
+        self.license_agree_link = cf.get("general", "license_agree_link")
         #get general properties
 
         #get program properties
-        self.min_audio_time = int(self.cf.get("program", "min_audio_time"))
-        self.max_audio_time = int(self.cf.get("program", "max_audio_time"))
-        self.default_audio_time = int(self.cf.get("program", "default_audio_time"))
-        self.min_test_audio_time = int(self.cf.get("program", "min_test_audio_time"))
-        self.max_test_audio_time = int(self.cf.get("program", "max_test_audio_time"))
-        self.default_test_audio_time = int(self.cf.get("program", "default_test_audio_time"))
+        self.min_audio_time = int(cf.get("program", "min_audio_time"))
+        self.max_audio_time = int(cf.get("program", "max_audio_time"))
+        self.default_audio_time = int(cf.get("program", "default_audio_time"))
+        self.min_test_audio_time = int(cf.get("program", "min_test_audio_time"))
+        self.max_test_audio_time = int(cf.get("program", "max_test_audio_time"))
+        self.default_test_audio_time = int(cf.get("program", "default_test_audio_time"))
         #get program properties
 
-        self.use_ggl = bool(self.cf.get("uses", "use_ggl"))
+        self.use_ggl = bool(cf.get("uses", "use_ggl"))
 
         self.root = root
         self.processor = processor
         self.root.title(self.title)
         self.root.resizable(FALSE, FALSE)
         self.root.protocol("WM_DELETE_WINDOW", self.close)
-        root.wm_iconbitmap(bitmap=self.cf.get("main_window", "icon_file"))
+        root.wm_iconbitmap(bitmap=cf.get("main_window", "icon_file"))
 
         self.top_frame = None
         self.main_frame = None
@@ -86,15 +82,15 @@ class Application(Frame):
         makes simple GUI of About window
         """
         window = "about_window"
-        ok_hover_bg = self.cf.get(window, "ok_hover_bg")
-        ok_default_bg = self.cf.get(window, "ok_default_bg")
+        ok_hover_bg = cf.get(window, "ok_hover_bg")
+        ok_default_bg = cf.get(window, "ok_default_bg")
         font = Font(family=self.font_family, size=10)
 
         #main frame
         top = Toplevel(self)
         top.resizable(FALSE, FALSE)
         top.title("About " + self.title)
-        top.wm_iconbitmap(bitmap=self.cf.get(window, "icon_file"))
+        top.wm_iconbitmap(bitmap=cf.get(window, "icon_file"))
 
         #info frame in main frame
         frame = Frame(top, relief=SUNKEN, bg="white", borderwidth=1)
@@ -208,8 +204,7 @@ class Application(Frame):
         if time.get() == 0:
             time.set(self.default_audio_time)
         file_name = filedialog.asksaveasfilename(filetypes=[("Wave audio files", "*.wav *.wave")],
-                                                 defaultextension=".wav",
-                                                 initialdir=self.cf.get("program", "base_save_folder"))
+                                                 defaultextension=".wav", initialdir=path_to_records)
         if len(file_name) == 0:
             messagebox.showwarning("Warning", "You must input name of new file, and save it!")
         else:
@@ -240,12 +235,9 @@ class Application(Frame):
 
 
 def main():
-    cf = cp.ConfigParser()
-    cf.read("properties/properties.cfg")
-    processor = Processor(cf.get("program", "base_examples_folder"), np.fft.fft,
-                          lambda: WavFile(cf.get("program", "path_to_small_silence_wav")).get_one_channel_data())
+    processor = Processor(path_to_files, np.fft.fft, lambda: WavFile(path_to_silence).get_one_channel_data())
     root = Tk()
-    app = Application(root, cf, processor)
+    Application(root, processor)
     root.mainloop()
 
 

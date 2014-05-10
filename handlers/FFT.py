@@ -1,5 +1,5 @@
-import numpy as np
 from utils.Utils import correct_len, is_power_of_2
+import numpy as np
 
 __author__ = 'Olexandr'
 

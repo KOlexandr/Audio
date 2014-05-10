@@ -1,9 +1,6 @@
-import wave
-
-import pyaudio
-
 from beans.WavFile import WavFile
-
+import pyaudio
+import wave
 
 __author__ = 'Olexandr'
 
@@ -22,7 +19,7 @@ class Recorder:
         """
         records audio and save as *.wav file
         @param time: time for record is seconds
-        @param file_name: name of new file
+        @param [str] file_name: name of new file
         """
         sample_width, frames = self.record_audio(time)
         wf = wave.open(file_name, 'wb')

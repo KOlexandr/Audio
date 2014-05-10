@@ -1,4 +1,4 @@
-from variables import path_to_project
+from variables import path_to_mfcc
 from beans.WavFile import WavFile
 from utils import Utils
 import ctypes
@@ -8,7 +8,6 @@ import os
 __author__ = 'Olexandr'
 
 path_to_dll = os.path.dirname(__file__) + "/"
-path_to_mfcc = path_to_project + "/resources/mfcc/"
 
 
 class SPro5:
