@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="254155669">
+    <data-source source="LOCAL" name="SQLite - speech.db" uuid="e45d8d5f-15ad-4316-9a38-fa16543528ab">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/resources/speech.db</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

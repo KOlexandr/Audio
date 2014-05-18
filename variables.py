@@ -1,5 +1,5 @@
-from configparser import ConfigParser
 import os
+from configparser import ConfigParser
 
 __author__ = 'Olexandr'
 
@@ -22,3 +22,6 @@ path_to_files = str(path_to_project + cf.get("resources", "path_to_files"))
 path_to_records = str(path_to_project + cf.get("resources", "path_to_records"))
 path_to_examples = str(path_to_project + cf.get("resources", "path_to_examples"))
 path_to_silence = str(path_to_project + cf.get("resources", "path_to_small_silence"))
+
+#SQLite DataBase
+path_to_database = str(path_to_project + "/resources/speech.db")
