@@ -25,3 +25,6 @@ path_to_silence = str(path_to_project + cf.get("resources", "path_to_small_silen
 
 #SQLite DataBase
 path_to_database = str(path_to_project + "/resources/speech.db")
+
+#HMM
+path_to_hmm_words = str(path_to_project + "/resources/audio_files/isolated_digits_ti_train_endpt/")
