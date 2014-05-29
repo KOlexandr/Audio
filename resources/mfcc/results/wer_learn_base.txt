@@ -1,20 +1,19 @@
-words: 	add	open	close	paste	test	music	internet	copy	retry	back	cancel	delete	seven	habr	films
-add: 	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-open: 	0	2	1	0	0	0	1	0	0	0	0	0	0	0	0
-close: 	0	0	5	0	0	0	0	0	0	0	0	0	0	0	0
-paste: 	0	0	0	5	0	0	0	0	0	0	0	0	0	0	0
-test: 	0	0	0	0	5	0	0	0	0	0	0	0	0	0	0
-music: 	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0
-internet: 	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0
-copy: 	0	0	0	0	0	0	0	5	0	0	0	0	0	0	0
-retry: 	0	0	0	0	0	0	0	0	5	0	0	0	0	0	0
-back: 	0	0	0	0	0	0	0	0	0	4	0	0	0	0	0
-cancel: 	0	0	0	0	0	0	0	0	0	0	4	0	0	0	0
-delete: 	0	0	0	0	0	0	0	0	0	0	0	4	0	0	0
-seven: 	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0
-habr: 	0	0	0	0	0	0	0	0	0	0	0	0	0	4	0
-films: 	0	0	0	0	0	0	0	0	0	0	0	0	0	0	5
+words: 	habr	paste	test	films	retry	back	delete	open	copy	close	cancel	internet	music	add
+habr: 	4	0	0	0	0	0	0	0	0	0	0	0	0	0
+paste: 	0	5	0	0	0	0	0	0	0	0	0	0	0	0
+test: 	0	0	5	0	0	0	0	0	0	0	0	0	0	0
+films: 	0	0	0	5	0	0	0	0	0	0	0	0	0	0
+retry: 	0	0	0	0	5	0	0	0	0	0	0	0	0	0
+back: 	0	0	0	0	0	4	0	0	0	0	0	0	0	0
+delete: 	0	0	0	0	0	0	4	0	0	0	0	0	0	0
+open: 	0	0	0	0	0	0	0	3	0	1	0	0	0	0
+copy: 	0	0	0	0	0	0	0	0	5	0	0	0	0	0
+close: 	0	0	0	0	0	0	0	0	0	5	0	0	0	0
+cancel: 	0	0	0	0	0	0	0	0	0	0	4	0	0	0
+internet: 	0	0	0	0	0	0	0	0	0	0	0	4	0	0
+music: 	0	0	0	0	0	0	0	0	0	0	0	0	4	0
+add: 	0	0	0	0	0	0	0	0	0	0	0	0	0	5
 
-attempts num: 65
-correct num: 63
-word error rate: 3.07692 %
+attempts num: 63
+correct num: 62
+word error rate: 1.5873 %

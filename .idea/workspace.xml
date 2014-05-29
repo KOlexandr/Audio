@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0db91aa-b7c4-4319-965f-f86680b0dd9d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/test/12345678910.wav" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Window.py" afterPath="$PROJECT_DIR$/Window.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/fir/__init__.py" afterPath="$PROJECT_DIR$/algorithms/fir/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/harmonicOscillations/__init__.py" afterPath="$PROJECT_DIR$/algorithms/harmonicOscillations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/naiveBayesClassifier/__init__.py" afterPath="$PROJECT_DIR$/algorithms/naiveBayesClassifier/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/spro5/__init__.py" afterPath="$PROJECT_DIR$/algorithms/spro5/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/vad/__init__.py" afterPath="$PROJECT_DIR$/algorithms/vad/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/properties.cfg" afterPath="$PROJECT_DIR$/properties/properties.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/variables.py" afterPath="$PROJECT_DIR$/variables.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt" afterPath="$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt" afterPath="$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/results/system.bin" afterPath="$PROJECT_DIR$/resources/mfcc/results/system.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/base/test_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/base/test_base.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\algorithms\hmm\__init__.py" afterPath="$PROJECT_DIR$/algorithms/x_test/hmm/__init__.py" />
-      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\algorithms\spro5\SProWrapper.dll" afterPath="$PROJECT_DIR$/algorithms/spro5/WSPro.dll" />
-      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\algorithms\spro5\WrapperWRSystemSPro.dll" afterPath="$PROJECT_DIR$/algorithms/spro5/WWRSystemSPro.dll" />
-      <change type="MOVED" beforePath="E:\EmergencyFiles\Python\RecordAudio\pretreatmentOfSpeechSignals.py" afterPath="$PROJECT_DIR$/algorithms/x_test/pretreatmentOfSpeechSignals.py" />
     </list>
     <ignored path="RecordAudio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +40,7 @@
     <SUITE FILE_PATH="coverage/RecordAudio$MainLibrary.coverage" NAME="MainLibrary Coverage Results" MODIFIED="1391035076819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$test.coverage" NAME="test Coverage Results" MODIFIED="1401141425615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/hmm" />
     <SUITE FILE_PATH="coverage/RecordAudio$Main.coverage" NAME="Main Coverage Results" MODIFIED="1398735459468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RecordAudio$Window.coverage" NAME="Window Coverage Results" MODIFIED="1401357537313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RecordAudio$Window.coverage" NAME="Window Coverage Results" MODIFIED="1401358324539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$FFT.coverage" NAME="FFT Coverage Results" MODIFIED="1390091072064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$Test1.coverage" NAME="Test1 Coverage Results" MODIFIED="1399174529603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$VADTest.coverage" NAME="VADTest Coverage Results" MODIFIED="1393111516371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -117,7 +112,7 @@
             <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/algorithms/spro5/__init__.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state line="188" column="11" selection-start="9037" selection-end="9037" vertical-scroll-proportion="0.359375" vertical-offset="2881" max-vertical-offset="4284">
+                  <state line="153" column="0" selection-start="7557" selection-end="7557" vertical-scroll-proportion="0.33224756" vertical-offset="2312" max-vertical-offset="4352">
                     <folding />
                   </state>
                 </provider>
@@ -146,52 +141,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="excluded_learn.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="excluded_learn.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+            <state line="1" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="0.029010238" vertical-offset="0" max-vertical-offset="586">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wer_learn_base.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt">
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="1" selection-start="683" selection-end="683" vertical-scroll-proportion="-12.24" vertical-offset="0" max-vertical-offset="442">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_base.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/mfcc/base/test_base.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="0" selection-start="1729" selection-end="1729" vertical-scroll-proportion="0.0" vertical-offset="1096" max-vertical-offset="2006">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wer_test_base.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="wer_test_base.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt">
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
             <state />
           </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="652" selection-end="652" vertical-scroll-proportion="0.3457627" vertical-offset="0" max-vertical-offset="885">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="learn_base.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/mfcc/base/learn_base.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="0" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1734">
+          <provider editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
               <folding />
             </state>
           </provider>
@@ -200,7 +165,7 @@
       <file leaf-file-name="excluded_test.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+            <state line="1" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
               <folding />
             </state>
           </provider>
@@ -290,13 +255,13 @@
         <option value="$PROJECT_DIR$/variables.py" />
         <option value="$PROJECT_DIR$/properties/properties.cfg" />
         <option value="$PROJECT_DIR$/Window.py" />
-        <option value="$PROJECT_DIR$/algorithms/spro5/__init__.py" />
-        <option value="$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt" />
-        <option value="$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt" />
-        <option value="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" />
-        <option value="$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt" />
         <option value="$PROJECT_DIR$/resources/mfcc/base/test_base.txt" />
+        <option value="$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt" />
+        <option value="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" />
         <option value="$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt" />
+        <option value="$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt" />
+        <option value="$PROJECT_DIR$/algorithms/spro5/__init__.py" />
+        <option value="$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt" />
       </list>
     </option>
   </component>
@@ -492,47 +457,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mfcc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mfcc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="properties" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="algorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="x_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="algorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="x_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recommendationSystem" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1067,7 +1044,11 @@
       <created>1401303775551</created>
       <updated>1401303775551</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="demonstration&#10;">
+      <created>1401357886698</created>
+      <updated>1401357886698</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1102,7 +1083,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17305644" sideWeight="0.56369424" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34615386" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34615386" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12353568" sideWeight="0.43630573" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34615386" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1148,7 +1129,8 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="lpc/SQLite database" />
     <MESSAGE value="HMM not finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="HMM not finished" />
+    <MESSAGE value="demonstration&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="demonstration&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1208,6 +1190,16 @@
           <line>78</line>
           <option name="timeStamp" value="470" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/algorithms/spro5/__init__.py</url>
+          <line>149</line>
+          <option name="timeStamp" value="478" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/algorithms/spro5/__init__.py</url>
+          <line>153</line>
+          <option name="timeStamp" value="479" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -1220,7 +1212,7 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="478" />
+      <option name="time" value="480" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1510,54 +1502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/spro5/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="11" selection-start="9037" selection-end="9037" vertical-scroll-proportion="0.359375" vertical-offset="2881" max-vertical-offset="4284">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Window.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="275" column="17" selection-start="12380" selection-end="12380" vertical-scroll-proportion="0.0" vertical-offset="2831" max-vertical-offset="6681">
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-            <element signature="e#4286#5971#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/base/learn_base.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1734">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="1" selection-start="683" selection-end="683" vertical-scroll-proportion="-12.24" vertical-offset="0" max-vertical-offset="442">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/mfcc/base/test_base.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="112" column="0" selection-start="1729" selection-end="1729" vertical-scroll-proportion="0.0" vertical-offset="1096" max-vertical-offset="2006">
@@ -1572,12 +1516,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt">
+    <entry file="file://$PROJECT_DIR$/Window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="275" column="17" selection-start="12380" selection-end="12380" vertical-scroll-proportion="0.0" vertical-offset="2831" max-vertical-offset="6681">
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#4286#5971#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/base/learn_base.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="652" selection-end="652" vertical-scroll-proportion="0.3457627" vertical-offset="0" max-vertical-offset="885">
+        <state line="18" column="1" selection-start="683" selection-end="683" vertical-scroll-proportion="-12.24" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/spro5/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="0" selection-start="7557" selection-end="7557" vertical-scroll-proportion="0.33224756" vertical-offset="2312" max-vertical-offset="4352">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="0.029010238" vertical-offset="0" max-vertical-offset="586">
           <folding />
         </state>
       </provider>

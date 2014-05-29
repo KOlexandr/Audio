@@ -141,13 +141,16 @@ class SPro5:
         if use_exclude_list:
             if os.path.exists(exclude_file):
                 f = open(exclude_file, "r")
-                excluded = f.readlines()
+                excluded_lines = f.readlines()
                 f.close()
             else:
-                excluded = []
+                excluded_lines = []
 
         file_paths = Utils.get_simple_file_names(path_to_mfcc + "waves/" + work_type, ".wav")
         leading_zeros = len(str(len(file_paths)))
+        excluded = []
+        for i in excluded_lines:
+            excluded.append(i.replace("\n", ""))
         for i in range(len(file_paths)):
             if use_exclude_list:
                 if not file_paths[i] in excluded:
@@ -158,7 +161,8 @@ class SPro5:
 
         if use_exclude_list:
             f = open(exclude_file, "w")
-            f.write("\n".join(excluded))
+            f.writelines(excluded)
+            f.write("\n")
             f.close()
 
     def wr_system(self, work_type):
