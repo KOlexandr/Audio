@@ -111,7 +111,7 @@ class HarmonicOscillations:
 
 
 def test():
-    wav = WavFile(path_to_test + 'sin100Hz.wav')
+    wav = WavFile(path_to_test + '12345678910.wav')
     freq, amplitude = HarmonicOscillations.fft(wav)
     freq1, amplitude1 = HarmonicOscillations.fft_db_amplitude_wav(wav)
 
@@ -143,5 +143,5 @@ def test_all_audio():
 
 
 if "__main__" == __name__:
-    # test()
-    test_all_audio()
+    test()
+    # test_all_audio()

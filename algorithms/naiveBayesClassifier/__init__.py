@@ -79,7 +79,7 @@ class NBC:
         if not file_object is None:
             self.audio_files[class_key].append(ClassifierBean(file_object, False))
         elif not path_to_file is None:
-            self.audio_files[class_key].append(ClassifierBean(self.get_audio_files([path_to_file]), False))
+            self.audio_files[class_key].append(ClassifierBean(self.get_audio_files([path_to_file])[0], False))
         else:
             raise Exception("One of parameters (file_object, path_to_file) should be not None")
         self.docs_count[class_key] += 1
@@ -188,6 +188,9 @@ def test():
     nbc = NBC()
     nbc.add_audio_files("speech", path_to_speech)
     nbc.add_audio_files("non_speech", path_to_non_speech)
+
+    nbc.add_one_audio_file("speech", path_to_file="E:\EmergencyFiles\Python\RecordAudio\\resources\\audio_files\isolated_digits_ti_train_endpt\MAN\AE\\1A_endpt.wav")
+
     nbc.teach_classifier()
     classes = nbc.get_classes(nbc.classify(WavFile(path_to_waves + "12345678910.wav")))
     print(classes)

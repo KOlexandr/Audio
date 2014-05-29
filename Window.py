@@ -1,4 +1,11 @@
-from variables import path_to_records, path_to_files, path_to_silence, cf
+from algorithms.fir import FiniteImpulseFilter
+from algorithms.harmonicOscillations import HarmonicOscillations
+from algorithms.naiveBayesClassifier import NBC
+from algorithms.spro5 import SPro5
+from algorithms.vad import test
+from handlers.Plotter import Plotter
+from variables import path_to_records, path_to_files, path_to_silence, cf, path_to_speech, path_to_non_speech, \
+    path_to_waves, path_to_mfcc, path_to_mfcc_dll
 from tkinter import filedialog, messagebox
 from handlers.Processor import Processor
 from beans.WavFile import WavFile
@@ -12,8 +19,34 @@ __author__ = 'Olexandr'
 
 
 class Application(Frame):
-    def __init__(self, root, processor):
+    def __init__(self, root):
         Frame.__init__(self, root)
+
+        #========================================================================
+        # Fast Fourier Transform
+        self.processor = Processor(path_to_files, np.fft.fft, lambda: WavFile(path_to_silence).get_one_channel_data())
+        # Fast Fourier Transform
+        #========================================================================
+
+        #========================================================================
+        # Naive Bayes Classifier
+        self.nbc = NBC()
+        print("Adding speech NBC examples")
+        self.nbc.add_audio_files("speech", path_to_speech)
+        print("Adding non speech NBC examples")
+        self.nbc.add_audio_files("non_speech", path_to_non_speech)
+        print("Teaching NBC classifier with added examples")
+        # self.nbc.teach_classifier()
+        print("Teaching NBC classifier finished")
+        # Naive Bayes Classifier
+        #========================================================================
+
+        #========================================================================
+        # SPro 5 (MFCC classifierd)
+        self.s = SPro5(path_to_mfcc_dll)
+        self.s.learn()
+        # SPro 5 (MFCC classifierd)
+        #========================================================================
 
         #get general properties
         self.title = cf.get("general", "title")
@@ -36,10 +69,7 @@ class Application(Frame):
         self.default_test_audio_time = int(cf.get("program", "default_test_audio_time"))
         #get program properties
 
-        self.use_ggl = bool(cf.get("uses", "use_ggl"))
-
         self.root = root
-        self.processor = processor
         self.root.title(self.title)
         self.root.resizable(FALSE, FALSE)
         self.root.protocol("WM_DELETE_WINDOW", self.close)
@@ -125,12 +155,151 @@ class Application(Frame):
         for child in frame.winfo_children():
             child.destroy()
 
+    #==================================================================================================================
+    def record_audio_file(self, time, path=path_to_records):
+        file_name = filedialog.asksaveasfilename(filetypes=[("Wave audio files", "*.wav *.wave")],
+                                                 defaultextension=".wav", initialdir=path)
+        if len(file_name) == 0:
+            messagebox.showwarning("Warning", "You must input name of new file, and save it!")
+        else:
+            self.processor.recorder.record_audio_to_file_and_get_wav(time=time, file_name=file_name)
+            messagebox.showinfo("File Saved", "Audio recorded, saved into file")
+
+    def record_example_audio(self, time):
+        """
+        records short audio file (file example with some word)
+        and adds it to library
+        @param time: length of test file
+        """
+        if time.get() == 0:
+            time.set(self.default_audio_time)
+        file_name = filedialog.asksaveasfilename(filetypes=[("Wave audio files", "*.wav *.wave")],
+                                                 defaultextension=".wav", initialdir=path_to_records)
+        if len(file_name) == 0:
+            messagebox.showwarning("Warning", "You must input name of new file, and save it!")
+        else:
+            wav = self.processor.recorder.record_audio_to_file_and_get_wav(time=time.get(), file_name=file_name)
+            self.processor.lib.create_and_add_item_from_wave(wav)
+            messagebox.showinfo("File Saved", "Audio recorded, saved into file and added to library!")
+
+    def record_test_audio(self, time):
+        """
+        records audio from microphone and uses this audio for analyzing
+        @param time: length of test file
+        """
+        if time.get() == 0:
+            time.set(self.default_test_audio_time)
+        wav = self.processor.recorder.record_and_get_wav(time.get())
+        samples, word_count, max_len = self.processor.find_word_in_test_file(wav.get_one_channel_data())
+        result_str = "All words in file = " + str(word_count) + "\n"
+        print("All words in file = " + str(word_count))
+        for j in samples:
+            word, coefficient = self.processor.lib.find_max_corrcoef_and_word(j, max_len)
+            if coefficient > 0.3:
+                result_str += word + " - " + str(coefficient) + "\n"
+                print(word + " - " + str(coefficient))
+        messagebox.showinfo("Result", result_str)
+
+    def add_file_to_nbc(self, clazz, path=path_to_records):
+        askopenfile = filedialog.askopenfile(filetypes=[("Wave audio files", "*.wav *.wave")], defaultextension=".wav",
+                                             initialdir=path)
+        if not askopenfile is None:
+            self.nbc.add_one_audio_file(clazz, path_to_file=askopenfile.name)
+            self.nbc.teach_classifier()
+
+    def classify(self, path=path_to_waves):
+        askopenfile = filedialog.askopenfile(filetypes=[("Wave audio files", "*.wav *.wave")], defaultextension=".wav",
+                                             initialdir=path)
+        print("Teaching NBC classifier with added examples")
+        self.nbc.teach_classifier()
+        print("Teaching NBC classifier finished")
+        if not askopenfile is None:
+            classes = self.nbc.get_classes(self.nbc.classify(WavFile(askopenfile.name)))
+            mess = ""
+            for i in classes.keys():
+                for j in classes[i].keys():
+                    mess += str(i) + ": " + str(j) + "\n"
+            messagebox.showinfo("Classification results", mess)
+        else:
+            messagebox.showwarning("Warning", "You should select one file. Please, try again")
+
+    @staticmethod
+    def show_test_ho(path=path_to_waves):
+        askopenfile = filedialog.askopenfile(filetypes=[("Wave audio files", "*.wav *.wave")], defaultextension=".wav",
+                                             initialdir=path)
+        if not askopenfile is None:
+            wav = WavFile(askopenfile.name)
+            freq, amplitude = HarmonicOscillations.fft_db_amplitude_wav(wav)
+
+            plotter = Plotter()
+            plotter.add_sub_plot_data("data", wav.samples)
+            plotter.add_sub_plot_data("fft_log_fft_db_hz", amplitude, freq, scale_x='log', scale_y='log')
+            plotter.sub_plot_all_horizontal()
+        else:
+            messagebox.showwarning("Warning", "You should select one file. Please, try again")
+
+    @staticmethod
+    def show_test_fir(path=path_to_waves):
+        askopenfile = filedialog.askopenfile(filetypes=[("Wave audio files", "*.wav *.wave")], defaultextension=".wav",
+                                             initialdir=path)
+        if not askopenfile is None:
+            wav = WavFile(askopenfile.name)
+            freq, amplitude = HarmonicOscillations.fft_db_amplitude_wav(wav)
+            print("Using Fir Filter with 'Hemming' window")
+            out = FiniteImpulseFilter.filter(amplitude, 100, wav.frame_rate, 20, 50, "hemming")
+
+            plotter = Plotter()
+            plotter.add_sub_plot_data("original", wav.samples)
+            plotter.add_sub_plot_data("fft", amplitude, freq, scale_x='log', scale_y='log')
+            plotter.add_sub_plot_data("fft_filtered", out, freq, scale_x='log', scale_y='log')
+            plotter.sub_plot_all_horizontal()
+        else:
+            messagebox.showwarning("Warning", "You should select one file. Please, try again")
+
+    @staticmethod
+    def show_test_vad_open(path=path_to_records):
+        askopenfile = filedialog.askopenfile(filetypes=[("Wave audio files", "*.wav *.wave")], defaultextension=".wav",
+                                             initialdir=path)
+        if not askopenfile is None:
+            wav = WavFile(askopenfile.name)
+            test(wav, 3, 3, 0)
+        else:
+            messagebox.showwarning("Warning", "You should select one file. Please, try again")
+
+    def add_mfcc_file(self, file_type, path=path_to_mfcc):
+        self.record_audio_file(5, path=path + "waves/" + file_type)
+        self.s.learn()
+
+    def show_test_mfcc(self):
+        self.s.test()
+        results = SPro5.get_results()
+        mess = ""
+        for i in results.keys():
+            mess += str(i) + ": " + str(results[i]) + "\n"
+        messagebox.showinfo("Results MFCC", mess)
+    #==================================================================================================================
+
     def make_main_frame(self):
         """
         makes simple GUI of main window with 2 buttons record example file (Teach Program)
         and record test audio and analyze it (Record and Analyze Sound)
         """
         self.clear_frame(self.main_frame)
+
+        #========================================================================
+        # Record Audio
+        Label(self.main_frame, text="Record Audio File",
+              font=Font(family=self.font_family, size=10, weight="bold")).pack(side=TOP, pady=5, padx=5)
+        Button(self.main_frame, text="Record",
+               command=lambda: self.make_record_frame(self.min_audio_time, self.max_audio_time,
+                                                      self.record_example_audio), width=15).pack()
+        # Record Audio
+        #========================================================================
+
+        #========================================================================
+        # Fast Fourier Transform
+        Label(self.main_frame, text="Fast Fourier Transform Only",
+              font=Font(family=self.font_family, size=10, weight="bold")).pack(side=TOP, pady=5, padx=5)
         Button(self.main_frame, text="Teach Program",
                command=lambda: self.make_record_frame(self.min_audio_time, self.max_audio_time,
                                                       self.record_example_audio), width=15).pack()
@@ -138,6 +307,55 @@ class Application(Frame):
                command=lambda: self.make_record_frame(self.min_test_audio_time, self.max_test_audio_time,
                                                       self.record_test_audio),
                width=30).pack()
+        # Fast Fourier Transform
+        #========================================================================
+
+        #========================================================================
+        # Naive Bayes Classifier
+        Label(self.main_frame, text="Naive Bayes Classifier",
+              font=Font(family=self.font_family, size=10, weight="bold")).pack(side=TOP, pady=5, padx=5)
+        Button(self.main_frame, text="Add speech file for NBC", command=lambda: self.add_file_to_nbc("speech"),
+               width=30).pack()
+        Button(self.main_frame, text="Add non speech file for NBC", command=lambda: self.add_file_to_nbc("non_speech"),
+               width=30).pack()
+        Button(self.main_frame, text="Classify file", command=lambda: self.classify(), width=30).pack()
+        # Naive Bayes Classifier
+        #========================================================================
+
+        #========================================================================
+        # Voice Activity Detection
+        Label(self.main_frame, text="Voice Activity Detection",
+              font=Font(family=self.font_family, size=10, weight="bold")).pack(side=TOP, pady=5, padx=5)
+        Button(self.main_frame, text="Test Open", command=lambda: self.show_test_vad_open(), width=30).pack()
+        # Voice Activity Detection
+        #========================================================================
+
+        #========================================================================
+        # Harmonic Oscillations (Pretty FFT)
+        Label(self.main_frame, text="Harmonic Oscillations (Pretty FFT)",
+              font=Font(family=self.font_family, size=10, weight="bold")).pack(side=TOP, pady=5, padx=5)
+        Button(self.main_frame, text="Harmonic Oscillations", command=lambda: self.show_test_ho(), width=30).pack()
+        # Harmonic Oscillations (Pretty FFT)
+        #========================================================================
+
+        #========================================================================
+        # Finite Impulse Response Filter
+        Label(self.main_frame, text="Finite Impulse Response Filter",
+              font=Font(family=self.font_family, size=10, weight="bold")).pack(side=TOP, pady=5, padx=5)
+        Button(self.main_frame, text="FIR Filter", command=lambda: self.show_test_fir(), width=30).pack()
+        # Finite Impulse Response Filter
+        #========================================================================
+
+        #========================================================================
+        # SPro 5 (MFCC classifierd)
+        Label(self.main_frame, text="MFCC",
+              font=Font(family=self.font_family, size=10, weight="bold")).pack(side=TOP, pady=5, padx=5)
+        Button(self.main_frame, text="Record learn file", command=lambda: self.add_mfcc_file("learn"), width=30).pack()
+        Button(self.main_frame, text="Record test file", command=lambda: self.add_mfcc_file("test"), width=30).pack()
+        Button(self.main_frame, text="Test", command=lambda: self.show_test_mfcc(), width=30).pack()
+        # SPro 5 (MFCC classifierd)
+        #========================================================================
+
         self.main_frame.pack(side=TOP)
 
     def init_top_frame(self):
@@ -195,49 +413,10 @@ class Application(Frame):
         Button(self.main_frame, text="Back", command=self.make_main_frame, width=20).pack(side=LEFT)
         self.main_frame.pack()
 
-    def record_example_audio(self, time):
-        """
-        records short audio file (file example with some word)
-        and adds it to library
-        @param time: length of test file
-        """
-        if time.get() == 0:
-            time.set(self.default_audio_time)
-        file_name = filedialog.asksaveasfilename(filetypes=[("Wave audio files", "*.wav *.wave")],
-                                                 defaultextension=".wav", initialdir=path_to_records)
-        if len(file_name) == 0:
-            messagebox.showwarning("Warning", "You must input name of new file, and save it!")
-        else:
-            wav = self.processor.recorder.record_audio_to_file_and_get_wav(time=time.get(), file_name=file_name)
-            self.processor.lib.create_and_add_item_from_wave(wav)
-            messagebox.showinfo("File Saved", "Audio recorded, saved into file and added to library!")
-
-    def record_test_audio(self, time):
-        """
-        records audio from microphone and uses this audio for analyzing
-        @param time: length of test file
-        """
-        if time.get() == 0:
-            time.set(self.default_test_audio_time)
-        wav = self.processor.recorder.record_and_get_wav(time.get())
-        if self.use_ggl:
-            result_str = ''
-        else:
-            samples, word_count, max_len = self.processor.find_word_in_test_file(wav.get_one_channel_data())
-            result_str = "All words in file = " + str(word_count) + "\n"
-            print("All words in file = " + str(word_count))
-            for j in samples:
-                word, coefficient = self.processor.lib.find_max_corrcoef_and_word(j, max_len)
-                if coefficient > 0.3:
-                    result_str += word + " - " + str(coefficient) + "\n"
-                    print(word + " - " + str(coefficient))
-        messagebox.showinfo("Result", result_str)
-
 
 def main():
-    processor = Processor(path_to_files, np.fft.fft, lambda: WavFile(path_to_silence).get_one_channel_data())
     root = Tk()
-    Application(root, processor)
+    Application(root)
     root.mainloop()
 
 

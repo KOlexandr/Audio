@@ -81,7 +81,7 @@ def vad(wav_file, frame_size=10, fft_function=numpy.fft.fft):
 
         if speech[i] == 0:
             min_energy = (silence_count * min_energy + energy[i]) / (silence_count + 1)
-        thresh_energy = energy_prim_threshold * log10(min_energy)
+        thresh_energy = energy_prim_threshold * log10(abs(min_energy)+1e-5)
 
     return {"energy": energy,
             "mdf": freq_component,
@@ -255,10 +255,9 @@ def plot_result(wav, word_results, params, min_params, colors, items):
     plot.sub_plot_all_horizontal()
 
 
-def test(file_name, min_frames_voice, min_frames_noise, bad_frames_count):
+def test(wav, min_frames_voice, min_frames_noise, bad_frames_count):
     keys, shifts = ["energy", "mdf", "zcr", "sfm"], {"energy": 1, "mdf": 320, "zcr": 1, "sfm": 1}
     colors = {"energy": "red", "mdf": "green", "zcr": "black", "sfm": "yellow"}
-    wav = WavFile(file_name)
     params = vad(wav)
     min_params = {}
     if bad_frames_count == 0:
@@ -278,4 +277,4 @@ def test(file_name, min_frames_voice, min_frames_noise, bad_frames_count):
 
 
 if "__main__" == __name__:
-    test(path_to_waves + "12345678910.wav", 3, 3, 0)
+    test(WavFile(path_to_waves + "12345678910.wav"), 3, 3, 0)

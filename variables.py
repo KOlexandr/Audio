@@ -21,6 +21,7 @@ path_to_flacs = str(path_to_project + cf.get("resources", "path_to_flacs"))
 path_to_files = str(path_to_project + cf.get("resources", "path_to_files"))
 path_to_records = str(path_to_project + cf.get("resources", "path_to_records"))
 path_to_examples = str(path_to_project + cf.get("resources", "path_to_examples"))
+path_to_mfcc_dll = str(path_to_project + cf.get("resources", "path_to_mfcc_dll"))
 path_to_silence = str(path_to_project + cf.get("resources", "path_to_small_silence"))
 
 #SQLite DataBase

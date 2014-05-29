@@ -1,4 +1,4 @@
-from variables import path_to_mfcc
+from variables import path_to_mfcc, path_to_mfcc_dll
 from beans.WavFile import WavFile
 from utils import Utils
 import ctypes
@@ -7,8 +7,6 @@ import os
 
 __author__ = 'Olexandr'
 
-path_to_dll = os.path.dirname(__file__) + "/"
-
 
 class SPro5:
     """
@@ -16,10 +14,12 @@ class SPro5:
     wrapper for SPro 5.0 c/c++ program
     use DLL for transform wav file to mfcc
     """
-    def __init__(self):
+    def __init__(self, path_to_dll):
         self.mfcc = {"learn": {}, "test": {}}
-        self.s_pro_5 = ctypes.CDLL(path_to_dll + "SProWrapper.dll")
-        self.wr_s_pro_5 = ctypes.CDLL(path_to_dll + "WrapperWRSystemSPro.dll")
+        self.ws_pro_5 = ctypes.CDLL(path_to_dll + "SPro.dll")
+        self.s_pro_5 = ctypes.CDLL(path_to_dll + "WSPro.dll")
+        self.wrs_pro_5 = ctypes.CDLL(path_to_dll + "WRSystemSPro.dll")
+        self.wr_s_pro_5 = ctypes.CDLL(path_to_dll + "WWRSystemSPro.dll")
 
     def s_pro_base_params(self, input_file, output_file):
         """
@@ -125,6 +125,7 @@ class SPro5:
             idx = 2
             while os.path.exists(base_path + output_file):
                 output_file = re.sub("\\.wav", "-" + str(i + idx).zfill(leading_zeros) + ".mfcc", file_paths[i])
+                idx += 1
         self.s_pro_base_params(waves_path + file_paths[i], base_path + output_file)
 
     def all_waves_to_mfcc(self, work_type, use_exclude_list=True):
@@ -157,7 +158,7 @@ class SPro5:
 
         if use_exclude_list:
             f = open(exclude_file, "w")
-            f.writelines(excluded)
+            f.write("\n".join(excluded))
             f.close()
 
     def wr_system(self, work_type):
@@ -245,7 +246,7 @@ class SPro5:
 
 
 if "__main__" == __name__:
-    # s = SPro5()
-    # s.learn()
-    # s.test()
+    s = SPro5(path_to_mfcc_dll)
+    s.learn()
+    s.test()
     print(SPro5.get_results())
