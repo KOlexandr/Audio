@@ -1,5 +1,8 @@
+import struct
+import wave
+import scipy
+from variables import path_to_test, path_to_vad_results
 from handlers.Plotter import Plotter
-from variables import path_to_test
 from beans.WavFile import WavFile
 from math import log10, floor
 from scipy import stats
@@ -255,6 +258,19 @@ def plot_result(wav, word_results, params, min_params, colors, items):
     plot.sub_plot_all_horizontal()
 
 
+def create_files(wav, word_results, items):
+    # channel1 = wav.samples[0::wav.number_of_channels]
+    # channel2 = wav.samples[1::wav.number_of_channels]
+    data = wav.get_one_channel_data()
+    for i in word_results.keys():
+        starts = word_results[i]['starts']
+        ends = word_results[i]['ends']
+        num = 1
+        for k in range(0, len(starts)):
+            WavFile.write(path_to_vad_results + 'word' + str(num) + "_" + str(i) + '.wav', data[starts[k]*items:ends[k]*items], 0)
+            num += 1
+
+
 def test(wav, min_frames_voice, min_frames_noise, bad_frames_count):
     keys, shifts = ["energy", "mdf", "zcr", "sfm"], {"energy": 1, "mdf": 320, "zcr": 1, "sfm": 1}
     colors = {"energy": "red", "mdf": "green", "zcr": "black", "sfm": "yellow"}
@@ -273,6 +289,7 @@ def test(wav, min_frames_voice, min_frames_noise, bad_frames_count):
         starts, ends = find_words_for_one_param(params[i], min_params[i], min_frames_voice, min_frames_noise)
         word_results[i]["starts"], word_results[i]["ends"] = starts, ends
 
+    create_files(wav, word_results, params["items_per_frame"])
     plot_result(wav, word_results, params, min_params, colors, params["items_per_frame"])
 
 
