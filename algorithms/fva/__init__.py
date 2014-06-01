@@ -1,4 +1,5 @@
-from variables import path_to_examples, path_to_silence, path_to_waves
+from algorithms.fir import FiniteImpulseFilter
+from variables import path_to_examples, path_to_silence, path_to_test
 from handlers.Recorder import Recorder
 from beans.Library import Library
 from beans.WavFile import WavFile
@@ -9,21 +10,22 @@ __author__ = 'Olexandr'
 
 
 class FFTVoiceAnalyzer:
-
-    def __init__(self, base_lib_folder, fft, get_silence, really_transform=False):
+    def __init__(self, base_lib_folder, fft, silence, really_transform=False):
         """
         @param base_lib_folder: base folder with example files
         @param fft: function for counting FFT
-        @param get_silence: function for get "silence" example file
+        @param silence: "silence" example WavFile
         @param really_transform: is really transform few channels to one or use one channel without transformation
         self.extension: extension of audio files which will use
         """
         self.fft = fft
-        self.recorder = Recorder()
+        self.silence = silence
         self.extension = ".wav"
-        self.get_silence = get_silence
+        self.recorder = Recorder()
         self.base_lib_folder = base_lib_folder
         self.really_transform = really_transform
+        self.filter_fft = lambda sam, fr=None: abs(self.fft(sam)) if fr is None else FiniteImpulseFilter.filter(
+            abs(self.fft(sam)), 50, fr, win_func="hemming")
 
         self.lib = self.create_lib_with_examples()
 
@@ -38,19 +40,20 @@ class FFTVoiceAnalyzer:
             lib.create_and_add_item_from_wave(i)
         return lib
 
-    def find_word_in_test_file(self, test_samples):
+    def find_word_in_test_file(self, test):
         """
         analyze test file (finds all silence and split file to few pars by them)
-        @param test_samples: samples of recorded audio
+        @param test: recorded audio
         @return: samples of each found word, word count, max length of word (array of samples)
         """
         start_idx = 0
         indexes, coefficients = [], []
-        silence = self.get_silence()
-        length_of_silence = len(silence)
-        for i in range(int(len(test_samples) / length_of_silence)):
-            f = test_samples[start_idx:start_idx + length_of_silence]
-            tmp = np.corrcoef(abs(self.fft(silence)), abs(self.fft(f)))
+        length_of_silence = len(self.silence.get_one_channel_data())
+        silence_samples = self.filter_fft(self.silence.get_one_channel_data())
+        for i in range(int(len(test.get_one_channel_data()) / length_of_silence)):
+            f = test.get_one_channel_data()[start_idx:start_idx + length_of_silence]
+            test_samples = self.filter_fft(f)
+            tmp = np.corrcoef(silence_samples, test_samples)
             coefficients.append(abs(tmp[0][1]))
             indexes.append((start_idx, start_idx + length_of_silence))
             start_idx += length_of_silence
@@ -66,7 +69,7 @@ class FFTVoiceAnalyzer:
             finish = j - 1
             if k > 0:
                 words_count += 1
-                tmp = test_samples[indexes[start][0]:indexes[finish][1]]
+                tmp = test.get_one_channel_data()[indexes[start][0]:indexes[finish][1]]
                 max_length = max(max_length, len(tmp))
                 words_samples.append(tmp)
                 k = 0
@@ -75,7 +78,7 @@ class FFTVoiceAnalyzer:
 
     @staticmethod
     def analyze(wav, analyzer):
-        samples, word_count, max_len = analyzer.find_word_in_test_file(wav.get_one_channel_data())
+        samples, word_count, max_len = analyzer.find_word_in_test_file(wav)
         result = "All words in file = " + str(word_count) + "\n"
         for j in samples:
             word, coefficient = analyzer.lib.find_max_corrcoef_and_word(j, max_len)
@@ -85,5 +88,5 @@ class FFTVoiceAnalyzer:
 
 
 if "__main__" == __name__:
-    processor = FFTVoiceAnalyzer(path_to_examples, np.fft.fft, lambda: WavFile(path_to_silence).get_one_channel_data())
-    FFTVoiceAnalyzer.analyze(WavFile(path_to_waves + "13245678109Speed.wav"), processor)
+    processor = FFTVoiceAnalyzer(path_to_examples, np.fft.fft, WavFile(path_to_silence))
+    print(FFTVoiceAnalyzer.analyze(WavFile(path_to_test + "13245678109WahWah.wav"), processor))

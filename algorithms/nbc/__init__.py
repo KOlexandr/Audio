@@ -1,4 +1,4 @@
-from variables import path_to_speech, path_to_non_speech, path_to_waves
+from variables import path_to_speech, path_to_non_speech, path_to_test
 from beans.ClassifierBean import ClassifierBean
 from beans.WavFile import WavFile
 from utils.Utils import get_files
@@ -189,10 +189,10 @@ def test():
     nbc.add_audio_files("speech", path_to_speech)
     nbc.add_audio_files("non_speech", path_to_non_speech)
 
-    nbc.add_one_audio_file("speech", path_to_file="E:\EmergencyFiles\Python\RecordAudio\\resources\\audio_files\isolated_digits_ti_train_endpt\MAN\AE\\1A_endpt.wav")
+    # nbc.add_one_audio_file("speech", path_to_file="E:\EmergencyFiles\Python\RecordAudio\\resources\\audio_files\isolated_digits\MAN\AE\\1A_endpt.wav")
 
     nbc.teach_classifier()
-    classes = nbc.get_classes(nbc.classify(WavFile(path_to_waves + "12345678910.wav")))
+    classes = nbc.get_classes(nbc.classify(WavFile(path_to_test + "12345678910.wav")))
     print(classes)
 
 

@@ -1,5 +1,5 @@
-from variables import path_to_records, path_to_files, path_to_silence, cf, path_to_speech, path_to_non_speech, \
-    path_to_waves, path_to_mfcc, path_to_mfcc_dll
+from variables import path_to_records, path_to_silence, cf, path_to_speech, path_to_non_speech, \
+    path_to_mfcc, path_to_mfcc_dll, path_to_test, path_to_examples
 from algorithms.fva import FFTVoiceAnalyzer
 from algorithms.fft import FFT
 from algorithms.nbc import NBC
@@ -24,8 +24,7 @@ class Application(Frame):
 
         #========================================================================
         # Fast Fourier Transform
-        self.processor = FFTVoiceAnalyzer(path_to_files, np.fft.fft,
-                                          lambda: WavFile(path_to_silence).get_one_channel_data())
+        self.processor = FFTVoiceAnalyzer(path_to_examples, np.fft.fft, WavFile(path_to_silence))
         # Fast Fourier Transform
         #========================================================================
 
@@ -201,7 +200,7 @@ class Application(Frame):
             self.nbc.add_one_audio_file(clazz, path_to_file=askopenfile.name)
             self.nbc.teach_classifier()
 
-    def classify(self, path=path_to_waves):
+    def classify(self, path=path_to_test):
         askopenfile = filedialog.askopenfile(filetypes=[("Wave audio files", "*.wav *.wave")], defaultextension=".wav",
                                              initialdir=path)
         print("Teaching NBC classifier with added examples")
@@ -218,7 +217,7 @@ class Application(Frame):
             messagebox.showwarning("Warning", "You should select one file. Please, try again")
 
     @staticmethod
-    def show_test_ho(path=path_to_waves):
+    def show_test_ho(path=path_to_test):
         askopenfile = filedialog.askopenfile(filetypes=[("Wave audio files", "*.wav *.wave")], defaultextension=".wav",
                                              initialdir=path)
         if not askopenfile is None:
@@ -233,7 +232,7 @@ class Application(Frame):
             messagebox.showwarning("Warning", "You should select one file. Please, try again")
 
     @staticmethod
-    def show_test_fir(path=path_to_waves):
+    def show_test_fir(path=path_to_test):
         askopenfile = filedialog.askopenfile(filetypes=[("Wave audio files", "*.wav *.wave")], defaultextension=".wav",
                                              initialdir=path)
         if not askopenfile is None:

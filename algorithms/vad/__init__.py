@@ -1,5 +1,5 @@
 from handlers.Plotter import Plotter
-from variables import path_to_waves
+from variables import path_to_test
 from beans.WavFile import WavFile
 from math import log10, floor
 from scipy import stats
@@ -277,4 +277,4 @@ def test(wav, min_frames_voice, min_frames_noise, bad_frames_count):
 
 
 if "__main__" == __name__:
-    test(WavFile(path_to_waves + "12345678910.wav"), 3, 3, 0)
+    test(WavFile(path_to_test + "12345678910.wav"), 3, 3, 0)

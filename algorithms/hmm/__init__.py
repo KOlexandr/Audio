@@ -517,7 +517,7 @@ def main():
     # HMM training 
     [estTR, estE] = arrayfun(@(a) hmmtrain(a{1}, trans, emis), trseq, 'UniformOutput', false)
     # Testing begins: compute test ceps{or one su~ject JT, not in training set 
-    testceps = arrayfun(@(a) getceps(strcat('isolated_digits_ti_train_endpt/MAN/JT/', ...
+    testceps = arrayfun(@(a) getceps(strcat('isolated_digits/MAN/JT/', ...
         a{1}, 'B_endpt.wav'), 1, frame_rate, x, y), digits, 'UniformOutput', false)
     # Encode test ceps with single subject flag set 
     testseq = arrayfun(@(a) encode(a{1}, cbk, 1), testceps, 'UniformOutput', false)

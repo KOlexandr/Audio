@@ -21,6 +21,36 @@ class FFT:
     """
 
     @staticmethod
+    def fft_amplitude(wav):
+        """
+        wrapper for c++ fft from FFT.dll
+        @param wav: custom WavFile
+        @return: freq - vector of frequency (Hz), amplitude - vector of amplitudes (db)
+        """
+        dll = ctypes.CDLL(path_to_dll)
+        p2 = int(math.log2(wav.samples.nbytes/wav.sample_width))
+        array_size = 1 << p2
+        in_data = (ctypes.c_double * (array_size * 2))()
+        out_data = (ctypes.c_double * (array_size * 2))()
+
+        min_size = min(array_size * 2, len(wav.samples))
+        in_data[0:min_size] = wav.samples[0:min_size]
+
+        dll.fft(ctypes.c_int(p2), in_data, out_data)
+        out = list(out_data)
+
+        #magnitude of spectrum
+        amplitude = []
+        freq = []
+        current_freq = 0
+        delta = float(wav.frame_rate)/float(array_size)
+        for i in range(0, array_size, 2):
+            amplitude.append(math.sqrt(out[i]*out[i]+out[i+1]*out[i+1]))
+            freq.append(current_freq)
+            current_freq += delta
+        return freq, amplitude
+
+    @staticmethod
     def fft(wav):
         """
         wrapper for c++ fft from FFT.dll
@@ -37,20 +67,7 @@ class FFT:
         in_data[0:min_size] = wav.samples[0:min_size]
 
         dll.fft(ctypes.c_int(p2), in_data, out_data)
-        out = [0]*(array_size * 2)
-        for i in range(array_size * 2):
-            out[i] = out_data[i]
-
-        #magnitude of spectrum
-        amplitude = []
-        freq = []
-        current_freq = 0
-        delta = float(wav.frame_rate)/float(array_size)
-        for i in range(0, array_size, 2):
-            amplitude.append(math.sqrt(out[i]*out[i]+out[i+1]*out[i+1]))
-            freq.append(current_freq)
-            current_freq += delta
-        return freq, amplitude
+        return list(out_data)
 
     @staticmethod
     def fft_db_amplitude_wav(wav):

@@ -1,7 +1,7 @@
-from algorithms.fft import FFT
-from variables import path_to_test
 from handlers.Plotter import Plotter
+from variables import path_to_test
 from beans.WavFile import WavFile
+from algorithms.fft import FFT
 import ctypes
 import os
 
@@ -23,7 +23,7 @@ class FiniteImpulseFilter:
     }
 
     @staticmethod
-    def filter(in_data, filter_length, frame_rate, fb, fba, win_func="square"):
+    def filter(in_data, filter_length, frame_rate, fb=20, fba=50, win_func="square"):
         """
         @param in_data: vector of input data (vector after fft transform)
         @param filter_length: length of filter (biggest length - slower program)

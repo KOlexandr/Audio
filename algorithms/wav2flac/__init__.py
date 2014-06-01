@@ -1,4 +1,4 @@
-from variables import path_to_flacs, path_to_waves
+from variables import path_to_flacs, path_to_test
 from urllib.request import Request, urlopen
 import glob
 import os
@@ -111,6 +111,4 @@ class WavFLAC:
 
 if "__main__" == __name__:
     converter = WavFLAC()
-    file = converter.wav2flac(path_to_waves + '12345678910.wav', path_to_flacs + '12345678910.flac')
-    # file = converter.flac2wav('resources/audio_files/flacs/test.flac', 'resources/audio_files/waves/t.wav')
-    # converter.stt_google_wav('resources/audio_files/waves/12345678910.wav')
+    file = converter.wav2flac(path_to_test + '12345678910.wav', path_to_flacs + '12345678910.flac')

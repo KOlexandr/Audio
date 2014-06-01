@@ -1,7 +1,7 @@
 import re
 import sqlite3 as sql
 from utils.Utils import get_files
-from variables import path_to_database, path_to_files
+from variables import path_to_database, path_to_examples
 
 __author__ = 'Olexandr'
 
@@ -42,5 +42,5 @@ class DataBase:
         return path[path.rfind("/")+1:]
 
 
-db = DataBase(path_to_database, path_to_files)
+db = DataBase(path_to_database, path_to_examples)
 db.create_lib_with_examples()
