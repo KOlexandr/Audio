@@ -1,4 +1,4 @@
-from algorithms.harmonicOscillations import HarmonicOscillations
+from algorithms.fft import FFT
 from variables import path_to_test
 from handlers.Plotter import Plotter
 from beans.WavFile import WavFile
@@ -46,7 +46,7 @@ class FiniteImpulseFilter:
 
 def test():
     file = WavFile(path_to_test + "12345678910.wav")
-    freq, amplitude = HarmonicOscillations.fft_db_amplitude_wav(file)
+    freq, amplitude = FFT.fft_db_amplitude_wav(file)
     out = FiniteImpulseFilter.filter(amplitude, 100, file.frame_rate, 20, 50, "hemming")
 
     plotter = Plotter()

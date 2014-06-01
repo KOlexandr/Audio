@@ -1,6 +1,8 @@
+from utils.Utils import correct_len, is_power_of_2
 from handlers.Plotter import Plotter
 from variables import path_to_test
 from beans.WavFile import WavFile
+import numpy as np
 import ctypes
 import numpy
 import math
@@ -9,18 +11,19 @@ import os
 __author__ = 'Olexandr'
 
 
-path_to_dll = os.path.dirname(__file__) + "/HarmonicOscillations.dll"
+path_to_dll = os.path.dirname(__file__) + "/FFT.dll"
 
 
-class HarmonicOscillations:
+class FFT:
     """
     http://habrahabr.ru/post/219337
+    Fast Fourier Transform
     """
 
     @staticmethod
     def fft(wav):
         """
-        wrapper for c++ fft from HarmonicOscillations.dll
+        wrapper for c++ fft from FFT.dll
         @param wav: custom WavFile
         @return: freq - vector of frequency (Hz), amplitude - vector of amplitudes (db)
         """
@@ -52,18 +55,18 @@ class HarmonicOscillations:
     @staticmethod
     def fft_db_amplitude_wav(wav):
         """
-        wrapper for c++ fft_db_hz from HarmonicOscillations.dll
-        create freq and amplitude vectors in c++-code (works more faster then HarmonicOscillations.fft)
+        wrapper for c++ fft_db_hz from FFT.dll
+        create freq and amplitude vectors in c++-code (works more faster then FFT.fft)
         @param wav: custom WavFile
         @return: freq - vector of frequency (Hz), amplitude - vector of amplitudes (db)
         """
-        return HarmonicOscillations.fft_db_amplitude(wav.samples, wav.samples.nbytes, wav.sample_width, wav.frame_rate)
+        return FFT.fft_db_amplitude(wav.samples, wav.samples.nbytes, wav.sample_width, wav.frame_rate)
 
     @staticmethod
     def fft_db_amplitude(samples, byte_per_frame, sample_width, frame_rate):
         """
-        wrapper for c++ fft_db_hz from HarmonicOscillations.dll
-        create freq and amplitude vectors in c++-code (works more faster then HarmonicOscillations.fft)
+        wrapper for c++ fft_db_hz from FFT.dll
+        create freq and amplitude vectors in c++-code (works more faster then FFT.fft)
         @param samples: vector of audio data
         @param byte_per_frame: values for representation each frame (2)
         @param sample_width: width of each sample
@@ -109,11 +112,51 @@ class HarmonicOscillations:
         if not file_name is None:
             WavFile.write(file_name, buffer, time)
 
+    @staticmethod
+    def fft_p(x):
+        """A recursive implementation of the 1D Cooley-Tukey FFT"""
+        x = np.asarray(x, dtype=float)
+        n = x.shape[0]
+
+        if n % 2 > 0:
+            raise ValueError("size of x must be a power of 2")
+        elif n <= 32:  # this cutoff should be optimized
+            return FFT.dft_slow(x)
+        else:
+            x_even = FFT.fft(x[::2])
+            x_odd = FFT.fft(x[1::2])
+            factor = np.exp(-2j * np.pi * np.arange(n) / n)
+            return np.concatenate([x_even + factor[:n / 2] * x_odd,
+                                   x_even + factor[n / 2:] * x_odd])
+
+    @staticmethod
+    def dft_slow(x):
+        """Compute the discrete Fourier Transform of the 1D array x"""
+        x = np.asarray(x, dtype=float)
+        array = x.shape[0]
+        n = np.arange(array)
+        k = n.reshape((array, 1))
+        m = np.exp(-2j * np.pi * k * n / array)
+        return np.dot(m, x)
+
+    @staticmethod
+    def fft_diff_len(x):
+        """
+        Fast Fourier transform for different lists which can have length not power of 2
+        function correct length and if all ok run fft
+        @param x: list of data
+        @return: list with fft
+        """
+        if is_power_of_2(len(x)):
+            return FFT.fft(x)
+        else:
+            return FFT.fft_diff_len(correct_len(x, is_pow_of_2=True))
+
 
 def test():
     wav = WavFile(path_to_test + '12345678910.wav')
-    freq, amplitude = HarmonicOscillations.fft(wav)
-    freq1, amplitude1 = HarmonicOscillations.fft_db_amplitude_wav(wav)
+    freq, amplitude = FFT.fft(wav)
+    freq1, amplitude1 = FFT.fft_db_amplitude_wav(wav)
 
     plotter = Plotter()
     plotter.add_sub_plot_data("data", wav.samples)
@@ -127,9 +170,9 @@ def test_all_audio():
     sin = WavFile(path_to_test + 'sin100Hz.wav')
     noise = WavFile(path_to_test + 'noise.wav')
     m = WavFile(path_to_test + 'meandr25Hz.wav')
-    freq_sin, amplitude_sin = HarmonicOscillations.fft_db_amplitude_wav(sin)
-    freq_noise, amplitude_noise = HarmonicOscillations.fft_db_amplitude_wav(noise)
-    freq_m, amplitude_m = HarmonicOscillations.fft_db_amplitude_wav(m)
+    freq_sin, amplitude_sin = FFT.fft_db_amplitude_wav(sin)
+    freq_noise, amplitude_noise = FFT.fft_db_amplitude_wav(noise)
+    freq_m, amplitude_m = FFT.fft_db_amplitude_wav(m)
 
     plotter = Plotter()
     plotter.add_sub_plot_data("sin 100 Hz", sin.samples)

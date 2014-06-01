@@ -1,6 +1,6 @@
-from variables import path_to_examples, path_to_silence, path_to_records
-from beans.library.Library import Library
+from variables import path_to_examples, path_to_silence, path_to_waves
 from handlers.Recorder import Recorder
+from beans.Library import Library
 from beans.WavFile import WavFile
 from utils.Utils import get_files
 import numpy as np
@@ -8,19 +8,19 @@ import numpy as np
 __author__ = 'Olexandr'
 
 
-class Processor:
+class FFTVoiceAnalyzer:
 
-    def __init__(self, base_lib_folder, fft, get_silence, really_transform=False, extension=".wav"):
+    def __init__(self, base_lib_folder, fft, get_silence, really_transform=False):
         """
         @param base_lib_folder: base folder with example files
         @param fft: function for counting FFT
         @param get_silence: function for get "silence" example file
         @param really_transform: is really transform few channels to one or use one channel without transformation
-        @param extension: extension of audio files which will use
+        self.extension: extension of audio files which will use
         """
         self.fft = fft
         self.recorder = Recorder()
-        self.extension = extension
+        self.extension = ".wav"
         self.get_silence = get_silence
         self.base_lib_folder = base_lib_folder
         self.really_transform = really_transform
@@ -73,21 +73,17 @@ class Processor:
             j += 1
         return words_samples, words_count, max_length
 
-
-def test():
-    filename = "/test.wav"
-    processor = Processor(path_to_examples, np.fft.fft, lambda: WavFile(path_to_silence).get_one_channel_data())
-    processor.recorder.record_audio_to_file(3, path_to_records + filename)
-    # wav = WavFile("waves/13245678109Speed.wav")
-    wav = WavFile(path_to_records + filename)
-    wav.plot_samples_as_one_channel()
-    samples, word_count, max_len = processor.find_word_in_test_file(wav.get_one_channel_data())
-    print("All words in file = " + str(word_count))
-    for j in samples:
-        word, coefficient = processor.lib.find_max_corrcoef_and_word(j, max_len)
-        if coefficient > 0.3:
-            print(word + " - " + str(coefficient))
+    @staticmethod
+    def analyze(wav, analyzer):
+        samples, word_count, max_len = analyzer.find_word_in_test_file(wav.get_one_channel_data())
+        result = "All words in file = " + str(word_count) + "\n"
+        for j in samples:
+            word, coefficient = analyzer.lib.find_max_corrcoef_and_word(j, max_len)
+            if coefficient > 0.3:
+                result += word + " - " + str(coefficient) + "\n"
+        return result
 
 
 if "__main__" == __name__:
-    test()
+    processor = FFTVoiceAnalyzer(path_to_examples, np.fft.fft, lambda: WavFile(path_to_silence).get_one_channel_data())
+    FFTVoiceAnalyzer.analyze(WavFile(path_to_waves + "13245678109Speed.wav"), processor)

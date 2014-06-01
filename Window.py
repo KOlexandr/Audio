@@ -1,14 +1,14 @@
-from algorithms.fir import FiniteImpulseFilter
-from algorithms.harmonicOscillations import HarmonicOscillations
-from algorithms.naiveBayesClassifier import NBC
-from algorithms.spro5 import SPro5
-from algorithms.vad import test
-from handlers.Plotter import Plotter
 from variables import path_to_records, path_to_files, path_to_silence, cf, path_to_speech, path_to_non_speech, \
     path_to_waves, path_to_mfcc, path_to_mfcc_dll
+from algorithms.fva import FFTVoiceAnalyzer
+from algorithms.fft import FFT
+from algorithms.nbc import NBC
+from algorithms.fir import FiniteImpulseFilter
 from tkinter import filedialog, messagebox
-from handlers.Processor import Processor
+from handlers.Plotter import Plotter
+from algorithms.wav2mfcc import SPro5
 from beans.WavFile import WavFile
+from algorithms.vad import test
 from tkinter.font import Font
 from tkinter.ttk import Style
 from tkinter import *
@@ -24,7 +24,8 @@ class Application(Frame):
 
         #========================================================================
         # Fast Fourier Transform
-        self.processor = Processor(path_to_files, np.fft.fft, lambda: WavFile(path_to_silence).get_one_channel_data())
+        self.processor = FFTVoiceAnalyzer(path_to_files, np.fft.fft,
+                                          lambda: WavFile(path_to_silence).get_one_channel_data())
         # Fast Fourier Transform
         #========================================================================
 
@@ -190,14 +191,7 @@ class Application(Frame):
         if time.get() == 0:
             time.set(self.default_test_audio_time)
         wav = self.processor.recorder.record_and_get_wav(time.get())
-        samples, word_count, max_len = self.processor.find_word_in_test_file(wav.get_one_channel_data())
-        result_str = "All words in file = " + str(word_count) + "\n"
-        print("All words in file = " + str(word_count))
-        for j in samples:
-            word, coefficient = self.processor.lib.find_max_corrcoef_and_word(j, max_len)
-            if coefficient > 0.3:
-                result_str += word + " - " + str(coefficient) + "\n"
-                print(word + " - " + str(coefficient))
+        result_str = FFTVoiceAnalyzer.analyze(wav, self.processor)
         messagebox.showinfo("Result", result_str)
 
     def add_file_to_nbc(self, clazz, path=path_to_records):
@@ -229,7 +223,7 @@ class Application(Frame):
                                              initialdir=path)
         if not askopenfile is None:
             wav = WavFile(askopenfile.name)
-            freq, amplitude = HarmonicOscillations.fft_db_amplitude_wav(wav)
+            freq, amplitude = FFT.fft_db_amplitude_wav(wav)
 
             plotter = Plotter()
             plotter.add_sub_plot_data("data", wav.samples)
@@ -244,7 +238,7 @@ class Application(Frame):
                                              initialdir=path)
         if not askopenfile is None:
             wav = WavFile(askopenfile.name)
-            freq, amplitude = HarmonicOscillations.fft_db_amplitude_wav(wav)
+            freq, amplitude = FFT.fft_db_amplitude_wav(wav)
             print("Using Fir Filter with 'Hemming' window")
             out = FiniteImpulseFilter.filter(amplitude, 100, wav.frame_rate, 20, 50, "hemming")
 
@@ -277,6 +271,7 @@ class Application(Frame):
         for i in results.keys():
             mess += str(i) + ": " + str(results[i]) + "\n"
         messagebox.showinfo("Results MFCC", mess)
+
     #==================================================================================================================
 
     def make_main_frame(self):

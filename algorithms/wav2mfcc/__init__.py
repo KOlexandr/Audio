@@ -149,15 +149,16 @@ class SPro5:
         file_paths = Utils.get_simple_file_names(path_to_mfcc + "waves/" + work_type, ".wav")
         leading_zeros = len(str(len(file_paths)))
         excluded = []
-        for i in excluded_lines:
-            excluded.append(i.replace("\n", ""))
-        for i in range(len(file_paths)):
-            if use_exclude_list:
-                if not file_paths[i] in excluded:
-                    excluded.append(file_paths[i])
+        if use_exclude_list:
+            for i in excluded_lines:
+                excluded.append(i.replace("\n", ""))
+            for i in range(len(file_paths)):
+                if use_exclude_list:
+                    if not file_paths[i] in excluded:
+                        excluded.append(file_paths[i])
+                        self.wav_to_mfcc(base_path, file_paths, i, leading_zeros, waves_path)
+                else:
                     self.wav_to_mfcc(base_path, file_paths, i, leading_zeros, waves_path)
-            else:
-                self.wav_to_mfcc(base_path, file_paths, i, leading_zeros, waves_path)
 
         if use_exclude_list:
             f = open(exclude_file, "w")

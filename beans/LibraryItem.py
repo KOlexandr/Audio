@@ -25,3 +25,6 @@ class LibraryItem:
         @param fft_function: function for counting FFT
         """
         self.fft = fft_function(self.samples)
+
+    def __str__(self):
+        return str(self.word)

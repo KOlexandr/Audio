@@ -1,6 +1,6 @@
 import numpy as np
 
-from beans.library.LibraryItem import LibraryItem
+from beans.LibraryItem import LibraryItem
 from utils.Utils import correct_len, is_power_of_2, next_power_of_2
 
 
