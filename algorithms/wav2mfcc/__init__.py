@@ -16,10 +16,10 @@ class SPro5:
     """
     def __init__(self, path_to_dll):
         self.mfcc = {"learn": {}, "test": {}}
-        self.ws_pro_5 = ctypes.CDLL(path_to_dll + "SPro.dll")
-        self.s_pro_5 = ctypes.CDLL(path_to_dll + "WSPro.dll")
-        self.wrs_pro_5 = ctypes.CDLL(path_to_dll + "WRSystemSPro.dll")
-        self.wr_s_pro_5 = ctypes.CDLL(path_to_dll + "WWRSystemSPro.dll")
+        self.s_pro = ctypes.CDLL(path_to_dll + "SPro.dll")
+        self.ws_pro = ctypes.CDLL(path_to_dll + "WSPro.dll")
+        self.wrs_s_pro = ctypes.CDLL(path_to_dll + "WRSystemSPro.dll")
+        self.wwrs_s_pro = ctypes.CDLL(path_to_dll + "WWRSystemSPro.dll")
 
     def s_pro_base_params(self, input_file, output_file):
         """
@@ -30,14 +30,14 @@ class SPro5:
         data = "--format=wave --sample-rate=" + str(wav.frame_rate) + " --mel --freq-min=0 --freq-max=8000" \
                " --channel=" + str(wav.number_of_channels) + " --fft-length=256 --length=16.0" \
                " --shift=10.0 --num-ceps=13 " + str(input_file) + " " + str(output_file)
-        self.s_pro_5.main(len(data) * 2, ctypes.c_wchar_p(data))
+        self.ws_pro.main(len(data) * 2, ctypes.c_wchar_p(data))
 
     def s_pro_custom_params(self, parameters_str):
         """
         all possible parameters for run SPro 5.0
         @param parameters_str: string with all parameters in correct format
         """
-        self.s_pro_5.main(len(parameters_str)*2, ctypes.c_wchar_p(parameters_str))
+        self.ws_pro.main(len(parameters_str)*2, ctypes.c_wchar_p(parameters_str))
 
     @staticmethod
     def print_help():
@@ -122,9 +122,9 @@ class SPro5:
         """
         output_file = re.sub("\\.wav", "-" + str(i + 1).zfill(leading_zeros) + ".mfcc", file_paths[i])
         if os.path.exists(base_path + output_file):
-            idx = 2
+            idx = 1
             while os.path.exists(base_path + output_file):
-                output_file = re.sub("\\.wav", "-" + str(i + idx).zfill(leading_zeros) + ".mfcc", file_paths[i])
+                output_file = re.sub("\\.wav", "-" + str(idx).zfill(leading_zeros) + ".mfcc", file_paths[i])
                 idx += 1
         self.s_pro_base_params(waves_path + file_paths[i], base_path + output_file)
 
@@ -163,8 +163,8 @@ class SPro5:
 
         if use_exclude_list:
             f = open(exclude_file, "w")
-            f.writelines(excluded)
-            f.write("\n")
+            for i in excluded:
+                f.write(i + "\n")
             f.close()
 
     def wr_system(self, work_type):
@@ -186,7 +186,7 @@ class SPro5:
             joined_params = "--learn " + ' '.join(params)
         else:
             joined_params = ' '.join(params)
-        self.wr_s_pro_5.main(len(joined_params)*2, ctypes.c_wchar_p(joined_params))
+        self.wwrs_s_pro.main(len(joined_params)*2, ctypes.c_wchar_p(joined_params))
 
     def run(self, work_type, use_exclude_list=True):
         """
@@ -253,6 +253,8 @@ class SPro5:
 
 if "__main__" == __name__:
     s = SPro5(path_to_mfcc_dll)
-    s.learn()
-    s.test()
-    print(SPro5.get_results())
+    # s.all_waves_to_mfcc("test")
+    s.all_waves_to_mfcc("learn")
+    # s.learn()
+    # s.test()
+    # print(SPro5.get_results())
