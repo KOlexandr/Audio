@@ -1,5 +1,5 @@
 from variables import path_to_records, path_to_silence, cf, path_to_speech, path_to_non_speech, \
-    path_to_mfcc, path_to_mfcc_dll, path_to_test, path_to_examples
+    path_to_mfcc, path_to_test, path_to_examples
 from algorithms.fva import FFTVoiceAnalyzer
 from algorithms.fft import FFT
 from algorithms.nbc import NBC
@@ -43,7 +43,7 @@ class Application(Frame):
 
         #========================================================================
         # SPro 5 (MFCC classifierd)
-        self.s = SPro5(path_to_mfcc_dll)
+        self.s = SPro5()
         self.s.learn()
         # SPro 5 (MFCC classifierd)
         #========================================================================

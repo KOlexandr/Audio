@@ -1,4 +1,4 @@
-from variables import path_to_mfcc, path_to_mfcc_dll
+from variables import path_to_mfcc, path_to_wav2mfcc, use_exe
 from beans.WavFile import WavFile
 from utils import Utils
 import ctypes
@@ -14,30 +14,61 @@ class SPro5:
     wrapper for SPro 5.0 c/c++ program
     use DLL for transform wav file to mfcc
     """
-    def __init__(self, path_to_dll):
+    def __init__(self):
         self.mfcc = {"learn": {}, "test": {}}
-        self.s_pro = ctypes.CDLL(path_to_dll + "SPro.dll")
-        self.ws_pro = ctypes.CDLL(path_to_dll + "WSPro.dll")
-        self.wrs_s_pro = ctypes.CDLL(path_to_dll + "WRSystemSPro.dll")
-        self.wwrs_s_pro = ctypes.CDLL(path_to_dll + "WWRSystemSPro.dll")
 
-    def s_pro_base_params(self, input_file, output_file):
+        if use_exe:
+            self.wav2mfcc_base = self.wav2mfcc_base_params_exe
+            self.wav2mfcc_custom = self.wav2mfcc_custom_params_exe
+        else:
+            self.wav2mfcc = ctypes.CDLL(path_to_wav2mfcc + "dll/SPro.dll")
+            self.wav2mfcc_wrapper = ctypes.CDLL(path_to_wav2mfcc + "dll/WSPro.dll")
+
+            self.wav2mfcc_base = self.wav2mfcc_base_params_dll
+            self.wav2mfcc_custom = self.wav2mfcc_custom_params_dll
+
+        self.wrs_s_pro = ctypes.CDLL(path_to_wav2mfcc + "dll/WRSystemSPro.dll")
+        self.wwrs_s_pro = ctypes.CDLL(path_to_wav2mfcc + "dll/WWRSystemSPro.dll")
+
+    def wav2mfcc_base_params_dll(self, input_file, output_file):
         """
-        runs SPro 5.0 with base parameters
         reads input wav file from path and transform it into mfcc file to another path
+        method uses DLL for converting files
         """
         wav = WavFile(input_file)
         data = "--format=wave --sample-rate=" + str(wav.frame_rate) + " --mel --freq-min=0 --freq-max=8000" \
                " --channel=" + str(wav.number_of_channels) + " --fft-length=256 --length=16.0" \
                " --shift=10.0 --num-ceps=13 " + str(input_file) + " " + str(output_file)
-        self.ws_pro.main(len(data) * 2, ctypes.c_wchar_p(data))
+        self.wav2mfcc_wrapper.main(len(data) * 2, ctypes.c_wchar_p(data))
 
-    def s_pro_custom_params(self, parameters_str):
+    def wav2mfcc_custom_params_dll(self, parameters_str):
         """
-        all possible parameters for run SPro 5.0
+        method works like self.wav2mfcc_base_params_dll but gets as input params string with all possible parameters
+        method uses DLL for converting files
         @param parameters_str: string with all parameters in correct format
         """
-        self.ws_pro.main(len(parameters_str)*2, ctypes.c_wchar_p(parameters_str))
+        self.wav2mfcc_wrapper.main(len(parameters_str)*2, ctypes.c_wchar_p(parameters_str))
+
+    @staticmethod
+    def wav2mfcc_base_params_exe(input_file, output_file):
+        """
+        reads input wav file from path and transform it into mfcc file to another path
+        method uses compiled exe file for converting files
+        """
+        wav = WavFile(input_file)
+        data = "--format=wave --sample-rate=" + str(wav.frame_rate) + " --mel --freq-min=0 --freq-max=8000" \
+               " --channel=" + str(wav.number_of_channels) + " --fft-length=256 --length=16.0" \
+               " --shift=10.0 --num-ceps=13 " + str(input_file) + " " + str(output_file)
+        os.system(path_to_wav2mfcc + "/exe/SPro.exe " + data)
+
+    @staticmethod
+    def wav2mfcc_custom_params_exe(parameters_str):
+        """
+        method works like self.wav2mfcc_base_params_exe but gets as input params string with all possible parameters
+        method uses compiled exe file for converting files
+        @param parameters_str: string with all parameters in correct format
+        """
+        os.system(path_to_wav2mfcc + "/exe/SPro.exe " + parameters_str)
 
     @staticmethod
     def print_help():
@@ -120,13 +151,13 @@ class SPro5:
         @param waves_path: path to folder with .wav files for SPro 5.0
         @return:
         """
-        output_file = re.sub("\\.wav", "-" + str(i + 1).zfill(leading_zeros) + ".mfcc", file_paths[i])
+        output_file = re.sub("(?:-[0-9]{1,3}\\.wav|\\.wav)", "-" + str(1).zfill(leading_zeros) + ".mfcc", file_paths[i])
         if os.path.exists(base_path + output_file):
             idx = 1
             while os.path.exists(base_path + output_file):
-                output_file = re.sub("\\.wav", "-" + str(idx).zfill(leading_zeros) + ".mfcc", file_paths[i])
+                output_file = re.sub("(?:-[0-9]{1,3}\\.wav|\\.wav)", "-" + str(idx).zfill(leading_zeros) + ".mfcc", file_paths[i])
                 idx += 1
-        self.s_pro_base_params(waves_path + file_paths[i], base_path + output_file)
+        self.wav2mfcc_base(waves_path + file_paths[i], base_path + output_file)
 
     def all_waves_to_mfcc(self, work_type, use_exclude_list=True):
         """
@@ -218,7 +249,7 @@ class SPro5:
         self.run("learn", use_exclude_list)
 
     @staticmethod
-    def get_results():
+    def get_results(separator=","):
         """
         analyze wer_test_base.txt file with results of analyzing
         @return: dict with filename of test file (cleared filename) and most possible word from library
@@ -233,7 +264,37 @@ class SPro5:
             line = str(i).replace("\n", "").split("\t")
             if len(line) > 0:
                 results[line[0].replace(": ", "")] = SPro5.get_word(words, list(map(int, line[1:])))
-        return results
+        str_res = ""
+        keys__sort = list(results.keys())
+        keys__sort.sort()
+        words = {}
+        for i in keys__sort:
+            word = re.sub("_(:?mdf|zcr|sfm|energy)", "", str(i))
+            str_res += word + ": " + str(results[i]) + "\n"
+            if words.get(word) is None:
+                words[word] = {}
+            if words[word].get(str(results[i])) is None:
+                words[word][str(results[i])] = 1
+            else:
+                words[word][str(results[i])] += 1
+
+        str_res_words = ""
+        words_keys = list(words.keys())
+        words_keys.sort()
+        for i in words_keys:
+            str_res_words += "["
+            not_first = False
+            max_val = max(words[i].values())
+            for j in words[i].keys():
+                if words[i][j] == max_val:
+                    if not_first:
+                        str_res_words += "|" + str(j)
+                    else:
+                        str_res_words += str(j)
+                        not_first = True
+            str_res_words += "]" + separator
+
+        return str_res_words
 
     @staticmethod
     def get_word(words, coefficients):
@@ -252,9 +313,7 @@ class SPro5:
 
 
 if "__main__" == __name__:
-    s = SPro5(path_to_mfcc_dll)
-    # s.all_waves_to_mfcc("test")
-    s.all_waves_to_mfcc("learn")
+    s = SPro5()
     # s.learn()
-    # s.test()
-    # print(SPro5.get_results())
+    s.test()
+    print(SPro5.get_results())

@@ -1,0 +1,15 @@
+words: 	4	5	2	3	1
+word1_mdf: 	0	0	1	0	0
+word4_mdf: 	1	0	0	0	0
+word5_energy: 	0	1	0	0	0
+word4_energy: 	1	0	0	0	0
+word5_mdf: 	0	1	0	0	0
+word2_mdf: 	0	0	1	0	0
+word1_energy: 	0	0	1	0	0
+word3_energy: 	0	0	0	1	0
+word2_energy: 	0	0	1	0	0
+word3_mdf: 	0	0	0	1	0
+
+attempts num: 10
+correct num: 0
+word error rate: 100 %

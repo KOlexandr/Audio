@@ -89,4 +89,4 @@ class FFTVoiceAnalyzer:
 
 if "__main__" == __name__:
     processor = FFTVoiceAnalyzer(path_to_examples, np.fft.fft, WavFile(path_to_silence))
-    print(FFTVoiceAnalyzer.analyze(WavFile(path_to_test + "13245678109WahWah.wav"), processor))
+    print(FFTVoiceAnalyzer.analyze(WavFile(path_to_test + "12345.wav"), processor))

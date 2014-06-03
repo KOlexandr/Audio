@@ -1,6 +1,3 @@
-import struct
-import wave
-import scipy
 from variables import path_to_test, path_to_vad_results
 from handlers.Plotter import Plotter
 from beans.WavFile import WavFile
@@ -202,7 +199,8 @@ def find_words(starts, ends, min_frames_voice, min_frames_noise):
     for i in range(len(starts)-1):
         word_lengths.append(ends[i] - starts[i])
         noise_lengths.append(starts[i+1] - ends[i])
-    word_lengths.append(ends[len(starts)-1] - starts[len(starts)-1])
+    if len(ends) > 0 and len(starts) > 0:
+        word_lengths.append(ends[len(starts)-1] - starts[len(starts)-1])
 
     i, j = 0, 0
     while i < len(starts):
@@ -259,16 +257,17 @@ def plot_result(wav, word_results, params, min_params, colors, items):
 
 
 def create_files(wav, word_results, items):
-    # channel1 = wav.samples[0::wav.number_of_channels]
-    # channel2 = wav.samples[1::wav.number_of_channels]
     data = wav.get_one_channel_data()
     for i in word_results.keys():
         starts = word_results[i]['starts']
         ends = word_results[i]['ends']
         num = 1
         for k in range(0, len(starts)):
-            WavFile.write(path_to_vad_results + 'word' + str(num) + "_" + str(i) + '.wav', data[starts[k]*items:ends[k]*items], 0)
-            num += 1
+            file_name = 'word' + str(num) + "_" + str(i) + '.wav'
+            file_items = data[starts[k] * items:ends[k] * items]
+            if len(file_items) > 10000:
+                WavFile.write(path_to_vad_results + file_name, file_items, 0)
+                num += 1
 
 
 def test(wav, min_frames_voice, min_frames_noise, bad_frames_count):
@@ -276,7 +275,7 @@ def test(wav, min_frames_voice, min_frames_noise, bad_frames_count):
     colors = {"energy": "red", "mdf": "green", "zcr": "black", "sfm": "yellow"}
     params = vad(wav)
     min_params = {}
-    if bad_frames_count == 0:
+    if bad_frames_count <= 0:
         for i in keys:
             min_params[i] = min(params[i]) + shifts[i]
     else:
@@ -294,4 +293,4 @@ def test(wav, min_frames_voice, min_frames_noise, bad_frames_count):
 
 
 if "__main__" == __name__:
-    test(WavFile(path_to_test + "12345678910.wav"), 3, 3, 0)
+    test(WavFile(path_to_test + "12345.wav"), 3, 10, 10)
