@@ -1,10 +1,10 @@
 import math
+from math import isnan
 import numpy
 import scipy
 from numpy.ma.core import sort
 from numpy.core.umath import sign
 from numpy.matlib import repmat, rand
-from numpy.core.fromnumeric import mean
 from numpy.lib.arraysetops import setxor1d
 
 from beans.WavFile import WavFile
@@ -344,6 +344,7 @@ def vq_split(x, code_book_size=32):
         min_index, dst = vq_index(x, cb)
         cluster_d, population, low_pop = numpy.zeros((1, lc)), numpy.zeros((1, lc)), []
         # Find the Centroids (Mean of each Cluster)
+        cb = numpy.transpose(cb)
         for i in range(lc):
             ind = []
             for j in range(len(min_index)):
@@ -353,49 +354,27 @@ def vq_split(x, code_book_size=32):
             if len(ind) < min_pop * n / lc:
                 low_pop.append(i)
             else:
-                cb[:, i] = mean(x[:, ind], 2)
-                population[i] = len(ind)
-                cluster_d[i] = sum(dst[ind])
-        if not low_pop is None:
-            temp, MaxInd = max_n(population, len(low_pop))
-            # Replace low-population codewords with
-            cb[:, low_pop] = cb[:, MaxInd] * (1 + e)
-            # splits of high population codewords
-            cb[:, MaxInd] = cb[:, MaxInd] * (1 - e)
-            # re-train 
-            min_index, dst = vq_index(x, cb)
-            cluster_d = [0] * lc
-            population = [0] * lc
-            for i in range(lc):
-                ind = filter(lambda x: x == i, min_index.index(i))
-                if not ind is None:
-                    cb[:, i] = mean(x[:, ind], 2)
-                    population[i] = len(ind)
-                    cluster_d[i] = sum(dst[ind])
-                # if no vector is close enough to this codeword, replace it with a random vector
-                else:
-                    cb[:, i] = x[:, math.floor(rand() * n) + 1]
-                    print('A random vector was assigned as a codeword.')
-                    # At least another iteration is required
-                    is_first_round = 1
+                cb[:, i] = [sum(x[:, j])/n for j in ind]
+                population[0, i] = len(ind)
+                cluster_d[0, i] = sum([dst[j] for j in ind])
         iterate += 1
         # First iteration after a split (do  not exit)
 
-        PrevTotalDist = 0
+        prev_total_dist = 0
         if is_first_round:
-            TotalDist = sum(cluster_d)
-            dist_hist.append(TotalDist)
-            PrevTotalDist = TotalDist
-            is_first_round = 0
+            total_dist = sum([i if not isnan(i) else 0 for i in cluster_d])
+            dist_hist.append(total_dist)
+            prev_total_dist = total_dist
+            is_first_round = False
         else:
-            TotalDist = sum(cluster_d)
-            dist_hist.append(TotalDist)
-            PercentageImprovement = ((PrevTotalDist - TotalDist) / PrevTotalDist)
+            total_dist = sum(cluster_d)
+            dist_hist.append(total_dist)
+            percentage_improvement = ((prev_total_dist - total_dist) / prev_total_dist)
             # Improvement substantial
-            if PercentageImprovement >= dt:
+            if percentage_improvement >= dt:
                 # Save Distortion o/this iteration and continue training
-                PrevTotalDist = TotalDist
-                is_first_round = 0
+                prev_total_dist = total_dist
+                is_first_round = False
             # Improvement NOT substantial (Saturation)
             else:
                 each_size_iter_counter = 0
@@ -403,20 +382,19 @@ def vq_split(x, code_book_size=32):
                 if lc >= code_book_size:
                     # Exact number of codewords
                     if code_book_size == lc:
-                        # disp(TotalDist)
+                        # disp(total_dist)
                         break
                         # Kill one codeword at a time
                     else:
                         # Eliminate low population codewords
                         temp = min(population)
-                        ind = population.index(temp)
-                        NCB = cb[:, setxor1d(rand(lc), ind)]
-                        cb = NCB
+                        ind = list(population).index(temp)
+                        cb = cb[:, setxor1d(rand(lc), ind)]
                         lc -= 1
-                        is_first_round = 1
+                        is_first_round = True
                 # If not enough codewords exist yet, split more
                 else:
-                    cb = [cb * (1 + e), cb * (1 - e)]
+                    cb = [cb * (1 + e)] + [cb * (1 - e)]
                     # split size reduction
                     e *= e_red
                     # Improvement Threshold Reduction
@@ -430,12 +408,12 @@ def vq_split(x, code_book_size=32):
         BestD = 0
         if not is_there_a_best_cb:
             BestCB = cb
-            BestD = TotalDist
+            BestD = total_dist
             is_there_a_best_cb = 1
         else:
-            if TotalDist < BestD:
+            if total_dist < BestD:
                 BestCB = cb
-                BestD = TotalDist
+                BestD = total_dist
         each_size_iter_counter += 1
         # Ift oo many iterations in this size,
         if each_size_iter_counter > max_iter_in_each_size:
@@ -448,7 +426,7 @@ def vq_split(x, code_book_size=32):
             if lc >= code_book_size:
                 # Exact number of codewords
                 if code_book_size == lc:
-                    # disp(TotalDist)
+                    # disp(total_dist)
                     break
                     # Kill one codeword at a time
                 else:
@@ -470,7 +448,7 @@ def vq_split(x, code_book_size=32):
                 split += 1
                 is_there_a_best_cb = 0
                 # disp(lc)
-        # disp(TotalDist)
+        # disp(total_dist)
         p = list(map(lambda y: y / n, population))
         #save CBTemp cb p dist_hist
     return cb, list(map(lambda y: y / n, population)), dist_hist
