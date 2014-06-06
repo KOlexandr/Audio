@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0db91aa-b7c4-4319-965f-f86680b0dd9d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/fft/__init__.py" afterPath="$PROJECT_DIR$/algorithms/fft/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/fir/__init__.py" afterPath="$PROJECT_DIR$/algorithms/fir/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/fva/__init__.py" afterPath="$PROJECT_DIR$/algorithms/fva/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/vad/__init__.py" afterPath="$PROJECT_DIR$/algorithms/vad/__init__.py" />
+      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\algorithms\hmm\__init__.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/properties.cfg" afterPath="$PROJECT_DIR$/properties/properties.cfg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/variables.py" afterPath="$PROJECT_DIR$/variables.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -30,11 +27,11 @@
     <SUITE FILE_PATH="coverage/RecordAudio$FilterFFTTest.coverage" NAME="FilterFFTTest Coverage Results" MODIFIED="1398899257835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$WavFile.coverage" NAME="WavFile Coverage Results" MODIFIED="1390092442657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$Test.coverage" NAME="Test Coverage Results" MODIFIED="1399746245679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RecordAudio$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1401837593807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/wav2mfcc" />
+    <SUITE FILE_PATH="coverage/RecordAudio$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1402068974012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/fft" />
     <SUITE FILE_PATH="coverage/RecordAudio$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1402046366762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/nbc" />
     <SUITE FILE_PATH="coverage/RecordAudio$NBCTest.coverage" NAME="NBCTest Coverage Results" MODIFIED="1393107538115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$FFTAnalyzeTest.coverage" NAME="FFTAnalyzeTest Coverage Results" MODIFIED="1399749568829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RecordAudio$__init____3_.coverage" NAME="__init__ (3) Coverage Results" MODIFIED="1402056292911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/fva" />
+    <SUITE FILE_PATH="coverage/RecordAudio$__init____3_.coverage" NAME="__init__ (3) Coverage Results" MODIFIED="1402069394891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/fva" />
     <SUITE FILE_PATH="coverage/RecordAudio$MainLibrary.coverage" NAME="MainLibrary Coverage Results" MODIFIED="1391035076819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$test.coverage" NAME="test Coverage Results" MODIFIED="1401141425615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/hmm" />
     <SUITE FILE_PATH="coverage/RecordAudio$Main.coverage" NAME="Main Coverage Results" MODIFIED="1398735459468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -62,7 +59,7 @@
       <file leaf-file-name="Window.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="241" column="49" selection-start="10593" selection-end="10593" vertical-scroll-proportion="0.0" vertical-offset="2045" max-vertical-offset="3196">
+            <state line="26" column="52" selection-start="889" selection-end="889" vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="4862">
               <folding>
                 <element signature="e#0#146#0" expanded="true" />
                 <element signature="e#3837#4157#0" expanded="false" />
@@ -71,11 +68,8 @@
                 <element signature="e#6035#6105#0" expanded="false" />
                 <element signature="e#6290#6794#0" expanded="false" />
                 <element signature="e#6846#7694#0" expanded="false" />
-                <element signature="e#7743#8136#0" expanded="false" />
                 <element signature="e#8206#8533#0" expanded="false" />
                 <element signature="e#8586#9365#0" expanded="false" />
-                <element signature="e#9434#10100#0" expanded="false" />
-                <element signature="e#12081#17005#0" expanded="false" />
                 <element signature="e#17045#17613#0" expanded="false" />
                 <element signature="e#17656#18468#0" expanded="false" />
                 <element signature="e#18499#18764#0" expanded="false" />
@@ -85,60 +79,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="properties.cfg" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/properties/properties.cfg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="28" selection-start="242" selection-end="242" vertical-scroll-proportion="0.27724665" vertical-offset="76" max-vertical-offset="986">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/fva/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="32" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1581">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WavFile.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/beans/WavFile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="46" selection-start="1439" selection-end="1439" vertical-scroll-proportion="0.4464883" vertical-offset="226" max-vertical-offset="2958">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/fft/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="4" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="3587">
+            <state line="56" column="7" selection-start="2404" selection-end="2404" vertical-scroll-proportion="0.0" vertical-offset="699" max-vertical-offset="1683">
               <folding>
-                <element signature="e#0#50#0" expanded="true" />
+                <element signature="e#0#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/fir/__init__.py">
+        <entry file="file://$PROJECT_DIR$/algorithms/vad/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1224">
+            <state line="115" column="28" selection-start="4525" selection-end="4525" vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="3587">
               <folding>
-                <element signature="e#0#36#0" expanded="true" />
+                <element signature="e#0#67#0" expanded="true" />
+                <element signature="e#4810#4994#0" expanded="false" />
+                <element signature="e#5029#5169#0" expanded="false" />
+                <element signature="e#5191#5364#0" expanded="false" />
+                <element signature="e#5403#5805#0" expanded="false" />
+                <element signature="e#5849#6214#0" expanded="false" />
+                <element signature="e#6287#7879#0" expanded="false" />
+                <element signature="e#7970#8900#0" expanded="false" />
+                <element signature="e#10506#10985#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="variables.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/variables.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="10" selection-start="1408" selection-end="1418" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="731">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="properties.cfg" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/properties/properties.cfg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="20" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="986">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -174,8 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Test1.py" />
-        <option value="$PROJECT_DIR$/algorithms/ffir/__init__.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/algorithms/mel/__init__.py" />
         <option value="$PROJECT_DIR$/utils/Utils.py" />
@@ -218,21 +191,23 @@
         <option value="$PROJECT_DIR$/algorithms/hmm/__init__.py" />
         <option value="$PROJECT_DIR$/algorithms/nbc/__init__.py" />
         <option value="$PROJECT_DIR$/handlers/Plotter.py" />
-        <option value="$PROJECT_DIR$/Window.py" />
         <option value="$PROJECT_DIR$/algorithms/fir/__init__.py" />
+        <option value="$PROJECT_DIR$/beans/Library.py" />
         <option value="$PROJECT_DIR$/algorithms/fft/__init__.py" />
-        <option value="$PROJECT_DIR$/algorithms/vad/__init__.py" />
-        <option value="$PROJECT_DIR$/variables.py" />
-        <option value="$PROJECT_DIR$/properties/properties.cfg" />
         <option value="$PROJECT_DIR$/algorithms/fva/__init__.py" />
+        <option value="$PROJECT_DIR$/properties/properties.cfg" />
+        <option value="$PROJECT_DIR$/variables.py" />
+        <option value="$PROJECT_DIR$/beans/WavFile.py" />
+        <option value="$PROJECT_DIR$/algorithms/vad/__init__.py" />
+        <option value="$PROJECT_DIR$/Window.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1374" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -389,43 +364,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="algorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="fva" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="algorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fir" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -464,6 +403,22 @@
     <property name="SearchEverywhereHistory" value="" />
     <property name="dynamic.classpath" value="false" />
     <property name="Console.TableResult.DefaultCopyAction" value="Comma-separated Values (CSV)" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="272" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="290" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="297" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="976" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="297" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="286" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="293" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="972" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -506,25 +461,6 @@
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="__init__ (4)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithms/hmm" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RecordAudio" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithms/hmm/__init__.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <method />
     </configuration>
     <configuration default="false" name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -579,6 +515,27 @@
       <module name="RecordAudio" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithms/fva/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="__init__ (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithms/fft" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RecordAudio" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithms/fft/__init__.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
@@ -742,18 +699,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.__init__" />
-      <item index="1" class="java.lang.String" itemvalue="Python.__init__ (4)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.__init__ (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.__init__ (5)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.__init__ (3)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.__init__ (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.__init__ (5)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.__init__ (3)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.__init__ (2)" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.__init__ (3)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.__init__ (5)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.__init__" />
-        <item index="3" class="java.lang.String" itemvalue="Python.__init__ (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.__init__ (4)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.__init__ (2)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.__init__ (5)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.__init__" />
+        <item index="4" class="java.lang.String" itemvalue="Python.__init__ (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -913,7 +870,11 @@
       <created>1402050377861</created>
       <updated>1402050377862</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="FIR refactoring&#10;">
+      <created>1402056320496</created>
+      <updated>1402056320496</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -937,12 +898,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1374" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41346154" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41346154" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3253205" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32478634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4551282" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34615386" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -951,7 +912,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24773414" sideWeight="0.56342185" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17465389" sideWeight="0.56342185" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -998,7 +959,8 @@
     <MESSAGE value="get much good results&#10;" />
     <MESSAGE value="tests" />
     <MESSAGE value="VAD and Plotter refactoring&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="VAD and Plotter refactoring&#10;" />
+    <MESSAGE value="FIR refactoring&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIR refactoring&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1058,17 +1020,17 @@
           <line>78</line>
           <option name="timeStamp" value="470" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
+        <line-breakpoint type="python-line">
           <url>file://$PROJECT_DIR$/algorithms/hmm/__init__.py</url>
           <line>321</line>
           <option name="timeStamp" value="529" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
+        <line-breakpoint type="python-line">
           <url>file://$PROJECT_DIR$/algorithms/hmm/__init__.py</url>
           <line>320</line>
           <option name="timeStamp" value="530" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
+        <line-breakpoint type="python-line">
           <url>file://$PROJECT_DIR$/algorithms/nbc/__init__.py</url>
           <line>209</line>
           <option name="timeStamp" value="531" />
@@ -1085,28 +1047,10 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="535" />
+      <option name="time" value="545" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Python33/Lib/sqlite3/dbapi2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1536" selection-end="1536" vertical-scroll-proportion="-0.22051282" vertical-offset="945" max-vertical-offset="1530" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-1571908645/_sqlite3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="266" column="8" selection-start="8369" selection-end="8369" vertical-scroll-proportion="0.0" vertical-offset="4327" max-vertical-offset="17799" />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ad79d594/e45d8d5f-15ad-4316-9a38-fa16543528ab/..sqlite_sequence">
-      <provider editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="539" />
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/ad79d594/e45d8d5f-15ad-4316-9a38-fa16543528ab/..audio_files">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
@@ -1154,13 +1098,6 @@
         <state line="1257" column="4" selection-start="37932" selection-end="37932" vertical-scroll-proportion="0.0" vertical-offset="19933" max-vertical-offset="29682" />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-1571908645/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5545" column="8" selection-start="190597" selection-end="190597" vertical-scroll-proportion="0.3327645" vertical-offset="94070" max-vertical-offset="95574">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python33/Lib/site-packages/numpy/core/fromnumeric.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2631" column="4" selection-start="79415" selection-end="79415" vertical-scroll-proportion="0.0" vertical-offset="44396" max-vertical-offset="49589">
@@ -1190,11 +1127,6 @@
     <entry file="file://C:/Python33/Lib/tkinter/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1908" column="0" selection-start="78684" selection-end="78684" vertical-scroll-proportion="0.3327645" vertical-offset="32241" max-vertical-offset="66249" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python33/Lib/site-packages/numpy/fft/fftpack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="4" selection-start="2095" selection-end="2095" vertical-scroll-proportion="0.0" vertical-offset="1199" max-vertical-offset="19125" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/beans/ClassifierBean.py">
@@ -1322,13 +1254,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python33/Lib/site-packages/sklearn/hmm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="742" column="0" selection-start="26155" selection-end="26155" vertical-scroll-proportion="0.0" vertical-offset="12268" max-vertical-offset="20621">
@@ -1359,23 +1284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/hmm/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="321" column="0" selection-start="12238" selection-end="12238" vertical-scroll-proportion="0.24386503" vertical-offset="1524" max-vertical-offset="2176">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#437#2094#0" expanded="false" />
-            <element signature="e#2163#2722#0" expanded="false" />
-            <element signature="e#2751#3413#0" expanded="false" />
-            <element signature="e#3481#7216#0" expanded="false" />
-            <element signature="e#7250#8191#0" expanded="false" />
-            <element signature="e#8281#8553#0" expanded="false" />
-            <element signature="e#8586#8862#1" expanded="false" />
-            <element signature="e#9351#10670#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python33/Lib/site-packages/matplotlib/axes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="238" column="0" selection-start="7929" selection-end="7929" vertical-scroll-proportion="0.33333334" vertical-offset="3717" max-vertical-offset="159902">
@@ -1399,12 +1307,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/wav2mfcc/dll/SPro.dll">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="611" column="129" selection-start="112323" selection-end="112323" vertical-scroll-proportion="-3.623946" vertical-offset="12536" max-vertical-offset="13872">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beans/Library.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="186" selection-end="186" vertical-scroll-proportion="0.28052804" vertical-offset="0" max-vertical-offset="1751">
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#1011#1333#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/fir/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="27" selection-start="133" selection-end="133" vertical-scroll-proportion="0.08415841" vertical-offset="0" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python33/Lib/site-packages/numpy/fft/fftpack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="4" selection-start="2095" selection-end="2095" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="19125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-1571908645/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1229" column="8" selection-start="43827" selection-end="43827" vertical-scroll-proportion="0.0" vertical-offset="20732" max-vertical-offset="95574">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/fft/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="8" selection-start="2107" selection-end="2107" vertical-scroll-proportion="1.502868" vertical-offset="421" max-vertical-offset="2856">
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#3741#4584#0" expanded="false" />
+            <element signature="e#4630#5214#0" expanded="false" />
+            <element signature="e#5263#5530#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/variables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="17" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.83168316" vertical-offset="108" max-vertical-offset="714">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beans/WavFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="0" selection-start="3807" selection-end="3807" vertical-scroll-proportion="0.8085809" vertical-offset="666" max-vertical-offset="2108">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#1921#2815#0" expanded="false" />
+            <element signature="e#5275#5307#0" expanded="false" />
+            <element signature="e#5353#5631#0" expanded="false" />
+            <element signature="e#5694#5973#0" expanded="false" />
+            <element signature="e#6006#6082#0" expanded="false" />
+            <element signature="e#6137#6324#0" expanded="false" />
+            <element signature="e#6446#6666#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beans/LibraryItem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="24" selection-start="695" selection-end="695" vertical-scroll-proportion="0.5891089" vertical-offset="0" max-vertical-offset="606">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/vad/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="28" selection-start="331" selection-end="331" vertical-scroll-proportion="0.21906355" vertical-offset="73" max-vertical-offset="3111">
+        <state line="115" column="28" selection-start="4525" selection-end="4525" vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="3587">
           <folding>
             <element signature="e#0#67#0" expanded="true" />
-            <element signature="e#3359#4773#0" expanded="false" />
             <element signature="e#4810#4994#0" expanded="false" />
             <element signature="e#5029#5169#0" expanded="false" />
             <element signature="e#5191#5364#0" expanded="false" />
@@ -1417,9 +1413,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/fva/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="7" selection-start="2404" selection-end="2404" vertical-scroll-proportion="0.0" vertical-offset="699" max-vertical-offset="1683">
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="241" column="49" selection-start="10593" selection-end="10593" vertical-scroll-proportion="0.0" vertical-offset="2045" max-vertical-offset="3196">
+        <state line="26" column="52" selection-start="889" selection-end="889" vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="4862">
           <folding>
             <element signature="e#0#146#0" expanded="true" />
             <element signature="e#3837#4157#0" expanded="false" />
@@ -1428,11 +1433,8 @@
             <element signature="e#6035#6105#0" expanded="false" />
             <element signature="e#6290#6794#0" expanded="false" />
             <element signature="e#6846#7694#0" expanded="false" />
-            <element signature="e#7743#8136#0" expanded="false" />
             <element signature="e#8206#8533#0" expanded="false" />
             <element signature="e#8586#9365#0" expanded="false" />
-            <element signature="e#9434#10100#0" expanded="false" />
-            <element signature="e#12081#17005#0" expanded="false" />
             <element signature="e#17045#17613#0" expanded="false" />
             <element signature="e#17656#18468#0" expanded="false" />
             <element signature="e#18499#18764#0" expanded="false" />
@@ -1441,48 +1443,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="24854">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/properties/properties.cfg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="20" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="986">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/variables.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="10" selection-start="1408" selection-end="1418" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/fir/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1224">
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/fft/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="4" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="3587">
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/fva/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="32" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1581">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beans/WavFile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="46" selection-start="1439" selection-end="1439" vertical-scroll-proportion="0.4464883" vertical-offset="226" max-vertical-offset="2958">
+        <state line="13" column="28" selection-start="242" selection-end="242" vertical-scroll-proportion="0.27724665" vertical-offset="76" max-vertical-offset="986">
           <folding />
         </state>
       </provider>

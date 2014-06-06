@@ -1,4 +1,5 @@
 import os
+from numpy.fft import fft
 from configparser import ConfigParser
 
 __author__ = 'Olexandr'
@@ -26,14 +27,11 @@ path_to_vad_results = str(path_to_project + cf.get("resources", "path_to_vad_res
 #SQLite DataBase
 path_to_database = str(path_to_project + "/resources/speech.db")
 
-#HMM
-path_to_hmm_words = str(path_to_project + cf.get("hmm", "path_to_hmm_files"))
-
 #MFCC
-use_exe = bool(cf.get("mfcc", "use_exe"))
+use_exe = bool(int(cf.get("mfcc", "use_exe")))
 
 #Plots
-show_plots = bool(cf.get("plots", "show_plots"))
+show_plots = bool(int(cf.get("plots", "show_plots")))
 
 #FIR
-use_filter = bool(cf.get("fir", "use_filter"))
+use_filter = bool(int(cf.get("fir", "use_filter")))
