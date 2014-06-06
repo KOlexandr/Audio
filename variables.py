@@ -23,9 +23,6 @@ path_to_wav2mfcc = str(path_to_project + cf.get("resources", "path_to_wav2mfcc")
 path_to_silence = str(path_to_project + cf.get("resources", "path_to_small_silence"))
 path_to_vad_results = str(path_to_project + cf.get("resources", "path_to_vad_results"))
 
-#SQLite DataBase
-path_to_database = str(path_to_project + "/resources/speech.db")
-
 #MFCC
 use_exe = bool(int(cf.get("mfcc", "use_exe")))
 

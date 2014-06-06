@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0db91aa-b7c4-4319-965f-f86680b0dd9d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/wav2mfcc/__init__.py" afterPath="$PROJECT_DIR$/algorithms/wav2mfcc/__init__.py" />
+      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\handlers\DataBase.py" afterPath="" />
+      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\speech.db" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/variables.py" afterPath="$PROJECT_DIR$/variables.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -110,7 +111,7 @@
       <file leaf-file-name="variables.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/variables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.6072607" vertical-offset="91" max-vertical-offset="697">
+            <state line="24" column="0" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.44835165" vertical-offset="0" max-vertical-offset="910">
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -272,11 +273,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="algorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wav2mfcc" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -290,7 +287,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="algorithms" />
+              <option name="myItemId" value="properties" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,29 +301,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="algorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nbc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="algorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fva" />
+              <option name="myItemId" value="handlers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -839,7 +814,11 @@
       <created>1402096894588</created>
       <updated>1402096894588</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="expected flag">
+      <created>1402097005367</created>
+      <updated>1402097005367</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -870,7 +849,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41346154" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32478634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32478634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17784877" sideWeight="0.56342185" order="0" side_tool="false" content_ui="combo" />
@@ -900,7 +879,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="vad" />
     <MESSAGE value="plotter" />
     <MESSAGE value="Naive Bayes Classifier" />
     <MESSAGE value="optimization and refactoring Naive Bayes Classifier" />
@@ -925,7 +903,8 @@
     <MESSAGE value="window" />
     <MESSAGE value="test" />
     <MESSAGE value="mfcc" />
-    <option name="LAST_COMMIT_MESSAGE" value="mfcc" />
+    <MESSAGE value="expected flag" />
+    <option name="LAST_COMMIT_MESSAGE" value="expected flag" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1103,11 +1082,6 @@
         <state line="4" column="8" selection-start="56" selection-end="56" vertical-scroll-proportion="0.07472528" vertical-offset="0" max-vertical-offset="910" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/DataBase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="34" selection-start="863" selection-end="863" vertical-scroll-proportion="0.72525597" vertical-offset="0" max-vertical-offset="816" />
-      </provider>
-    </entry>
     <entry file="file://C:/Python33/Lib/ctypes/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="352" column="0" selection-start="10949" selection-end="10949" vertical-scroll-proportion="0.0" vertical-offset="5789" max-vertical-offset="9333" />
@@ -1210,13 +1184,6 @@
     <entry file="file://$PROJECT_DIR$/handlers/Plotter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="53" selection-start="2941" selection-end="2941" vertical-scroll-proportion="0.0" vertical-offset="876" max-vertical-offset="1734">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/properties/properties.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="986">
           <folding />
         </state>
       </provider>
@@ -1350,9 +1317,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/properties/properties.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="28" selection-start="242" selection-end="242" vertical-scroll-proportion="0.15934066" vertical-offset="76" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/variables.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.6072607" vertical-offset="91" max-vertical-offset="697">
+        <state line="24" column="0" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.44835165" vertical-offset="0" max-vertical-offset="910">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
