@@ -10,7 +10,6 @@ __author__ = 'Olexandr'
 
 class SPro5:
     """
-    Wrapper for http://habrahabr.ru/post/150251
     wrapper for SPro 5.0 c/c++ program
     use DLL for transform wav file to mfcc
     """
