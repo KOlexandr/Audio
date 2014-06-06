@@ -1,5 +1,5 @@
 from algorithms.fir import FiniteImpulseFilter
-from variables import path_to_examples, path_to_silence, path_to_test
+from variables import path_to_examples, path_to_silence, path_to_test, use_filter
 from handlers.Recorder import Recorder
 from beans.Library import Library
 from beans.WavFile import WavFile
@@ -24,8 +24,10 @@ class FFTVoiceAnalyzer:
         self.recorder = Recorder()
         self.base_lib_folder = base_lib_folder
         self.really_transform = really_transform
-        self.filter_fft = lambda sam, fr=None: abs(self.fft(sam)) if fr is None else FiniteImpulseFilter.filter(
-            abs(self.fft(sam)), 50, fr, win_func="hemming")
+        if use_filter:
+            self.filter_fft = lambda sam, fr: FiniteImpulseFilter.filter(abs(self.fft(sam)), 50, fr, win_func="hemming")
+        else:
+            self.filter_fft = lambda sam, fr: abs(self.fft(sam))
 
         self.lib = self.create_lib_with_examples()
 
@@ -49,10 +51,10 @@ class FFTVoiceAnalyzer:
         start_idx = 0
         indexes, coefficients = [], []
         length_of_silence = len(self.silence.get_one_channel_data())
-        silence_samples = self.filter_fft(self.silence.get_one_channel_data())
+        silence_samples = self.filter_fft(self.silence.get_one_channel_data(), self.silence.frame_rate)
         for i in range(int(len(test.get_one_channel_data()) / length_of_silence)):
             f = test.get_one_channel_data()[start_idx:start_idx + length_of_silence]
-            test_samples = self.filter_fft(f)
+            test_samples = self.filter_fft(f, test.frame_rate)
             tmp = np.corrcoef(silence_samples, test_samples)
             coefficients.append(abs(tmp[0][1]))
             indexes.append((start_idx, start_idx + length_of_silence))

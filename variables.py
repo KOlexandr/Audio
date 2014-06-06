@@ -34,3 +34,6 @@ use_exe = bool(cf.get("mfcc", "use_exe"))
 
 #Plots
 show_plots = bool(cf.get("plots", "show_plots"))
+
+#FIR
+use_filter = bool(cf.get("fir", "use_filter"))

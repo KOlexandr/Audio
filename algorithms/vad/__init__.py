@@ -10,7 +10,7 @@ __author__ = 'Olexandr'
 
 def vad(wav_file, frame_size=10, fft_function=numpy.fft.fft):
     """
-    Voice Activity Detection (http://habrahabr.ru/post/192954)
+    Voice Activity Detection
     @param wav_file: WavFile object
     @param frame_size: size of one frame in milliseconds
     @param fft_function: function for count FFT

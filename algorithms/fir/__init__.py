@@ -13,7 +13,6 @@ path_to_dll = os.path.dirname(__file__) + "/FIR.dll"
 class FiniteImpulseFilter:
     """
     Filter with finite impulse response
-    http://habrahabr.ru/post/128140
     """
     window_function = {
         "square": 0,
@@ -49,11 +48,19 @@ def test():
     freq, amplitude = FFT.fft_db_amplitude_wav(file)
     out = FiniteImpulseFilter.filter(amplitude, 100, file.frame_rate, 20, 50, "hemming")
 
-    plotter = Plotter()
-    plotter.add_sub_plot_data("original", file.samples)
-    plotter.add_sub_plot_data("fft", amplitude, freq, scale_x='log', scale_y='log')
-    plotter.add_sub_plot_data("fft_filtered", out, freq, scale_x='log', scale_y='log')
-    plotter.sub_plot_all_horizontal()
+    file_plotter = Plotter()
+    file_plotter.add_sub_plot_data("Digitized audio file", file.samples, x_label="Samples", y_label="Amplitude")
+    file_plotter.sub_plot_all_horizontal()
+
+    fft_plotter = Plotter()
+    fft_plotter.add_sub_plot_data("Fast Fourier Transform", amplitude, freq, scale_x='log', scale_y='log',
+                                  x_label="Frequency (Hz)", y_label="Amplitude (db)")
+    fft_plotter.sub_plot_all_horizontal()
+
+    fft_plotter = Plotter()
+    fft_plotter.add_sub_plot_data("Fast Fourier Transform After FIR", out, freq, scale_x='log', scale_y='log',
+                                  x_label="Frequency (Hz)", y_label="Amplitude (db)")
+    fft_plotter.sub_plot_all_horizontal()
 
 
 if "__main__" == __name__:

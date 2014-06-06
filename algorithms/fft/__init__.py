@@ -16,7 +16,6 @@ path_to_dll = os.path.dirname(__file__) + "/FFT.dll"
 
 class FFT:
     """
-    http://habrahabr.ru/post/219337
     Fast Fourier Transform
     """
 
