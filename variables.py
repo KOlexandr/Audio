@@ -31,3 +31,6 @@ path_to_hmm_words = str(path_to_project + cf.get("hmm", "path_to_hmm_files"))
 
 #MFCC
 use_exe = bool(cf.get("mfcc", "use_exe"))
+
+#Plots
+show_plots = bool(cf.get("plots", "show_plots"))

@@ -1,11 +1,12 @@
 import math
-from math import isnan
+from sklearn import hmm
 import numpy
 import scipy
 from numpy.ma.core import sort
 from numpy.core.umath import sign
-from numpy.matlib import repmat, rand
+import matplotlib.pyplot as plt
 from numpy.lib.arraysetops import setxor1d
+from scipy.cluster.vq import vq, kmeans, whiten
 
 from beans.WavFile import WavFile
 from variables import path_to_hmm_words
@@ -32,12 +33,14 @@ def resample(x, ratio, quality='sinc_medium', window=None, algorithm='scikits'):
     if algorithm == 'scikits':
         try:
             import scikits.samplerate
+
             func = lambda array, r, q, w: scikits.samplerate.resample(array, r, q)
         except ImportError:
             print("Cannot find scikits.samplerate. Resampling using scipy.signal.resample")
             algorithm = 'scipy'
     if algorithm == 'scipy':
         import scipy.signal
+
         func = lambda array, r, q, w: scipy.signal.resample(array, int(round(len(array) * r)), window=w)
     if func is None:
         raise ValueError("Unknown algo %s. Use either scikits or scipy" % algorithm)
@@ -87,8 +90,8 @@ def max_n(x, n=None):
         tmp = list(x)
         v = sort(x)
         idx = list(map(lambda z: tmp.index(z), v))
-        res_v = [v[i] for i in range(len(x)-1, len(x)-n-1, -1)]
-        res_idx = [idx[i] for i in range(len(x)-1, len(x)-n-1, -1)]
+        res_v = [v[i] for i in range(len(x) - 1, len(x) - n - 1, -1)]
+        res_idx = [idx[i] for i in range(len(x) - 1, len(x) - n - 1, -1)]
     return res_v, res_idx
 
 
@@ -186,7 +189,7 @@ def vq_index(x_in, cb_in):
                 tmp.append(cb_in[i])
             tmp = numpy.transpose(tmp)
             for j in range(tmp.shape[1]):
-                d[i, j] = sum([(k - h)**2 for k, h in zip(tmp[:, j], x_in[:, j])])
+                d[i, j] = sum([(k - h) ** 2 for k, h in zip(tmp[:, j], x_in[:, j])])
         dst, indexes = [], []
         for j in range(d.shape[1]):
             dst.append(min(d[:, j]))
@@ -219,15 +222,15 @@ def encode(cep_set, cbk):
     single_flag - single set flag
     """
     n_set = len(cep_set)
-    n_code = numpy.rank(cbk)
+    n_code = cbk.shape[1]
     idx_out = []
     for m in range(n_set):
-        nr = size(cep_set[m], 1)
+        nr = cep_set[m].shape[0]
         idx = []
         for i in range(nr):
             dist = []
             for j in range(n_code):
-                tmp = [i - j for i, j in (cep_set[m][i, :], cbk[j, :])]
+                tmp = [cep_set[m][i] - g for g in cbk[j, :]]
                 dist.append(list(map(lambda y: y / sum(tmp), tmp)))
             idx = dist.index(min(dist))
         idx_out.append(idx)
@@ -273,190 +276,9 @@ def drecm(seqs, hmm_link, hmm_pb):
     return mx
 
 
-def vq_split(x, code_book_size=32):
-    """
-    Function vq_split.m for VQ and K-Means Algorithm with Splitting for Training
-    # Inputs: 
-    # @param x: a matrix each column of which is a data vector
-    # @param code_book_size: code book size (a power of2, e.g. 16, 32256, 1024)
-    # Outputs:
-    # m: the code book as the centroids of the clusters
-    # p: weight of each cluster, the number of its vectors divided by total
-    # number of vectors 
-    # dist_hist: total distortion history, a vector containing the overall
-    # distortion of each iteration 
-    # Method: 
-    # The mean vector is split to two. the model is trained on those two vectors 
-    # until the distortion does not vary much, then those are split to two and 
-    # so on, until the desired number of clusters is reached.
-
-    # Algorithm: 
-    # 1. Find the mean 
-    # 2. split each centroid to two
-    # 3. Assign each data point to a centroid 
-    # 4. Find the centroids 
-    # 5. Calculate the total distance 
-    # 6. If the distance has not changed much,
-    # if the number of centroids is smaller than L2, go to step 2
-    # else go to step 7
-    # else (the distance has changed substantially) go to step 3
-    # 7. Ift he number of centroids is larger than L, 
-    # discard the Centroid with (highest distortion OR lowest population) 
-    # go to step 3
-    # 8. Calculate the Variances and Cluster Weights if required 
-    # 9. End
-    """
-
-    #X to [X-e*X and X+e*X], Percentage for Splitting
-    e = 0.01
-    # Rate of reduction os split size after each splitting. i.e. e=e*e_red
-    e_red = 0.75
-    # threshold in improvement in Distortion
-    dt = 0.005
-    # before terminating and splitting again.
-    # Rate of reduction of improvement Threshold, dt,
-    dt_red = 0.75
-    # after each splitting
-    # population of each cluster should be at least 10#
-    min_pop = 0.10
-    # ofi ts quota (NILC)
-    # Otherwise that codeword is replaced with another codeword 
-    # Dimension, Number of Data points
-    d, n = x.shape[0], x.shape[1]
-    # First Iteration after Splitting
-    is_first_round = True
-    # Mean Vector
-    m = [sum(x[i, :])/n for i in range(d)]
-    # split to two vectors
-    cb = [list(map(lambda val: (1+e)*val, m)), list(map(lambda val: (1-e)*val, m))]
-    # Current size of the code book
-    lc = len(cb)
-    iterate, split = 0, 0
-    is_there_a_best_cb = 0
-    # The maximum number oft raining iterations at each
-    max_iter_in_each_size = 20
-    # code book size (The code book size starts from one and increases thereafter),
-    each_size_iter_counter = 0
-    dist_hist = []
-    while True:
-        # Distance Calculation 
-        # Find the closest codeword to each data vector
-        min_index, dst = vq_index(x, cb)
-        cluster_d, population, low_pop = numpy.zeros((1, lc)), numpy.zeros((1, lc)), []
-        # Find the Centroids (Mean of each Cluster)
-        cb = numpy.transpose(cb)
-        for i in range(lc):
-            ind = []
-            for j in range(len(min_index)):
-                if i == min_index[j]:
-                    ind.append(j)
-            # if a cluster has very low population, remember it.
-            if len(ind) < min_pop * n / lc:
-                low_pop.append(i)
-            else:
-                cb[:, i] = [sum(x[:, j])/n for j in ind]
-                population[0, i] = len(ind)
-                cluster_d[0, i] = sum([dst[j] for j in ind])
-        iterate += 1
-        # First iteration after a split (do  not exit)
-
-        prev_total_dist = 0
-        if is_first_round:
-            total_dist = sum([i if not isnan(i) else 0 for i in cluster_d])
-            dist_hist.append(total_dist)
-            prev_total_dist = total_dist
-            is_first_round = False
-        else:
-            total_dist = sum(cluster_d)
-            dist_hist.append(total_dist)
-            percentage_improvement = ((prev_total_dist - total_dist) / prev_total_dist)
-            # Improvement substantial
-            if percentage_improvement >= dt:
-                # Save Distortion o/this iteration and continue training
-                prev_total_dist = total_dist
-                is_first_round = False
-            # Improvement NOT substantial (Saturation)
-            else:
-                each_size_iter_counter = 0
-                # Enough Codewords ?
-                if lc >= code_book_size:
-                    # Exact number of codewords
-                    if code_book_size == lc:
-                        # disp(total_dist)
-                        break
-                        # Kill one codeword at a time
-                    else:
-                        # Eliminate low population codewords
-                        temp = min(population)
-                        ind = list(population).index(temp)
-                        cb = cb[:, setxor1d(rand(lc), ind)]
-                        lc -= 1
-                        is_first_round = True
-                # If not enough codewords exist yet, split more
-                else:
-                    cb = [cb * (1 + e)] + [cb * (1 - e)]
-                    # split size reduction
-                    e *= e_red
-                    # Improvement Threshold Reduction
-                    dt *= dt_red
-                    lc = size(cb, 2)
-                    is_first_round = 1
-                    split += 1
-                    # As we just split this codebook, there is  no best
-                    is_there_a_best_cb = 0
-                    # codebook at this size yet.
-        BestD = 0
-        if not is_there_a_best_cb:
-            BestCB = cb
-            BestD = total_dist
-            is_there_a_best_cb = 1
-        else:
-            if total_dist < BestD:
-                BestCB = cb
-                BestD = total_dist
-        each_size_iter_counter += 1
-        # Ift oo many iterations in this size,
-        if each_size_iter_counter > max_iter_in_each_size:
-            # stop training this size
-            each_size_iter_counter = 0
-            # choose the best codebook so far
-            cb = BestCB
-            is_there_a_best_cb = 0
-            # Enough Codewords ?
-            if lc >= code_book_size:
-                # Exact number of codewords
-                if code_book_size == lc:
-                    # disp(total_dist)
-                    break
-                    # Kill one codeword at a time
-                else:
-                    temp = min(population)
-                    ind = population.index(temp)
-                    NCB = cb[:, setxor1d(range(lc), ind)]
-                    cb = NCB
-                    lc -= 1
-                    is_first_round = 1
-            # split
-            else:
-                cb = [cb * (1 + e), cb * (1 - e)]
-                # split size reduction
-                e *= e_red
-                # Improvement Threshold Reduction
-                dt *= dt_red
-                lc = size(cb, 2)
-                is_first_round = 1
-                split += 1
-                is_there_a_best_cb = 0
-                # disp(lc)
-        # disp(total_dist)
-        p = list(map(lambda y: y / n, population))
-        #save CBTemp cb p dist_hist
-    return cb, list(map(lambda y: y / n, population)), dist_hist
-
-
 def main():
-    # This is the main program, a script file. 
-    digits = ['1', '2']
+    # This is the main program, a script file.
+    digits = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'Z']
     # Input training wave files from 33 subjects whose initials are listed below
     man_subjects = ['AE']
     frame_rate = 100
@@ -465,7 +287,7 @@ def main():
     for a in digits:
         for subject in man_subjects:
             train_cep_set.append(
-                get_ceps(path_to_hmm_words + 'MAN/' + subject + '/' + a + 'A_endpt.wav', frame_rate, x, y))
+                get_ceps(path_to_hmm_words + 'MAN/' + subject + '/' + a + 'A_endpt.wav', frame_rate, x, y, resample_flag=False))
 
     # Group cepstrum coefficients by digit(NixI3, i = 1. . 10) matricies
     tr_vectors = []
@@ -475,25 +297,33 @@ def main():
         for m in i:
             tr_vectors.append(list(m))
     # Get code book
-    cbk, p, dh = vq_split(numpy.transpose(tr_vectors))
-    cbk = numpy.transpose(cbk)
+    codebook, distortion = kmeans(whiten(numpy.transpose(tr_vectors)), 32)
+    codebook = numpy.transpose(codebook)
 
     n_digit, n_subject = len(digits), len(man_subjects)
-    # Encode train ceps 
-    '''trainseq = arrayfun(@(a) encode(a{1}, cbk, 0), train_cep_set, 'UniformOutput', false)
-    # Re-index the traing sequence so that it goes by digit first 
-    trseq = cell(1,n_digit)
-    for i = 1:n_digit
-      for m = 1:n_subject
-        trseq{i}{m} = trainseq{m}{i}
-      end 
-    end 
+    train_sec = []
+    # Encode train ceps
+    for a in train_cep_set:
+        train_sec.append(encode(a, codebook))
+    # Re-index the traing sequence so that it goes by digit first
+
     # Initialize HMM 
-    trans = [0.34 0.33 0.33 0.00 0.000.00 0.34 0.33 0.33 0.000.00 0.00 0.34 0.33 0.330.00 0.00 0.00 0.50 0.500.00 0.00 0.00 0.00 1.0]
+    trans = [[0.34, 0.33, 0.33, 0.00, 0.00],
+             [0.00, 0.34, 0.33, 0.33, 0.00],
+             [0.00, 0.00, 0.34, 0.33, 0.33],
+             [0.00, 0.00, 0.00, 0.50, 0.50],
+             [0.00, 0.00, 0.00, 0.00, 1.0]]
     # transitional probabilities 
-    emis = ones(size(trans,1),32)./32
-    # HMM training 
-    [estTR, estE] = arrayfun(@(a) hmmtrain(a{1}, trans, emis), trseq, 'UniformOutput', false)
+    emis = numpy.ones((len(trans[0]), 32))/32
+    # HMM training
+    model = hmm.GaussianHMM(5, transmat=trans)
+    model.means_ = codebook
+    model.covars_ = emis
+    X, Z = model.sample()
+    plt.plot(X[:, 0], X[:, 1], "-o", label="observations", ms=6, mfc="orange", alpha=0.7)
+    plt.legend(loc='best')
+    plt.show()
+    '''[estTR, estE] = arrayfun(@(a) hmmtrain(a{1}, trans, emis), trseq, 'UniformOutput', false)
     # Testing begins: compute test ceps{or one su~ject JT, not in training set 
     testceps = arrayfun(@(a) getceps(strcat('isolated_digits/MAN/JT/', ...
         a{1}, 'B_endpt.wav'), 1, frame_rate, x, y), digits, 'UniformOutput', false)

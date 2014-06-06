@@ -254,8 +254,7 @@ class Application(Frame):
         askopenfile = filedialog.askopenfile(filetypes=[("Wave audio files", "*.wav *.wave")], defaultextension=".wav",
                                              initialdir=path)
         if not askopenfile is None:
-            wav = WavFile(askopenfile.name)
-            test(wav, 3, 3, 0)
+            test(WavFile(askopenfile.name))
         else:
             messagebox.showwarning("Warning", "You should select one file. Please, try again")
 

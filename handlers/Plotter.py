@@ -8,7 +8,8 @@ class Plotter:
         self.data, self.additional_data = {}, {}
         self.sub_plot_num = 1
 
-    def add_sub_plot_data(self, title, data_y, data_x=None, color="blue", ls="-", scale_x=None, scale_y=None):
+    def add_sub_plot_data(self, title, data_y, data_x=None, color="blue", ls="-", scale_x=None, scale_y=None,
+                          x_label=None, y_label=None):
         """
         adds new data for plot in new sub plot frame
         @param title: title of subplot
@@ -21,7 +22,7 @@ class Plotter:
             data_x = range(len(data_y))
         if self.additional_data.get(title) is None:
             self.additional_data[title] = []
-        self.data[title] = (data_x, data_y, color, ls, self.sub_plot_num, scale_x, scale_y)
+        self.data[title] = (data_x, data_y, color, ls, self.sub_plot_num, scale_x, scale_y, x_label, y_label)
         self.sub_plot_num += 1
 
     def add_current_plot_data(self, title, data_y, data_x=None, color="green", ls="o", lw=1):
@@ -76,6 +77,10 @@ class Plotter:
                         plot.hlines(j[1], x_min, x_max, color=j[2], linestyles=j[3], lw=j[4])
                 plot.xlim((x_min, x_max))
             plot.title(i)
+            if not self.data[i][7] is None:
+                plot.xlabel(self.data[i][7])
+            if not self.data[i][8] is None:
+                plot.ylabel(self.data[i][8])
             plot.grid(True)
         plot.show()
 

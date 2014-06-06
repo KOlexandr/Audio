@@ -1,4 +1,4 @@
-from variables import path_to_test, path_to_vad_results
+from variables import path_to_test, path_to_vad_results, show_plots
 from handlers.Plotter import Plotter
 from beans.WavFile import WavFile
 from math import log10, floor
@@ -81,7 +81,7 @@ def vad(wav_file, frame_size=10, fft_function=numpy.fft.fft):
 
         if speech[i] == 0:
             min_energy = (silence_count * min_energy + energy[i]) / (silence_count + 1)
-        thresh_energy = energy_prim_threshold * log10(abs(min_energy)+1e-5)
+        thresh_energy = energy_prim_threshold * log10(abs(min_energy) + 1e-5)
 
     return {"energy": energy,
             "mdf": freq_component,
@@ -196,11 +196,11 @@ def find_words(starts, ends, min_frames_voice, min_frames_noise):
     @return: 2 lists with start indexes and end indexes of words
     """
     word_lengths, noise_lengths, word_starts, word_ends = [], [], [], []
-    for i in range(len(starts)-1):
+    for i in range(len(starts) - 1):
         word_lengths.append(ends[i] - starts[i])
-        noise_lengths.append(starts[i+1] - ends[i])
+        noise_lengths.append(starts[i + 1] - ends[i])
     if len(ends) > 0 and len(starts) > 0:
-        word_lengths.append(ends[len(starts)-1] - starts[len(starts)-1])
+        word_lengths.append(ends[len(starts) - 1] - starts[len(starts) - 1])
 
     i, j = 0, 0
     while i < len(starts):
@@ -208,18 +208,18 @@ def find_words(starts, ends, min_frames_voice, min_frames_noise):
             word_starts.append(starts[i])
             word_ends.append(0)
             t = 0
-            for k in range(i, len(starts)-1):
+            for k in range(i, len(starts) - 1):
                 if noise_lengths[k] > min_frames_noise:
-                    word_ends[len(word_ends)-1] = ends[k]
+                    word_ends[len(word_ends) - 1] = ends[k]
                     i = t = k
                     break
             if t != i or word_ends[j] == 0:
-                word_ends[j] = ends[len(starts)-1]
+                word_ends[j] = ends[len(starts) - 1]
             j += 1
         i += 1
-    for i in range(len(word_starts)-1):
-        if word_starts[i+1] < word_ends[i]:
-            word_ends[i] = word_starts[i+1]-1
+    for i in range(len(word_starts) - 1):
+        if word_starts[i + 1] < word_ends[i]:
+            word_ends[i] = word_starts[i + 1] - 1
     return word_starts, word_ends
 
 
@@ -244,16 +244,34 @@ def find_words_for_one_param(param, low_value, min_frames_voice, min_frames_nois
 
 
 def plot_result(wav, word_results, params, min_params, colors, items):
-    plot = Plotter()
-    plot.add_sub_plot_data("samples", wav.get_one_channel_data())
+    file = Plotter()
+    file.add_sub_plot_data("Digitized audio file", wav.get_one_channel_data(), x_label="Samples", y_label="Amplitude")
     for i in word_results.keys():
-        plot.add_line_at("samples", list(map(lambda x: x * items, word_results[i]["starts"])), "x", colors[i], lw=3)
-        plot.add_line_at("samples", list(map(lambda x: x * items, word_results[i]["ends"])), "x", colors[i], lw=3)
+        file.add_line_at("Digitized audio file", list(map(lambda x: x * items, word_results[i]["starts"])), "x",
+                         colors[i], lw=3)
+        file.add_line_at("Digitized audio file", list(map(lambda x: x * items, word_results[i]["ends"])), "x",
+                         colors[i], lw=3)
+    file.sub_plot_all_horizontal()
 
-    for i in word_results.keys():
-        plot.add_sub_plot_data(i, params[i])
-        plot.add_line_at(i, min_params[i], "y", color="red")
-    plot.sub_plot_all_horizontal()
+    energy = Plotter()
+    energy.add_sub_plot_data("Energy", params["energy"], x_label="Frames", y_label="Energy Value")
+    energy.add_line_at("Energy", min_params["energy"], "y", color="red")
+    energy.sub_plot_all_horizontal()
+
+    mdf = Plotter()
+    mdf.add_sub_plot_data("Most Dominant Frequency", params["mdf"], x_label="Frames", y_label="MDF Value")
+    mdf.add_line_at("Most Dominant Frequency", min_params["mdf"], "y", color="red")
+    mdf.sub_plot_all_horizontal()
+
+    zcr = Plotter()
+    zcr.add_sub_plot_data("Zero Crossing Rate", params["zcr"], x_label="Frames", y_label="ZCR Value")
+    zcr.add_line_at("Zero Crossing Rate", min_params["zcr"], "y", color="red")
+    zcr.sub_plot_all_horizontal()
+
+    zcr = Plotter()
+    zcr.add_sub_plot_data("Spectral Flatness Measure", params["sfm"], x_label="Frames", y_label="SFM Value")
+    zcr.add_line_at("Spectral Flatness Measure", min_params["sfm"], "y", color="red")
+    zcr.sub_plot_all_horizontal()
 
 
 def create_files(wav, word_results, items):
@@ -270,10 +288,10 @@ def create_files(wav, word_results, items):
                 num += 1
 
 
-def test(wav, min_frames_voice, min_frames_noise, bad_frames_count):
+def test(wav, frame_size=10, min_frames_voice=3, min_frames_noise=10, bad_frames_count=10):
     keys, shifts = ["energy", "mdf", "zcr", "sfm"], {"energy": 1, "mdf": 320, "zcr": 1, "sfm": 1}
     colors = {"energy": "red", "mdf": "green", "zcr": "black", "sfm": "yellow"}
-    params = vad(wav)
+    params = vad(wav, frame_size=frame_size)
     min_params = {}
     if bad_frames_count <= 0:
         for i in keys:
@@ -289,8 +307,10 @@ def test(wav, min_frames_voice, min_frames_noise, bad_frames_count):
         word_results[i]["starts"], word_results[i]["ends"] = starts, ends
 
     create_files(wav, word_results, params["items_per_frame"])
-    plot_result(wav, word_results, params, min_params, colors, params["items_per_frame"])
+    if show_plots:
+        plot_result(wav, word_results, params, min_params, colors, params["items_per_frame"])
 
 
 if "__main__" == __name__:
-    test(WavFile(path_to_test + "12345.wav"), 3, 10, 10)
+    # test(WavFile(path_to_test + "hivemind.wav"), 10, 5, 2, 15)
+    test(WavFile(path_to_test + "numbers.wav"), 10, 5, 2, 15)
