@@ -25,9 +25,10 @@ class FFTVoiceAnalyzer:
         self.base_lib_folder = base_lib_folder
         self.really_transform = really_transform
         if use_filter:
-            self.filter_fft = lambda sam, fr: FiniteImpulseFilter.filter(abs(self.fft(sam)), 50, fr, win_func="hemming")
+            self.filter_fft = lambda sam, fr=None: FiniteImpulseFilter.filter(abs(self.fft(sam)), 50, fr,
+                                                                              win_func="hemming")
         else:
-            self.filter_fft = lambda sam, fr: abs(self.fft(sam))
+            self.filter_fft = lambda sam, fr=None: abs(self.fft(sam))
 
         self.lib = self.create_lib_with_examples()
 
@@ -51,10 +52,10 @@ class FFTVoiceAnalyzer:
         start_idx = 0
         indexes, coefficients = [], []
         length_of_silence = len(self.silence.get_one_channel_data())
-        silence_samples = self.filter_fft(self.silence.get_one_channel_data(), self.silence.frame_rate)
+        silence_samples = self.filter_fft(self.silence.get_one_channel_data())
         for i in range(int(len(test.get_one_channel_data()) / length_of_silence)):
             f = test.get_one_channel_data()[start_idx:start_idx + length_of_silence]
-            test_samples = self.filter_fft(f, test.frame_rate)
+            test_samples = self.filter_fft(f)
             tmp = np.corrcoef(silence_samples, test_samples)
             coefficients.append(abs(tmp[0][1]))
             indexes.append((start_idx, start_idx + length_of_silence))

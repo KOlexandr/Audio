@@ -43,7 +43,7 @@ class Recorder:
         wf.setframerate(self.rate)
         wf.writeframes(frames)
         wf.close()
-        return WavFile(frames=frames, sample_width=sample_width, time=time, word=file_name)
+        return WavFile(samples=frames, sample_width=sample_width, time=time, word=file_name)
 
     def record_audio(self, time):
         """
@@ -79,4 +79,4 @@ class Recorder:
         @return: WavFile object
         """
         sample_width, frames = self.record_audio(time)
-        return WavFile(frames=frames, sample_width=sample_width, time=time)
+        return WavFile(samples=frames, sample_width=sample_width, time=time)

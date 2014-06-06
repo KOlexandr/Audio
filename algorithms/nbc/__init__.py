@@ -188,14 +188,23 @@ class NBC:
         speech_count = 0
         non_speech_count = 0
         for i in classes.keys():
-            if not i.get("speech") is None:
+            if not classes[i].get("speech") is None:
                 speech_count += 1
-            elif not i.get("non_speech") is None:
+            elif not classes[i].get("non_speech") is None:
                 non_speech_count += 1
         if speech_count > non_speech_count:
             return "speech"
         else:
             return "non_speech"
+
+    def initialize(self):
+        print("Adding speech NBC examples")
+        self.add_audio_files("speech", path_to_speech)
+        print("Adding non speech NBC examples")
+        self.add_audio_files("non_speech", path_to_non_speech)
+        print("Teaching NBC classifier with added examples")
+        self.teach_classifier()
+        print("Teaching NBC classifier finished")
 
 
 def test():

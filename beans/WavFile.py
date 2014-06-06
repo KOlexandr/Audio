@@ -7,14 +7,14 @@ __author__ = 'Olexandr'
 
 
 class WavFile:
-    def __init__(self, file_name=None, frames=None, sample_width=None, time=0, word="anonymous"):
+    def __init__(self, file_name=None, samples=None, sample_width=None, time=0, word="anonymous"):
         """
         initialize WavFile object
         you can use name of file from file system
         or list of frames, sample_width and time, this variant good
             when you record audio yourself and don't want save it to disk
         @param file_name: name of file (if you use file from disk)
-        @param frames: frames which represents wave file
+        @param samples: frames which represents wave file
         @param sample_width: width of samples
         @param time: length of recorded file in seconds
         """
@@ -31,10 +31,10 @@ class WavFile:
                 wav.close()
             else:
                 raise Exception("File '" + file_name + "' is not exists!")
-        elif not (frames is None) and not(sample_width is None) and time > 0:
+        elif not (samples is None) and not(sample_width is None) and time > 0:
             self.file_name = word
             self.sample_width = sample_width
-            self.samples = np.fromstring(frames, dtype=self.types[self.sample_width])
+            self.samples = np.fromstring(samples, dtype=self.types[self.sample_width])
             self.file_size_sec = time
             self.number_of_channels = 2
         else:

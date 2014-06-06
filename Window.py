@@ -1,5 +1,4 @@
-from variables import path_to_records, path_to_silence, cf, path_to_speech, path_to_non_speech, \
-    path_to_mfcc, path_to_test, path_to_examples
+from variables import path_to_records, path_to_silence, cf, path_to_mfcc, path_to_test, path_to_examples
 from algorithms.fva import FFTVoiceAnalyzer
 from algorithms.fft import FFT
 from algorithms.nbc import NBC
@@ -31,13 +30,7 @@ class Application(Frame):
         #========================================================================
         # Naive Bayes Classifier
         self.nbc = NBC()
-        print("Adding speech NBC examples")
-        self.nbc.add_audio_files("speech", path_to_speech)
-        print("Adding non speech NBC examples")
-        self.nbc.add_audio_files("non_speech", path_to_non_speech)
-        print("Teaching NBC classifier with added examples")
-        # self.nbc.teach_classifier()
-        print("Teaching NBC classifier finished")
+        self.nbc.initialize()
         # Naive Bayes Classifier
         #========================================================================
 
@@ -249,12 +242,11 @@ class Application(Frame):
         else:
             messagebox.showwarning("Warning", "You should select one file. Please, try again")
 
-    @staticmethod
-    def show_test_vad_open(path=path_to_records):
+    def show_test_vad_open(self, path=path_to_records):
         askopenfile = filedialog.askopenfile(filetypes=[("Wave audio files", "*.wav *.wave")], defaultextension=".wav",
                                              initialdir=path)
         if not askopenfile is None:
-            test(WavFile(askopenfile.name))
+            test(WavFile(askopenfile.name), self.nbc)
         else:
             messagebox.showwarning("Warning", "You should select one file. Please, try again")
 

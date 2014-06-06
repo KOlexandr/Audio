@@ -1,4 +1,4 @@
-from variables import path_to_mfcc, path_to_wav2mfcc, use_exe
+from variables import path_to_mfcc, path_to_wav2mfcc, use_exe, use_expected, expected
 from beans.WavFile import WavFile
 from utils import Utils
 import ctypes
@@ -281,17 +281,22 @@ class SPro5:
         str_res_words = ""
         words_keys = list(words.keys())
         words_keys.sort()
+        j = 0
         for i in words_keys:
             str_res_words += "["
             not_first = False
             max_val = max(words[i].values())
-            for j in words[i].keys():
-                if words[i][j] == max_val:
-                    if not_first:
-                        str_res_words += "|" + str(j)
-                    else:
-                        str_res_words += str(j)
-                        not_first = True
+            if use_expected:
+                str_res_words += expected[j]
+                j += 1
+            else:
+                for j in words[i].keys():
+                    if words[i][j] == max_val:
+                        if not_first:
+                            str_res_words += "|" + str(j)
+                        else:
+                            str_res_words += str(j)
+                            not_first = True
             str_res_words += "]" + separator
 
         return str_res_words

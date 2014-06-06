@@ -35,3 +35,6 @@ show_plots = bool(int(cf.get("plots", "show_plots")))
 
 #FIR
 use_filter = bool(int(cf.get("fir", "use_filter")))
+
+expected = "3215"
+use_expected = True

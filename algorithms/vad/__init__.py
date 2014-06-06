@@ -274,7 +274,7 @@ def plot_result(wav, word_results, params, min_params, colors, items):
     zcr.sub_plot_all_horizontal()
 
 
-def create_files(wav, word_results, items):
+def create_files(wav, word_results, items, nbc):
     data = wav.get_one_channel_data()
     for i in word_results.keys():
         starts = word_results[i]['starts']
@@ -283,14 +283,21 @@ def create_files(wav, word_results, items):
         for k in range(0, len(starts)):
             file_name = 'word' + str(num) + "_" + str(i) + '.wav'
             file_items = data[starts[k] * items:ends[k] * items]
-            if len(file_items) > 10000:
-                WavFile.write(path_to_vad_results + file_name, file_items, 0)
-                num += 1
+            if not nbc is None:
+                if len(file_items) > 10000 and nbc.get_class(nbc.get_classes(nbc.classify(
+                        WavFile(samples=WavFile.to_binary(file_items), sample_width=wav.sample_width, time=1)))) == "speech":
+                    WavFile.write(path_to_vad_results + file_name, file_items, 0)
+                    num += 1
+            else:
+                if len(file_items) > 10000:
+                    WavFile.write(path_to_vad_results + file_name, file_items, 0)
+                    num += 1
 
 
-def test(wav, frame_size=10, min_frames_voice=3, min_frames_noise=10, bad_frames_count=10):
+def test(wav, nbc=None, frame_size=10, min_frames_voice=3, min_frames_noise=10, bad_frames_count=10):
     keys, shifts = ["energy", "mdf", "zcr", "sfm"], {"energy": 1, "mdf": 320, "zcr": 1, "sfm": 1}
     colors = {"energy": "red", "mdf": "green", "zcr": "black", "sfm": "yellow"}
+
     params = vad(wav, frame_size=frame_size)
     min_params = {}
     if bad_frames_count <= 0:
@@ -306,11 +313,11 @@ def test(wav, frame_size=10, min_frames_voice=3, min_frames_noise=10, bad_frames
         starts, ends = find_words_for_one_param(params[i], min_params[i], min_frames_voice, min_frames_noise)
         word_results[i]["starts"], word_results[i]["ends"] = starts, ends
 
-    create_files(wav, word_results, params["items_per_frame"])
+    create_files(wav, word_results, params["items_per_frame"], nbc)
     if show_plots:
         plot_result(wav, word_results, params, min_params, colors, params["items_per_frame"])
 
 
 if "__main__" == __name__:
     # test(WavFile(path_to_test + "hivemind.wav"), 10, 5, 2, 15)
-    test(WavFile(path_to_test + "numbers.wav"), 10, 5, 2, 15)
+    test(WavFile(path_to_test + "3215.wav"), None, 10, 5, 2, 15)
