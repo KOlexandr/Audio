@@ -203,7 +203,7 @@ class NBC:
         print("Adding non speech NBC examples")
         self.add_audio_files("non_speech", path_to_non_speech)
         print("Teaching NBC classifier with added examples")
-        self.teach_classifier()
+        # self.teach_classifier()
         print("Teaching NBC classifier finished")
 
 

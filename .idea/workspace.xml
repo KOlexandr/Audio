@@ -2,104 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0db91aa-b7c4-4319-965f-f86680b0dd9d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1-10.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1-11.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2-10.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2-11.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3-10.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3-11.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5-10.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5-11.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/nonSpeech/word1_energy.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/nonSpeech/word1_mdf.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/nonSpeech/word1_sfm.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/audio_files/nonSpeech/word2_sfm.wav" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\1-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\1-02.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\1-03.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\1-04.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\1-05.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\1-06.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\1-07.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\1-08.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\1-09.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\1-10.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\2-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\2-02.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\2-03.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\2-04.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\2-05.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\2-06.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\2-07.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\2-08.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\2-09.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\2-10.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\3-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\3-02.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\3-03.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\3-04.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\3-05.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\3-06.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\3-07.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\3-08.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\3-09.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\3-10.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\4-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\4-02.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\4-03.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\4-04.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\4-05.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\4-06.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\4-07.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\4-08.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\4-09.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\4-10.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\5-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\5-02.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\5-03.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\5-04.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\5-05.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\5-06.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\5-07.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\5-08.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\5-09.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\learn\5-10.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test\word1_energy-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test\word1_mdf-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test\word2_energy-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test\word2_mdf-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test\word3_energy-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test\word3_mdf-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test\word4_energy-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test\word4_mdf-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test\word5_energy-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\base\test\word5_mdf-01.mfcc" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\waves\test\word1_energy.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\waves\test\word1_mdf.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\waves\test\word2_energy.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\waves\test\word2_mdf.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\waves\test\word3_energy.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\waves\test\word3_mdf.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\waves\test\word4_energy.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\waves\test\word4_mdf.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\waves\test\word5_energy.wav" afterPath="" />
-      <change type="DELETED" beforePath="E:\EmergencyFiles\Python\RecordAudio\resources\mfcc\waves\test\word5_mdf.wav" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/audio_files/test/12345.wav" afterPath="$PROJECT_DIR$/resources/audio_files/test/12345.wav" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handlers/Recorder.py" afterPath="$PROJECT_DIR$/handlers/Recorder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/beans/WavFile.py" afterPath="$PROJECT_DIR$/beans/WavFile.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Window.py" afterPath="$PROJECT_DIR$/Window.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/fva/__init__.py" afterPath="$PROJECT_DIR$/algorithms/fva/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/nbc/__init__.py" afterPath="$PROJECT_DIR$/algorithms/nbc/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/vad/__init__.py" afterPath="$PROJECT_DIR$/algorithms/vad/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/wav2mfcc/__init__.py" afterPath="$PROJECT_DIR$/algorithms/wav2mfcc/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt" afterPath="$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt" afterPath="$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/results/system.bin" afterPath="$PROJECT_DIR$/resources/mfcc/results/system.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/base/test_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/base/test_base.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/variables.py" afterPath="$PROJECT_DIR$/variables.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RecordAudio.iws" />
@@ -123,14 +34,14 @@
     <SUITE FILE_PATH="coverage/RecordAudio$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1402074823807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/vad" />
     <SUITE FILE_PATH="coverage/RecordAudio$Test.coverage" NAME="Test Coverage Results" MODIFIED="1399746245679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1402068974012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/fft" />
-    <SUITE FILE_PATH="coverage/RecordAudio$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1402076310190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/wav2mfcc" />
+    <SUITE FILE_PATH="coverage/RecordAudio$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1402076905363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/wav2mfcc" />
     <SUITE FILE_PATH="coverage/RecordAudio$NBCTest.coverage" NAME="NBCTest Coverage Results" MODIFIED="1393107538115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$FFTAnalyzeTest.coverage" NAME="FFTAnalyzeTest Coverage Results" MODIFIED="1399749568829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$__init____3_.coverage" NAME="__init__ (3) Coverage Results" MODIFIED="1402074785521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/fva" />
     <SUITE FILE_PATH="coverage/RecordAudio$MainLibrary.coverage" NAME="MainLibrary Coverage Results" MODIFIED="1391035076819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$test.coverage" NAME="test Coverage Results" MODIFIED="1401141425615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithms/hmm" />
     <SUITE FILE_PATH="coverage/RecordAudio$Main.coverage" NAME="Main Coverage Results" MODIFIED="1398735459468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RecordAudio$Window.coverage" NAME="Window Coverage Results" MODIFIED="1402073191699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RecordAudio$Window.coverage" NAME="Window Coverage Results" MODIFIED="1402079681785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$FFT.coverage" NAME="FFT Coverage Results" MODIFIED="1390091072064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$Test1.coverage" NAME="Test1 Coverage Results" MODIFIED="1399174529603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RecordAudio$VADTest.coverage" NAME="VADTest Coverage Results" MODIFIED="1393111516371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -145,89 +56,60 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/algorithms/vad/__init__.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state line="296" column="4" selection-start="11403" selection-end="11403" vertical-scroll-proportion="-0.08902691" vertical-offset="4990" max-vertical-offset="5491">
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="RecordAudio" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Window.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Window.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="248" column="0" selection-start="10974" selection-end="10974" vertical-scroll-proportion="0.0" vertical-offset="4216" max-vertical-offset="6800">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/fva/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="8" selection-start="3382" selection-end="3382" vertical-scroll-proportion="0.0" vertical-offset="1114" max-vertical-offset="1598">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/vad/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="253" column="0" selection-start="9456" selection-end="9456" vertical-scroll-proportion="0.0" vertical-offset="5007" max-vertical-offset="5491">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="excluded_test.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WavFile.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beans/WavFile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="8" selection-start="6356" selection-end="6356" vertical-scroll-proportion="0.0" vertical-offset="2839" max-vertical-offset="3009">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/wav2mfcc/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="299" column="44" selection-start="13707" selection-end="13707" vertical-scroll-proportion="0.0" vertical-offset="4598" max-vertical-offset="5508">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wer_learn_base.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="excluded_learn.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wer_test_base.txt" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="910">
-              <folding />
+            <state line="300" column="0" selection-start="13028" selection-end="13028" vertical-scroll-proportion="0.4731405" vertical-offset="1029" max-vertical-offset="2499">
+              <folding>
+                <element signature="e#586#3038#0" expanded="false" />
+                <element signature="e#3071#3357#0" expanded="false" />
+                <element signature="e#3392#3712#0" expanded="false" />
+                <element signature="e#3743#5428#0" expanded="false" />
+                <element signature="e#5489#5534#0" expanded="false" />
+                <element signature="e#5590#5660#0" expanded="false" />
+                <element signature="e#5937#6583#0" expanded="false" />
+                <element signature="e#6632#6909#0" expanded="false" />
+                <element signature="e#7186#7516#0" expanded="false" />
+                <element signature="e#7567#8110#0" expanded="false" />
+                <element signature="e#8174#8947#0" expanded="false" />
+                <element signature="e#9245#9572#0" expanded="false" />
+                <element signature="e#9641#10439#0" expanded="false" />
+                <element signature="e#10713#11085#0" expanded="false" />
+                <element signature="e#11137#11517#0" expanded="false" />
+                <element signature="e#11690#11787#0" expanded="false" />
+                <element signature="e#11827#12038#0" expanded="false" />
+                <element signature="e#12200#12378#1" expanded="false" />
+                <element signature="e#16587#17155#0" expanded="false" />
+                <element signature="e#17198#18010#0" expanded="false" />
+                <element signature="e#18041#18306#0" expanded="false" />
+                <element signature="e#18386#19165#0" expanded="false" />
+                <element signature="e#19184#19237#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -235,10 +117,8 @@
       <file leaf-file-name="variables.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/variables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="12" selection-start="1431" selection-end="1443" vertical-scroll-proportion="0.0" vertical-offset="213" max-vertical-offset="765">
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state line="1" column="25" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -305,8 +185,6 @@
         <option value="$PROJECT_DIR$/algorithms/harmonicOscillations/__init__.py" />
         <option value="$PROJECT_DIR$/algorithms/naiveBayesClassifier/__init__.py" />
         <option value="$PROJECT_DIR$/algorithms/spro5/__init__.py" />
-        <option value="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" />
-        <option value="$PROJECT_DIR$/resources/mfcc/base/test_base.txt" />
         <option value="$PROJECT_DIR$/algorithms/hmm/__init__.py" />
         <option value="$PROJECT_DIR$/handlers/Plotter.py" />
         <option value="$PROJECT_DIR$/algorithms/fir/__init__.py" />
@@ -315,16 +193,18 @@
         <option value="$PROJECT_DIR$/properties/properties.cfg" />
         <option value="$PROJECT_DIR$/algorithms/fva/__init__.py" />
         <option value="$PROJECT_DIR$/beans/WavFile.py" />
-        <option value="$PROJECT_DIR$/Window.py" />
         <option value="$PROJECT_DIR$/algorithms/vad/__init__.py" />
-        <option value="$PROJECT_DIR$/algorithms/nbc/__init__.py" />
         <option value="$PROJECT_DIR$/resources/mfcc/results/system.bin" />
-        <option value="$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt" />
-        <option value="$PROJECT_DIR$/variables.py" />
         <option value="$PROJECT_DIR$/algorithms/wav2mfcc/__init__.py" />
         <option value="$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt" />
-        <option value="$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt" />
         <option value="$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt" />
+        <option value="$PROJECT_DIR$/algorithms/nbc/__init__.py" />
+        <option value="$PROJECT_DIR$/resources/mfcc/base/test_base.txt" />
+        <option value="$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt" />
+        <option value="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" />
+        <option value="$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt" />
+        <option value="$PROJECT_DIR$/variables.py" />
+        <option value="$PROJECT_DIR$/Window.py" />
       </list>
     </option>
   </component>
@@ -409,6 +289,54 @@
               <option name="myItemId" value="mfcc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="waves" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mfcc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordAudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mfcc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -488,7 +416,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fva" />
+              <option name="myItemId" value="nbc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -506,7 +434,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fft" />
+              <option name="myItemId" value="fva" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -566,7 +494,7 @@
       <recent name="E:\EmergencyFiles\Python\RecordAudio\resources\audio_files\waves" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.__init__ (1)">
+  <component name="RunManager" selected="Python.Window">
     <configuration default="false" name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -831,10 +759,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.__init__ (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.__init__" />
-        <item index="2" class="java.lang.String" itemvalue="Python.__init__ (3)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Window" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Window" />
+        <item index="1" class="java.lang.String" itemvalue="Python.__init__ (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.__init__" />
+        <item index="3" class="java.lang.String" itemvalue="Python.__init__ (3)" />
         <item index="4" class="java.lang.String" itemvalue="Python.__init__ (2)" />
       </list>
     </recent_temporary>
@@ -1003,7 +931,11 @@
       <created>1402069510850</created>
       <updated>1402069510850</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="refactoring&#10;">
+      <created>1402076844878</created>
+      <updated>1402076844878</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1030,6 +962,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41346154" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1037,7 +970,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17784877" sideWeight="0.56342185" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4551282" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4551282" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17465389" sideWeight="0.43657818" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34615386" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1045,7 +978,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1064,7 +996,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="gui" />
     <MESSAGE value="teaching program etc." />
     <MESSAGE value="small silence" />
     <MESSAGE value="test" />
@@ -1089,7 +1020,8 @@
     <MESSAGE value="VAD and Plotter refactoring&#10;" />
     <MESSAGE value="FIR refactoring&#10;" />
     <MESSAGE value="FVA refactoring&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="FVA refactoring&#10;" />
+    <MESSAGE value="refactoring&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1165,11 +1097,6 @@
           <option name="timeStamp" value="531" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/algorithms/nbc/__init__.py</url>
-          <line>201</line>
-          <option name="timeStamp" value="561" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/algorithms/vad/__init__.py</url>
           <line>315</line>
           <option name="timeStamp" value="562" />
@@ -1191,7 +1118,7 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="572" />
+      <option name="time" value="573" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1262,7 +1189,9 @@
     </entry>
     <entry file="file://C:/Python33/Lib/tkinter/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1908" column="0" selection-start="78684" selection-end="78684" vertical-scroll-proportion="0.3327645" vertical-offset="32241" max-vertical-offset="66249" />
+        <state line="1908" column="0" selection-start="78684" selection-end="78684" vertical-scroll-proportion="0.3327645" vertical-offset="32241" max-vertical-offset="66249">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/beans/ClassifierBean.py">
@@ -1298,16 +1227,6 @@
     <entry file="file://C:/Python33/Lib/re.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="162" column="0" selection-start="8012" selection-end="8012" vertical-scroll-proportion="0.33333334" vertical-offset="2507" max-vertical-offset="6171" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/base/learn_base.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="15" selection-start="698" selection-end="698" vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="1139" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/base/test_base.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102" />
       </provider>
     </entry>
     <entry file="file://C:/Python33/Lib/site-packages/numpy/core/_methods.py">
@@ -1391,19 +1310,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/handlers/Plotter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="53" selection-start="2941" selection-end="2941" vertical-scroll-proportion="0.0" vertical-offset="876" max-vertical-offset="1734" />
+        <state line="70" column="53" selection-start="2941" selection-end="2941" vertical-scroll-proportion="0.0" vertical-offset="876" max-vertical-offset="1734">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/properties/properties.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="28" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="986">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/nbc/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="0" selection-start="8830" selection-end="8830" vertical-scroll-proportion="0.0" vertical-offset="3069" max-vertical-offset="3791">
           <folding />
         </state>
       </provider>
@@ -1422,29 +1336,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Window.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="248" column="0" selection-start="10974" selection-end="10974" vertical-scroll-proportion="0.0" vertical-offset="3817" max-vertical-offset="6800">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/variables.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="12" selection-start="1431" selection-end="1443" vertical-scroll-proportion="0.0" vertical-offset="213" max-vertical-offset="765">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/vad/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="253" column="0" selection-start="9456" selection-end="9456" vertical-scroll-proportion="0.0" vertical-offset="5007" max-vertical-offset="5491">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/fva/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="82" column="8" selection-start="3382" selection-end="3382" vertical-scroll-proportion="0.0" vertical-offset="1114" max-vertical-offset="1598">
@@ -1454,21 +1345,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/wav2mfcc/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="299" column="44" selection-start="13707" selection-end="13707" vertical-scroll-proportion="0.0" vertical-offset="4598" max-vertical-offset="5508">
+        <state line="261" column="0" selection-start="12199" selection-end="12199" vertical-scroll-proportion="0.0" vertical-offset="4191" max-vertical-offset="5508">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt">
+    <entry file="file://$PROJECT_DIR$/algorithms/vad/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="296" column="4" selection-start="11403" selection-end="11403" vertical-scroll-proportion="-0.08902691" vertical-offset="4990" max-vertical-offset="5491">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/base/test_base.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt">
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/base/learn_base.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>
@@ -1491,6 +1389,65 @@
       </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/nbc/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="211" column="49" selection-start="9365" selection-end="9365" vertical-scroll-proportion="0.6824176" vertical-offset="2881" max-vertical-offset="3791">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/variables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="25" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="300" column="0" selection-start="13028" selection-end="13028" vertical-scroll-proportion="0.4731405" vertical-offset="1029" max-vertical-offset="2499">
+          <folding>
+            <element signature="e#586#3038#0" expanded="false" />
+            <element signature="e#3071#3357#0" expanded="false" />
+            <element signature="e#3392#3712#0" expanded="false" />
+            <element signature="e#3743#5428#0" expanded="false" />
+            <element signature="e#5489#5534#0" expanded="false" />
+            <element signature="e#5590#5660#0" expanded="false" />
+            <element signature="e#5937#6583#0" expanded="false" />
+            <element signature="e#6632#6909#0" expanded="false" />
+            <element signature="e#7186#7516#0" expanded="false" />
+            <element signature="e#7567#8110#0" expanded="false" />
+            <element signature="e#8174#8947#0" expanded="false" />
+            <element signature="e#9245#9572#0" expanded="false" />
+            <element signature="e#9641#10439#0" expanded="false" />
+            <element signature="e#10713#11085#0" expanded="false" />
+            <element signature="e#11137#11517#0" expanded="false" />
+            <element signature="e#11690#11787#0" expanded="false" />
+            <element signature="e#11827#12038#0" expanded="false" />
+            <element signature="e#12200#12378#1" expanded="false" />
+            <element signature="e#16587#17155#0" expanded="false" />
+            <element signature="e#17198#18010#0" expanded="false" />
+            <element signature="e#18041#18306#0" expanded="false" />
+            <element signature="e#18386#19165#0" expanded="false" />
+            <element signature="e#19184#19237#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

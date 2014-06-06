@@ -1,5 +1,4 @@
 import os
-from numpy.fft import fft
 from configparser import ConfigParser
 
 __author__ = 'Olexandr'
