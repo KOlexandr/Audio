@@ -269,6 +269,8 @@ class Application(Frame):
     # Voice Activity Detection
     #========================================================================
 
+    #========================================================================
+    # MFCC
     def add_mfcc_file(self, file_type, path=path_to_mfcc):
         if not self.record_audio(5, path=path + "waves/" + file_type) is None:
             self.s.learn()
@@ -277,7 +279,8 @@ class Application(Frame):
         self.s.test()
         str_res = SPro5.get_results()
         messagebox.showinfo("Results MFCC", str_res)
-
+    # MFCC
+    #========================================================================
     #==================================================================================================================
 
     def make_main_frame(self):
@@ -339,13 +342,13 @@ class Application(Frame):
         #========================================================================
 
         #========================================================================
-        # SPro 5 (MFCC classifierd)
+        # SPro 5 (MFCC classifier)
         Label(self.main_frame, text="MFCC",
               font=Font(family=self.font_family, size=10, weight="bold")).pack(side=TOP, pady=5, padx=5)
         Button(self.main_frame, text="Test", command=lambda: self.show_test_mfcc(), width=30).pack()
         Button(self.main_frame, text="Record Test File", command=lambda: self.add_mfcc_file("test"), width=30).pack()
         Button(self.main_frame, text="Record Learn File", command=lambda: self.add_mfcc_file("learn"), width=30).pack()
-        # SPro 5 (MFCC classifierd)
+        # SPro 5 (MFCC classifier)
         #========================================================================
 
         self.main_frame.pack(side=TOP)
