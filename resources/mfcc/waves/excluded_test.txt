@@ -1,0 +1,16 @@
+word1_energy.wav
+word1_mdf.wav
+word1_sfm.wav
+word2_energy.wav
+word2_mdf.wav
+word2_sfm.wav
+word3_energy.wav
+word3_mdf.wav
+word3_sfm.wav
+word4_energy.wav
+word4_mdf.wav
+word4_sfm.wav
+word5_energy.wav
+word5_mdf.wav
+word5_sfm.wav
+word6_sfm.wav

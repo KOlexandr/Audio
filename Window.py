@@ -116,7 +116,8 @@ class Application(Frame):
         #info frame in main frame
         frame = Frame(top, relief=SUNKEN, bg="white", borderwidth=1)
 
-        Label(frame, text="This program was create for course work.", bg="white", font=font).pack(padx=5, pady=5)
+        Label(frame, text="Voice Analyzer. Simple program for speech recognition, created for qualification work",
+              bg="white", font=font).pack(padx=5, pady=5)
         Label(frame, text="Copyright " + self.copyright_year + ". GNU License. All rights reserved.",
               bg="white", font=font).pack(padx=5, pady=5)
 
@@ -233,7 +234,7 @@ class Application(Frame):
                                              initialdir=path)
         if not askopenfile is None:
             print("Teaching NBC classifier with added examples")
-            # self.nbc.teach_classifier()
+            self.nbc.teach_classifier()
             print("Teaching NBC classifier finished")
             classes = self.nbc.get_classes(self.nbc.classify(WavFile(askopenfile.name)))
             mess = ""
@@ -274,11 +275,8 @@ class Application(Frame):
 
     def show_test_mfcc(self):
         self.s.test()
-        results = SPro5.get_results()
-        mess = ""
-        for i in results.keys():
-            mess += str(i) + ": " + str(results[i]) + "\n"
-        messagebox.showinfo("Results MFCC", mess)
+        str_res = SPro5.get_results()
+        messagebox.showinfo("Results MFCC", str_res)
 
     #==================================================================================================================
 

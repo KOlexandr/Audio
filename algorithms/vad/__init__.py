@@ -1,4 +1,4 @@
-from variables import path_to_test, path_to_vad_results, show_plots
+from variables import path_to_test, path_to_vad_results, show_plots, use_nbc_for_vad
 from handlers.Plotter import Plotter
 from beans.WavFile import WavFile
 from math import log10, floor
@@ -283,9 +283,10 @@ def create_files(wav, word_results, items, nbc):
         for k in range(0, len(starts)):
             file_name = 'word' + str(num) + "_" + str(i) + '.wav'
             file_items = data[starts[k] * items:ends[k] * items]
-            if not nbc is None:
-                if len(file_items) > 10000 and nbc.get_class(nbc.get_classes(nbc.nbc_classify_file_select(
-                        WavFile(samples=WavFile.to_binary(file_items), sample_width=wav.sample_width, time=1)))) == "speech":
+            if not nbc is None and use_nbc_for_vad:
+                if len(file_items) > 10000 and nbc.get_class(nbc.get_classes(nbc.classify(
+                        WavFile(samples=WavFile.to_binary(file_items), sample_width=wav.sample_width,
+                                time=1)))) == "speech":
                     WavFile.write(path_to_vad_results + file_name, file_items, 0)
                     num += 1
             else:

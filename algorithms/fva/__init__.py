@@ -1,3 +1,4 @@
+import re
 from algorithms.fir import FiniteImpulseFilter
 from variables import path_to_examples, path_to_silence, path_to_test, use_filter
 from handlers.Recorder import Recorder
@@ -86,7 +87,7 @@ class FFTVoiceAnalyzer:
         for j in samples:
             word, coefficient = analyzer.lib.find_max_corrcoef_and_word(j, max_len)
             if coefficient > 0.3:
-                result += word + " - " + str(coefficient) + "\n"
+                result += re.sub("-.+", "", word) + " - " + str(coefficient) + "\n"
         return result
 
 

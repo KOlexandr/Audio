@@ -10,6 +10,7 @@ cf = ConfigParser()
 cf.read(path_to_project + "/properties/properties.cfg")
 
 #Naive Bayes Classifier
+use_nbc_for_vad = bool(int(cf.get("nbc", "use_nbc_for_vad")))
 path_to_speech = str(path_to_project + cf.get("nbc", "path_to_speech"))
 path_to_non_speech = str(path_to_project + cf.get("nbc", "path_to_non_speech"))
 
