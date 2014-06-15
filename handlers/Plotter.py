@@ -4,9 +4,10 @@ __author__ = 'Olexandr'
 
 
 class Plotter:
-    def __init__(self):
+    def __init__(self, name):
         self.data, self.additional_data = {}, {}
         self.sub_plot_num = 1
+        self.name = name
 
     def add_sub_plot_data(self, title, data_y, data_x=None, color="blue", ls="-", scale_x=None, scale_y=None,
                           x_label=None, y_label=None):
@@ -51,7 +52,7 @@ class Plotter:
         """
         self.additional_data[title].append((axis, x, color, ls, lw))
 
-    def sub_plot_all_horizontal(self):
+    def sub_plot_all_horizontal(self, show=True, save=False):
         """
         plots all subplots and their additional data in one window
         """
@@ -82,7 +83,10 @@ class Plotter:
             if not self.data[i][8] is None:
                 plot.ylabel(self.data[i][8])
             plot.grid(True)
-        plot.show()
+        if show:
+            plot.show()
+        if save:
+            plot.savefig(filename=self.name)
 
 
 def plot_data(data, title):

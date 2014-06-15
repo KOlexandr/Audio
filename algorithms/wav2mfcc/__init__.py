@@ -277,6 +277,14 @@ class SPro5:
             else:
                 words[word][str(results[i])] += 1
 
+        return SPro5.get_result_str(words, separator)
+
+    @staticmethod
+    def get_result_str(words, separator):
+        return SPro5.parse(words, separator)
+
+    @staticmethod
+    def parse(words, separator):
         str_res_words = ""
         words_keys = list(words.keys())
         words_keys.sort()

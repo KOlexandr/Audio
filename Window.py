@@ -198,10 +198,10 @@ class Application(Frame):
             result_str = FFTVoiceAnalyzer.analyze(wav, self.processor)
             messagebox.showinfo("Result", result_str)
             if show_plots:
-                plot = Plotter()
+                plot = Plotter("DRA")
                 plot.add_sub_plot_data("Digitized Recorded Audio", wav.get_one_channel_data(), x_label="Samples",
                                        y_label="Amplitude")
-                plot.sub_plot_all_horizontal()
+                plot.sub_plot_all_horizontal(show=False, save=True)
 
     def fft_analyzer_select(self, path=path_to_test):
         askopenfile = filedialog.askopenfile(filetypes=[("Wave audio files", "*.wav *.wave")], defaultextension=".wav",
@@ -211,10 +211,10 @@ class Application(Frame):
             result_str = FFTVoiceAnalyzer.analyze(wav, self.processor)
             messagebox.showinfo("Result", result_str)
             if show_plots:
-                plot = Plotter()
+                plot = Plotter("DRA")
                 plot.add_sub_plot_data("Digitized Recorded Audio", wav.get_one_channel_data(), x_label="Samples",
                                        y_label="Amplitude")
-                plot.sub_plot_all_horizontal()
+                plot.sub_plot_all_horizontal(show=False, save=True)
         else:
             messagebox.showwarning("Warning", "You should select one file. Please, try again")
     # Fast Fourier Transform Voice Analyzer
@@ -262,10 +262,10 @@ class Application(Frame):
         if not wav is None:
             test(wav, self.nbc)
             if show_plots:
-                plot = Plotter()
+                plot = Plotter("DRA")
                 plot.add_sub_plot_data("Digitized Recorded Audio", wav.get_one_channel_data(), x_label="Samples",
                                        y_label="Amplitude")
-                plot.sub_plot_all_horizontal()
+                plot.sub_plot_all_horizontal(show=False, save=True)
     # Voice Activity Detection
     #========================================================================
 
@@ -276,9 +276,11 @@ class Application(Frame):
             self.s.learn()
 
     def show_test_mfcc(self):
+        print("Start MFCC")
         self.s.test()
         str_res = SPro5.get_results()
         messagebox.showinfo("Results MFCC", str_res)
+        print("MFCC finished successful")
     # MFCC
     #========================================================================
     #==================================================================================================================

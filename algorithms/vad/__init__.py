@@ -244,34 +244,34 @@ def find_words_for_one_param(param, low_value, min_frames_voice, min_frames_nois
 
 
 def plot_result(wav, word_results, params, min_params, colors, items):
-    file = Plotter()
+    file = Plotter("DAF")
     file.add_sub_plot_data("Digitized audio file", wav.get_one_channel_data(), x_label="Samples", y_label="Amplitude")
     for i in word_results.keys():
         file.add_line_at("Digitized audio file", list(map(lambda x: x * items, word_results[i]["starts"])), "x",
                          colors[i], lw=3)
         file.add_line_at("Digitized audio file", list(map(lambda x: x * items, word_results[i]["ends"])), "x",
                          colors[i], lw=3)
-    file.sub_plot_all_horizontal()
+        file.sub_plot_all_horizontal(show=False, save=True)
 
-    energy = Plotter()
+    energy = Plotter("Energy")
     energy.add_sub_plot_data("Energy", params["energy"], x_label="Frames", y_label="Energy Value")
     energy.add_line_at("Energy", min_params["energy"], "y", color="red")
-    energy.sub_plot_all_horizontal()
+    energy.sub_plot_all_horizontal(show=False, save=True)
 
-    mdf = Plotter()
+    mdf = Plotter("MDF")
     mdf.add_sub_plot_data("Most Dominant Frequency", params["mdf"], x_label="Frames", y_label="MDF Value")
     mdf.add_line_at("Most Dominant Frequency", min_params["mdf"], "y", color="red")
-    mdf.sub_plot_all_horizontal()
+    mdf.sub_plot_all_horizontal(show=False, save=True)
 
-    zcr = Plotter()
+    zcr = Plotter("ZCR")
     zcr.add_sub_plot_data("Zero Crossing Rate", params["zcr"], x_label="Frames", y_label="ZCR Value")
     zcr.add_line_at("Zero Crossing Rate", min_params["zcr"], "y", color="red")
-    zcr.sub_plot_all_horizontal()
+    zcr.sub_plot_all_horizontal(show=False, save=True)
 
-    zcr = Plotter()
+    zcr = Plotter("SFM")
     zcr.add_sub_plot_data("Spectral Flatness Measure", params["sfm"], x_label="Frames", y_label="SFM Value")
     zcr.add_line_at("Spectral Flatness Measure", min_params["sfm"], "y", color="red")
-    zcr.sub_plot_all_horizontal()
+    zcr.sub_plot_all_horizontal(show=False, save=True)
 
 
 def create_files(wav, word_results, items, nbc):
@@ -295,7 +295,8 @@ def create_files(wav, word_results, items, nbc):
                     num += 1
 
 
-def test(wav, nbc=None, frame_size=10, min_frames_voice=3, min_frames_noise=10, bad_frames_count=10):
+def test(wav, nbc=None, frame_size=10, min_frames_voice=3, min_frames_noise=20, bad_frames_count=0):
+    print("Start analyze file with using VAD")
     keys, shifts = ["energy", "mdf", "zcr", "sfm"], {"energy": 1, "mdf": 320, "zcr": 1, "sfm": 1}
     colors = {"energy": "red", "mdf": "green", "zcr": "black", "sfm": "yellow"}
 
@@ -317,6 +318,7 @@ def test(wav, nbc=None, frame_size=10, min_frames_voice=3, min_frames_noise=10, 
     create_files(wav, word_results, params["items_per_frame"], nbc)
     if show_plots:
         plot_result(wav, word_results, params, min_params, colors, params["items_per_frame"])
+    print("Analyzing file with VAD has finished")
 
 
 if "__main__" == __name__:
