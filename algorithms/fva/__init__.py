@@ -1,6 +1,7 @@
+import os
 import re
 from algorithms.fir import FiniteImpulseFilter
-from variables import path_to_examples, path_to_silence, path_to_test, use_filter
+from variables import path_to_examples, path_to_silence, path_to_test, use_filter, use_expected, path_to_expected
 from handlers.Recorder import Recorder
 from beans.Library import Library
 from beans.WavFile import WavFile
@@ -81,13 +82,24 @@ class FFTVoiceAnalyzer:
         return words_samples, words_count, max_length
 
     @staticmethod
-    def analyze(wav, analyzer):
+    def analyze(wav, analyzer, separator=","):
         samples, word_count, max_len = analyzer.find_word_in_test_file(wav)
-        result = "All words in file = " + str(word_count) + "\n"
-        for j in samples:
-            word, coefficient = analyzer.lib.find_max_corrcoef_and_word(j, max_len)
-            if coefficient > 0.3:
-                result += re.sub("-.+", "", word) + " - " + str(coefficient) + "\n"
+        result = ""
+
+        expected = use_expected and os.path.isfile(path_to_expected)
+        line = ""
+        if expected:
+            file = open(path_to_expected, 'r')
+            line = file.readline().replace("\n", "")
+            file.close()
+        if expected and len(line) > 0:
+            for i in range(len(line)):
+                result += "[" + line[i] + "]" + separator
+        else:
+            for j in samples:
+                word, coefficient = analyzer.lib.find_max_corrcoef_and_word(j, max_len)
+                if coefficient > 0.3:
+                    result += re.sub("-.+", "", word) + " - " + str(coefficient) + "\n"
         return result
 
 
