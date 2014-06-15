@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0db91aa-b7c4-4319-965f-f86680b0dd9d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/fva/__init__.py" afterPath="$PROJECT_DIR$/algorithms/fva/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Window.py" afterPath="$PROJECT_DIR$/Window.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt" afterPath="$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/results/system.bin" afterPath="$PROJECT_DIR$/resources/mfcc/results/system.bin" />
@@ -58,11 +58,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Window.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Window.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="32" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2465">
+            <state line="89" column="0" selection-start="3358" selection-end="3358" vertical-scroll-proportion="0.25585285" vertical-offset="0" max-vertical-offset="1445">
               <folding>
+                <element signature="e#586#3038#0" expanded="false" />
                 <element signature="e#3071#3357#0" expanded="false" />
                 <element signature="e#3392#3712#0" expanded="false" />
                 <element signature="e#3743#5487#0" expanded="false" />
@@ -71,19 +72,20 @@
                 <element signature="e#5996#6642#0" expanded="false" />
                 <element signature="e#6691#6968#0" expanded="false" />
                 <element signature="e#7245#7575#0" expanded="false" />
-                <element signature="e#7626#8195#0" expanded="false" />
-                <element signature="e#8259#9058#0" expanded="false" />
-                <element signature="e#9356#9683#0" expanded="false" />
-                <element signature="e#9752#10548#0" expanded="false" />
-                <element signature="e#10822#11194#0" expanded="false" />
-                <element signature="e#11246#11652#0" expanded="false" />
-                <element signature="e#11914#12011#0" expanded="false" />
-                <element signature="e#12475#16820#0" expanded="false" />
-                <element signature="e#16860#17428#0" expanded="false" />
-                <element signature="e#17471#18283#0" expanded="false" />
-                <element signature="e#18314#18579#0" expanded="false" />
-                <element signature="e#18659#19438#0" expanded="false" />
-                <element signature="e#19457#19510#0" expanded="false" />
+                <element signature="e#7626#8296#0" expanded="false" />
+                <element signature="e#8360#9260#0" expanded="false" />
+                <element signature="e#9558#9974#0" expanded="false" />
+                <element signature="e#10043#10839#0" expanded="false" />
+                <element signature="e#11113#11485#0" expanded="false" />
+                <element signature="e#11537#11943#0" expanded="false" />
+                <element signature="e#12205#12302#0" expanded="false" />
+                <element signature="e#12342#12516#0" expanded="false" />
+                <element signature="e#12766#17111#0" expanded="false" />
+                <element signature="e#17151#17719#0" expanded="false" />
+                <element signature="e#17762#18574#0" expanded="false" />
+                <element signature="e#18605#18870#0" expanded="false" />
+                <element signature="e#18950#19729#0" expanded="false" />
+                <element signature="e#19748#19801#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -92,7 +94,7 @@
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/vad/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="8" selection-start="2065" selection-end="2065" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5355">
+            <state line="297" column="4" selection-start="11593" selection-end="11593" vertical-scroll-proportion="0.0" vertical-offset="4578" max-vertical-offset="5355">
               <folding>
                 <element signature="e#3376#4103#1" expanded="false" />
               </folding>
@@ -112,13 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/fva/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="68" selection-start="3638" selection-end="3638" vertical-scroll-proportion="0.4882943" vertical-offset="1204" max-vertical-offset="1921">
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state line="23" column="30" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -201,10 +201,10 @@
         <option value="$PROJECT_DIR$/algorithms/fir/__init__.py" />
         <option value="$PROJECT_DIR$/algorithms/vad/__init__.py" />
         <option value="$PROJECT_DIR$/handlers/Plotter.py" />
-        <option value="$PROJECT_DIR$/Window.py" />
         <option value="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" />
         <option value="$PROJECT_DIR$/algorithms/wav2mfcc/__init__.py" />
         <option value="$PROJECT_DIR$/algorithms/fva/__init__.py" />
+        <option value="$PROJECT_DIR$/Window.py" />
       </list>
     </option>
   </component>
@@ -975,7 +975,11 @@
       <created>1402827479194</created>
       <updated>1402827479194</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="fva expected">
+      <created>1402827680037</created>
+      <updated>1402827680037</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1284,7 +1288,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/handlers/Recorder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="0" selection-end="2637" vertical-scroll-proportion="0.11577752" vertical-offset="0" max-vertical-offset="1479" />
+        <state line="6" column="0" selection-start="0" selection-end="2637" vertical-scroll-proportion="0.11577752" vertical-offset="0" max-vertical-offset="1479">
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/beans/WavFile.py">
@@ -1398,35 +1406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Window.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="32" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2465">
-          <folding>
-            <element signature="e#3071#3357#0" expanded="false" />
-            <element signature="e#3392#3712#0" expanded="false" />
-            <element signature="e#3743#5487#0" expanded="false" />
-            <element signature="e#5548#5593#0" expanded="false" />
-            <element signature="e#5649#5719#0" expanded="false" />
-            <element signature="e#5996#6642#0" expanded="false" />
-            <element signature="e#6691#6968#0" expanded="false" />
-            <element signature="e#7245#7575#0" expanded="false" />
-            <element signature="e#7626#8195#0" expanded="false" />
-            <element signature="e#8259#9058#0" expanded="false" />
-            <element signature="e#9356#9683#0" expanded="false" />
-            <element signature="e#9752#10548#0" expanded="false" />
-            <element signature="e#10822#11194#0" expanded="false" />
-            <element signature="e#11246#11652#0" expanded="false" />
-            <element signature="e#11914#12011#0" expanded="false" />
-            <element signature="e#12475#16820#0" expanded="false" />
-            <element signature="e#16860#17428#0" expanded="false" />
-            <element signature="e#17471#18283#0" expanded="false" />
-            <element signature="e#18314#18579#0" expanded="false" />
-            <element signature="e#18659#19438#0" expanded="false" />
-            <element signature="e#19457#19510#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/fft/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="93" column="28" selection-start="3211" selection-end="3211" vertical-scroll-proportion="0.48387095" vertical-offset="1280" max-vertical-offset="3451">
@@ -1438,15 +1417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="31" selection-start="3856" selection-end="3856" vertical-scroll-proportion="4.686217" vertical-offset="0" max-vertical-offset="1802">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/vad/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="8" selection-start="2065" selection-end="2065" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5355">
-          <folding>
-            <element signature="e#3376#4103#1" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1462,9 +1432,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/fva/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="68" selection-start="3638" selection-end="3638" vertical-scroll-proportion="0.4882943" vertical-offset="1204" max-vertical-offset="1921">
+        <state line="23" column="30" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/vad/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="297" column="4" selection-start="11593" selection-end="11593" vertical-scroll-proportion="0.0" vertical-offset="4578" max-vertical-offset="5355">
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#3376#4103#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="0" selection-start="3358" selection-end="3358" vertical-scroll-proportion="0.25585285" vertical-offset="0" max-vertical-offset="1445">
+          <folding>
+            <element signature="e#586#3038#0" expanded="false" />
+            <element signature="e#3071#3357#0" expanded="false" />
+            <element signature="e#3392#3712#0" expanded="false" />
+            <element signature="e#3743#5487#0" expanded="false" />
+            <element signature="e#5548#5593#0" expanded="false" />
+            <element signature="e#5649#5719#0" expanded="false" />
+            <element signature="e#5996#6642#0" expanded="false" />
+            <element signature="e#6691#6968#0" expanded="false" />
+            <element signature="e#7245#7575#0" expanded="false" />
+            <element signature="e#7626#8296#0" expanded="false" />
+            <element signature="e#8360#9260#0" expanded="false" />
+            <element signature="e#9558#9974#0" expanded="false" />
+            <element signature="e#10043#10839#0" expanded="false" />
+            <element signature="e#11113#11485#0" expanded="false" />
+            <element signature="e#11537#11943#0" expanded="false" />
+            <element signature="e#12205#12302#0" expanded="false" />
+            <element signature="e#12342#12516#0" expanded="false" />
+            <element signature="e#12766#17111#0" expanded="false" />
+            <element signature="e#17151#17719#0" expanded="false" />
+            <element signature="e#17762#18574#0" expanded="false" />
+            <element signature="e#18605#18870#0" expanded="false" />
+            <element signature="e#18950#19729#0" expanded="false" />
+            <element signature="e#19748#19801#0" expanded="false" />
           </folding>
         </state>
       </provider>

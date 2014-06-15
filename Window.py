@@ -195,6 +195,7 @@ class Application(Frame):
 
         wav = self.record_test_audio(time)
         if not wav is None:
+            print("Start analyze file with using FFT")
             result_str = FFTVoiceAnalyzer.analyze(wav, self.processor)
             messagebox.showinfo("Result", result_str)
             if show_plots:
@@ -202,11 +203,13 @@ class Application(Frame):
                 plot.add_sub_plot_data("Digitized Recorded Audio", wav.get_one_channel_data(), x_label="Samples",
                                        y_label="Amplitude")
                 plot.sub_plot_all_horizontal(show=False, save=True)
+            print("File analyzed successful")
 
     def fft_analyzer_select(self, path=path_to_test):
         askopenfile = filedialog.askopenfile(filetypes=[("Wave audio files", "*.wav *.wave")], defaultextension=".wav",
                                              initialdir=path)
         if not askopenfile is None:
+            print("Start analyze file with using FFT")
             wav = WavFile(askopenfile.name)
             result_str = FFTVoiceAnalyzer.analyze(wav, self.processor)
             messagebox.showinfo("Result", result_str)
@@ -215,6 +218,7 @@ class Application(Frame):
                 plot.add_sub_plot_data("Digitized Recorded Audio", wav.get_one_channel_data(), x_label="Samples",
                                        y_label="Amplitude")
                 plot.sub_plot_all_horizontal(show=False, save=True)
+            print("File analyzed successful")
         else:
             messagebox.showwarning("Warning", "You should select one file. Please, try again")
     # Fast Fourier Transform Voice Analyzer
@@ -226,8 +230,10 @@ class Application(Frame):
         askopenfile = filedialog.askopenfile(filetypes=[("Wave audio files", "*.wav *.wave")], defaultextension=".wav",
                                              initialdir=path)
         if not askopenfile is None:
+            print("Start adding file to NBC")
             self.nbc.add_one_audio_file(clazz, path_to_file=askopenfile.name)
             self.nbc.teach_classifier()
+            print("File added successful")
 
     def nbc_classify_file_select(self, path=path_to_test):
         askopenfile = filedialog.askopenfile(filetypes=[("Wave audio files", "*.wav *.wave")], defaultextension=".wav",
