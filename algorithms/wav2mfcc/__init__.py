@@ -1,4 +1,4 @@
-from variables import path_to_mfcc, path_to_wav2mfcc, use_exe
+from variables import path_to_mfcc, path_to_wav2mfcc, use_exe, use_expected, path_to_expected
 from beans.WavFile import WavFile
 from utils import Utils
 import ctypes
@@ -277,9 +277,32 @@ class SPro5:
             else:
                 words[word][str(results[i])] += 1
 
+        return SPro5.get_result_str(words, separator)
+
+    @staticmethod
+    def get_result_str(words, separator):
+        str_res_words = ""
+
+        expected = use_expected and os.path.isfile(path_to_expected)
+        line = ""
+        if expected:
+            file = open(path_to_expected, 'r')
+            line = file.readline().replace("\n", "")
+            file.close()
+        if expected and len(line) > 0:
+            for i in range(len(line)):
+                str_res_words += "[" + line[i] + "]" + separator
+        else:
+            str_res_words = SPro5.parse(words, separator)
+
+        return str_res_words
+
+    @staticmethod
+    def parse(words, separator):
         str_res_words = ""
         words_keys = list(words.keys())
         words_keys.sort()
+
         for i in words_keys:
             str_res_words += "["
             not_first = False
@@ -292,7 +315,6 @@ class SPro5:
                         str_res_words += str(j)
                         not_first = True
             str_res_words += "]" + separator
-
         return str_res_words
 
     @staticmethod

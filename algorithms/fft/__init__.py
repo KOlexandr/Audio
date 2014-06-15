@@ -121,7 +121,7 @@ class FFT:
             buffer[i] += int(amplitude * math.sin(float(2 * math.pi * i * freq_hz / sample_rate)))
 
         if is_plot:
-            plotter = Plotter()
+            plotter = Plotter("Created Sin Test")
             plotter.add_sub_plot_data("data", buffer)
             plotter.sub_plot_all_horizontal()
 
@@ -174,7 +174,7 @@ def test():
     freq, amplitude = FFT.fft(wav)
     freq1, amplitude1 = FFT.fft_db_amplitude_wav(wav)
 
-    plotter = Plotter()
+    plotter = Plotter("Test FFT Single")
     plotter.add_sub_plot_data("data", wav.samples)
     plotter.add_sub_plot_data("fft_log_fft", amplitude, freq, scale_x='log', scale_y='log')
     plotter.add_sub_plot_data("fft_log_fft_db_hz", amplitude1, freq1, scale_x='log', scale_y='log')
@@ -190,7 +190,7 @@ def test_all_audio():
     freq_noise, amplitude_noise = FFT.fft_db_amplitude_wav(noise)
     freq_m, amplitude_m = FFT.fft_db_amplitude_wav(m)
 
-    plotter = Plotter()
+    plotter = Plotter("Test FFT Multiple")
     plotter.add_sub_plot_data("sin 100 Hz", sin.samples)
     plotter.add_sub_plot_data("fft sin 100 Hz", amplitude_sin, freq_sin, scale_x='log', scale_y='log')
     plotter.add_sub_plot_data("noise", noise.samples)

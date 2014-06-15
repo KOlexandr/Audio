@@ -48,16 +48,16 @@ def test():
     freq, amplitude = FFT.fft_db_amplitude_wav(file)
     out = FiniteImpulseFilter.filter(amplitude, 100, file.frame_rate, 20, 50, "hemming")
 
-    file_plotter = Plotter()
+    file_plotter = Plotter("FIR Test DAF")
     file_plotter.add_sub_plot_data("Digitized audio file", file.samples, x_label="Samples", y_label="Amplitude")
     file_plotter.sub_plot_all_horizontal()
 
-    fft_plotter = Plotter()
+    fft_plotter = Plotter("FIR Test FFT")
     fft_plotter.add_sub_plot_data("Fast Fourier Transform", amplitude, freq, scale_x='log', scale_y='log',
                                   x_label="Frequency (Hz)", y_label="Amplitude (db)")
     fft_plotter.sub_plot_all_horizontal()
 
-    fft_plotter = Plotter()
+    fft_plotter = Plotter("FIR Test FIR_FFT")
     fft_plotter.add_sub_plot_data("Fast Fourier Transform After FIR", out, freq, scale_x='log', scale_y='log',
                                   x_label="Frequency (Hz)", y_label="Amplitude (db)")
     fft_plotter.sub_plot_all_horizontal()
