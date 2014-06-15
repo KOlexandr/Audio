@@ -99,7 +99,7 @@ class FFTVoiceAnalyzer:
             for j in samples:
                 word, coefficient = analyzer.lib.find_max_corrcoef_and_word(j, max_len)
                 if coefficient > 0.3:
-                    result += re.sub("-.+", "", word) + " - " + str(coefficient) + "\n"
+                    result += "[" + re.sub("-.+", "", word) + "]" + separator
         return result
 
 
