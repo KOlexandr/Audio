@@ -1,11 +1,327 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0db91aa-b7c4-4319-965f-f86680b0dd9d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/results/system.bin" afterPath="$PROJECT_DIR$/resources/mfcc/results/system.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/results/wer_learn_base.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt" afterPath="$PROJECT_DIR$/resources/mfcc/results/wer_test_base.txt" />
+    <list default="true" id="f0db91aa-b7c4-4319-965f-f86680b0dd9d" name="Default" comment="files for testing">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-0.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-1.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-10.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-11.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-12.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-13.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-14.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-15.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-16.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-17.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-18.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-19.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-20.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-21.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-22.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-23.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-24.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-25.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-26.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-27.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-28.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-29.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-3.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-30.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-31.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-4.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-5.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-6.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-7.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-8.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/0/0-9.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-0.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-1.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-10.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-11.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-12.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-13.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-14.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-15.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-16.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-17.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-18.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-19.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-20.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-21.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-22.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-23.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-24.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-25.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-26.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-27.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-28.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-29.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-3.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-30.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-31.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-4.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-5.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-6.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-7.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-8.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/1/1-9.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-0.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-1.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-10.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-11.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-12.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-13.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-14.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-15.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-16.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-17.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-18.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-19.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-20.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-21.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-22.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-23.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-24.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-25.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-26.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-27.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-28.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-29.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-3.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-30.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-31.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-4.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-5.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-6.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-7.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-8.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/2/2-9.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-0.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-1.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-10.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-11.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-12.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-13.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-14.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-15.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-16.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-17.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-18.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-19.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-20.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-21.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-22.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-23.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-24.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-25.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-26.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-27.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-28.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-29.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-3.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-30.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-31.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-4.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-5.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-6.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-7.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-8.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/3/3-9.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-0.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-1.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-10.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-11.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-12.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-13.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-14.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-15.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-16.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-17.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-18.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-19.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-20.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-21.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-22.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-23.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-24.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-25.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-26.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-27.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-28.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-29.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-3.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-30.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-31.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-4.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-5.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-6.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-7.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-8.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/4/4-9.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-0.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-1.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-10.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-11.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-12.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-13.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-14.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-15.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-16.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-17.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-18.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-19.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-20.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-21.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-22.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-23.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-24.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-25.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-26.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-27.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-28.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-29.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-3.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-30.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-31.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-4.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-5.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-6.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-7.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-8.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/5/5-9.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-0.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-1.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-10.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-11.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-12.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-13.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-14.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-15.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-16.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-17.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-18.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-19.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-20.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-21.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-22.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-23.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-24.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-25.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-26.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-27.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-28.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-29.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-3.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-30.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-31.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-4.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-5.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-6.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-7.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-8.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/6/6-9.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-0.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-1.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-10.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-11.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-12.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-13.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-14.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-15.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-16.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-17.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-18.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-19.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-20.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-21.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-22.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-23.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-24.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-25.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-26.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-27.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-28.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-29.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-3.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-30.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-31.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-4.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-5.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-6.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-7.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-8.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/7/7-9.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-0.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-1.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-10.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-11.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-12.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-13.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-14.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-15.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-16.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-17.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-18.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-19.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-20.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-21.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-22.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-23.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-24.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-25.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-26.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-27.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-28.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-29.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-3.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-30.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-31.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-4.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-5.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-6.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-7.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-8.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/8/8-9.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-0.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-1.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-10.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-11.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-12.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-13.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-14.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-15.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-16.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-17.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-18.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-19.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-20.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-21.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-22.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-23.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-24.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-25.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-26.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-27.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-28.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-29.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-3.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-30.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-31.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-4.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-5.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-6.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-7.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-8.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mfcc/waves/learn/9/9-9.wav" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RecordAudio.iws" />
@@ -60,9 +376,9 @@
       <file leaf-file-name="Window.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="423" column="23" selection-start="19540" selection-end="19540" vertical-scroll-proportion="0.0" vertical-offset="4088" max-vertical-offset="4998">
+            <state line="424" column="0" selection-start="19541" selection-end="19541" vertical-scroll-proportion="0.0" vertical-offset="6774" max-vertical-offset="7667">
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#44#204#0" expanded="true" />
                 <element signature="e#3159#3445#0" expanded="false" />
                 <element signature="e#3896#5640#0" expanded="false" />
                 <element signature="e#5701#5746#0" expanded="false" />
@@ -78,9 +394,6 @@
                 <element signature="e#17797#18365#0" expanded="false" />
                 <element signature="e#18408#19220#0" expanded="false" />
                 <element signature="e#20424#20477#0" expanded="false" />
-                <marker date="1402951034341" expanded="true" signature="635:20405" placeholder="..." />
-                <marker date="1402951034341" expanded="true" signature="12780:13250" placeholder="..." />
-                <marker date="1402951034341" expanded="true" signature="19242:19540" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -89,7 +402,7 @@
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/wav2mfcc/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="76" selection-start="8630" selection-end="8630" vertical-scroll-proportion="0.0" vertical-offset="2408" max-vertical-offset="5780">
+            <state line="169" column="76" selection-start="8630" selection-end="8630" vertical-scroll-proportion="0.0" vertical-offset="2493" max-vertical-offset="5865">
               <folding />
             </state>
           </provider>
@@ -107,7 +420,7 @@
       <file leaf-file-name="excluded_learn.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="288" column="7" selection-start="2509" selection-end="2509" vertical-scroll-proportion="0.0" vertical-offset="4632" max-vertical-offset="5542">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5542">
               <folding />
             </state>
           </provider>
@@ -122,19 +435,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="learn_base.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="learn_base.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/mfcc/base/learn_base.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="16" selection-start="347" selection-end="347" vertical-scroll-proportion="0.71238095" vertical-offset="0" max-vertical-offset="5899">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5899">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WavFile.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="WavFile.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/beans/WavFile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="2958">
+            <state line="45" column="70" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.7885714" vertical-offset="300" max-vertical-offset="2958">
               <folding />
             </state>
           </provider>
@@ -154,7 +467,7 @@
       <file leaf-file-name="variables.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/variables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="51" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+            <state line="33" column="0" selection-start="1313" selection-end="1313" vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="799">
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -241,9 +554,9 @@
         <option value="$PROJECT_DIR$/algorithms/vad/__init__.py" />
         <option value="$PROJECT_DIR$/Window.py" />
         <option value="$PROJECT_DIR$/variables.py" />
-        <option value="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" />
         <option value="$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt" />
         <option value="$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt" />
+        <option value="$PROJECT_DIR$/resources/mfcc/base/learn_base.txt" />
       </list>
     </option>
   </component>
@@ -294,28 +607,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecordAudio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mfcc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="waves" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -916,7 +1207,11 @@
       <created>1402959598698</created>
       <updated>1402959598698</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="files for testing">
+      <created>1402962239000</created>
+      <updated>1402962239000</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1313,11 +1608,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/vad/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="274" column="4" selection-start="10608" selection-end="10608" vertical-scroll-proportion="0.0" vertical-offset="4465" max-vertical-offset="5610">
+          <folding>
+            <element signature="e#0#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/base/test_base.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mfcc/base/learn_base.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/wav2mfcc/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="169" column="76" selection-start="8630" selection-end="8630" vertical-scroll-proportion="0.0" vertical-offset="2493" max-vertical-offset="5865">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="423" column="23" selection-start="19540" selection-end="19540" vertical-scroll-proportion="0.0" vertical-offset="4088" max-vertical-offset="4998">
+        <state line="424" column="0" selection-start="19541" selection-end="19541" vertical-scroll-proportion="0.0" vertical-offset="6774" max-vertical-offset="7667">
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#44#204#0" expanded="true" />
             <element signature="e#3159#3445#0" expanded="false" />
             <element signature="e#3896#5640#0" expanded="false" />
             <element signature="e#5701#5746#0" expanded="false" />
@@ -1333,69 +1672,22 @@
             <element signature="e#17797#18365#0" expanded="false" />
             <element signature="e#18408#19220#0" expanded="false" />
             <element signature="e#20424#20477#0" expanded="false" />
-            <marker date="1402951034341" expanded="true" signature="635:20405" placeholder="..." />
-            <marker date="1402951034341" expanded="true" signature="12780:13250" placeholder="..." />
-            <marker date="1402951034341" expanded="true" signature="19242:19540" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/vad/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="274" column="4" selection-start="10608" selection-end="10608" vertical-scroll-proportion="0.0" vertical-offset="4465" max-vertical-offset="5610">
-          <folding>
-            <element signature="e#0#118#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/variables.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="51" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+        <state line="33" column="0" selection-start="1313" selection-end="1313" vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="799">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/base/test_base.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/beans/WavFile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="2958">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/wav2mfcc/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="76" selection-start="8630" selection-end="8630" vertical-scroll-proportion="0.0" vertical-offset="2408" max-vertical-offset="5780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_learn.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="288" column="7" selection-start="2509" selection-end="2509" vertical-scroll-proportion="0.0" vertical-offset="4632" max-vertical-offset="5542">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/waves/excluded_test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mfcc/base/learn_base.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="16" selection-start="347" selection-end="347" vertical-scroll-proportion="0.71238095" vertical-offset="0" max-vertical-offset="5899">
+        <state line="45" column="70" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.7885714" vertical-offset="300" max-vertical-offset="2958">
           <folding />
         </state>
       </provider>
