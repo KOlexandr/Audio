@@ -1,4 +1,4 @@
-from variables import path_to_test, path_to_vad_results, show_plots, use_nbc_for_vad
+from variables import path_to_test, path_to_vad_results, show_plots, use_nbc_for_vad, vad_use_keys, min_items_per_file
 from handlers.Plotter import Plotter
 from beans.WavFile import WavFile
 from math import log10, floor
@@ -159,12 +159,9 @@ def find_start(data, boundary):
     """
     idx, starts = [], []
     for i in range(1, len(data)):
-        if data[i] >= boundary > data[i - 1]:
+        if data[i] > boundary > data[i - 1]:
             idx.append(i)
-    for i in range(len(idx)):
-        if idx[i] != 0:
-            starts.append(idx[i])
-    return starts
+    return idx
 
 
 def find_end(data, boundary, start):
@@ -247,11 +244,12 @@ def plot_result(wav, word_results, params, min_params, colors, items):
     file = Plotter("DAF")
     file.add_sub_plot_data("Digitized audio file", wav.get_one_channel_data(), x_label="Samples", y_label="Amplitude")
     for i in word_results.keys():
-        file.add_line_at("Digitized audio file", list(map(lambda x: x * items, word_results[i]["starts"])), "x",
-                         colors[i], lw=3)
-        file.add_line_at("Digitized audio file", list(map(lambda x: x * items, word_results[i]["ends"])), "x",
-                         colors[i], lw=3)
-        file.sub_plot_all_horizontal(show=False, save=True)
+        if i in vad_use_keys:
+            file.add_line_at("Digitized audio file", list(map(lambda x: x * items, word_results[i]["starts"])), "x",
+                             colors[i], lw=3)
+            file.add_line_at("Digitized audio file", list(map(lambda x: x * items, word_results[i]["ends"])), "x",
+                             colors[i], lw=3)
+            file.sub_plot_all_horizontal(show=False, save=True)
 
     energy = Plotter("Energy")
     energy.add_sub_plot_data("Energy", params["energy"], x_label="Frames", y_label="Energy Value")
@@ -277,25 +275,26 @@ def plot_result(wav, word_results, params, min_params, colors, items):
 def create_files(wav, word_results, items, nbc):
     data = wav.get_one_channel_data()
     for i in word_results.keys():
-        starts = word_results[i]['starts']
-        ends = word_results[i]['ends']
-        num = 1
-        for k in range(0, len(starts)):
-            file_name = 'word' + str(num) + "_" + str(i) + '.wav'
-            file_items = data[starts[k] * items:ends[k] * items]
-            if not nbc is None and use_nbc_for_vad:
-                if len(file_items) > 10000 and nbc.get_class(nbc.get_classes(nbc.classify(
-                        WavFile(samples=WavFile.to_binary(file_items), sample_width=wav.sample_width,
-                                time=1)))) == "speech":
-                    WavFile.write(path_to_vad_results + file_name, file_items, 0)
-                    num += 1
-            else:
-                if len(file_items) > 10000:
-                    WavFile.write(path_to_vad_results + file_name, file_items, 0)
-                    num += 1
+        if i in vad_use_keys:
+            starts = word_results[i]['starts']
+            ends = word_results[i]['ends']
+            num = 1
+            for k in range(0, len(starts)):
+                file_name = 'word' + str(num) + "_" + str(i) + '.wav'
+                file_items = data[starts[k] * items:ends[k] * items]
+                if not nbc is None and use_nbc_for_vad:
+                    if len(file_items) > min_items_per_file and nbc.get_class(nbc.get_classes(nbc.classify(
+                            WavFile(samples=WavFile.to_binary(file_items), sample_width=wav.sample_width,
+                                    time=1)))) == "speech":
+                        WavFile.write(path_to_vad_results + file_name, file_items, 0)
+                        num += 1
+                else:
+                    if len(file_items) > min_items_per_file:
+                        WavFile.write(path_to_vad_results + file_name, file_items, 0)
+                        num += 1
 
 
-def test(wav, nbc=None, frame_size=10, min_frames_voice=3, min_frames_noise=20, bad_frames_count=0):
+def test(wav, nbc=None, frame_size=10, min_frames_voice=3, min_frames_noise=2, bad_frames_count=3):
     print("Start analyze file with using VAD")
     keys, shifts = ["energy", "mdf", "zcr", "sfm"], {"energy": 1, "mdf": 320, "zcr": 1, "sfm": 1}
     colors = {"energy": "red", "mdf": "green", "zcr": "black", "sfm": "yellow"}

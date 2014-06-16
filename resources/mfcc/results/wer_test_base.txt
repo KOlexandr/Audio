@@ -1,0 +1,10 @@
+words: 	4	5	1	2	3
+word3_energy: 	0	1	0	0	0
+word6_energy: 	1	0	0	0	0
+word4_energy: 	0	0	0	0	1
+word2_energy: 	0	1	0	0	0
+word5_energy: 	0	0	0	0	1
+
+attempts num: 5
+correct num: 0
+word error rate: 100 %

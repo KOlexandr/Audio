@@ -1,4 +1,7 @@
-from variables import path_to_records, path_to_silence, cf, path_to_mfcc, path_to_test, path_to_examples, show_plots
+import os
+from utils.Utils import get_files
+from variables import path_to_records, path_to_silence, cf, path_to_mfcc, path_to_test, path_to_examples, show_plots, \
+    path_to_vad_results, path_to_project
 from algorithms.fva import FFTVoiceAnalyzer
 from algorithms.nbc import NBC
 from tkinter import filedialog, messagebox
@@ -94,6 +97,7 @@ class Application(Frame):
         """
         menu_bar = Menu(self.root)
         help_menu = Menu(menu_bar, tearoff=0)
+        help_menu.add_command(label="Clear", command=self.clear)
         help_menu.add_command(label="About", command=self.about)
         menu_bar.add_cascade(label="Help", menu=help_menu)
         self.root.config(menu=menu_bar)
@@ -289,6 +293,23 @@ class Application(Frame):
         print("MFCC finished successful")
     # MFCC
     #========================================================================
+
+    def clear(self):
+        for i in get_files(path_to_vad_results, ".wav"):
+            os.remove(i)
+        for i in get_files(path_to_mfcc + "base/test/", ".mfcc"):
+            os.remove(i)
+        for i in get_files(path_to_project, ".png"):
+            os.remove(i)
+
+        file = open(path_to_mfcc + "base/test_base.txt", 'w')
+        file.write("")
+        file.close()
+
+        file = open(path_to_mfcc + "waves/excluded_test.txt", 'w')
+        file.write("")
+        file.close()
+
     #==================================================================================================================
 
     def make_main_frame(self):
@@ -400,6 +421,7 @@ class Application(Frame):
                                      icon='question', title='Close')
         if answer:
             self.root.destroy()
+            sys.exit(0)
 
     def make_record_frame(self, min_time, max_time, record_function):
         """
@@ -412,7 +434,7 @@ class Application(Frame):
         time = IntVar(self.main_frame)
         Label(self.main_frame, text="Time:").pack(side=LEFT)
         Spinbox(self.main_frame, from_=min_time, to=max_time, textvariable=time).pack(side=LEFT)
-        Button(self.main_frame, text="Record audio", command=lambda: record_function(time), width=20).pack(side=LEFT)
+        Button(self.main_frame, text="Record audio", command=lambda: record_function(time.get()), width=20).pack(side=LEFT)
         Button(self.main_frame, text="Back", command=self.make_main_frame, width=20).pack(side=LEFT)
         self.main_frame.pack()
 

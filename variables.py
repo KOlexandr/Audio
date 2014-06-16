@@ -36,3 +36,6 @@ use_filter = bool(int(cf.get("fir", "use_filter")))
 #expected
 use_expected = bool(int(cf.get("expected", "use_expected")))
 path_to_expected = str(cf.get("expected", "path_to_expected"))
+
+vad_use_keys = ["energy"]
+min_items_per_file = 15000
